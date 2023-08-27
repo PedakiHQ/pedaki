@@ -13,8 +13,10 @@
     "format:check": "prettier --check .  --cache"
   },
   "devDependencies": {
+    "@types/prettier": "^2.7.3"
+  },
+  "dependencies": {
     "prettier-plugin-tailwindcss": "^0.5.3",
-    "@types/prettier": "^2.7.3",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0"
   },
   "peerDependencies": {
