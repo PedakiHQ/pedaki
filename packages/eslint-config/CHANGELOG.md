@@ -1,5 +1,11 @@
 # @pedaki/eslint-config
 
+## 0.0.2
+
+### Patch Changes
+
+- [`425be08`](https://github.com/PedakiHQ/pedaki/commit/425be082980337501538f4119ecd3b38c588f627) Thanks [@Vahor](https://github.com/Vahor)! - add eslint in peerDependencies
+
 ## 0.0.1
 
 ### Patch Changes
