@@ -11,7 +11,15 @@
     "npm": "use-pnpm"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "dotenv -- turbo run start",
+    "format:check": "turbo run format:check",
+    "format": "turbo run format",
+    "clean": "turbo run clean",
+    "build": "dotenv -- turbo run build",
+    "test": "NODE_ENV=test dotenv -- turbo run test",
+    "dev": "dotenv -- turbo run dev",
+    "lint": "SKIP_ENV_VALIDATION=true && turbo run lint",
+    "typecheck": "turbo run typecheck"
   },
   "keywords": [
     "pedaki"
