@@ -19,7 +19,7 @@ jobs:
       github.repository == 'pedakihq/pedaki'
     steps:
       - name: Add initial reaction
-        uses: peter-evans/create-or-update-comment@v2
+        uses: peter-evans/create-or-update-comment@v3
         with:
           comment-id: ${{ github.event.comment.id }}
           reactions: eyes
@@ -33,7 +33,7 @@ jobs:
 
       - name: Add reaction if permission requirement not met
         if: steps.check-permissions.outcome == 'failure'
-        uses: peter-evans/create-or-update-comment@v2
+        uses: peter-evans/create-or-update-comment@v3
         with:
           comment-id: ${{ github.event.comment.id }}
           reactions: confused
@@ -97,7 +97,7 @@ jobs:
         shell: bash
 
       - name: Send success comment
-        uses: peter-evans/create-or-update-comment@v2
+        uses: peter-evans/create-or-update-comment@v3
         if: steps.changesets.outputs.published == 'true'
         with:
           comment-id: ${{ github.event.comment.id }}
