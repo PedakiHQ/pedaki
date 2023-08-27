@@ -1,5 +1,11 @@
 # @pedaki/prettier-config
 
+## 0.0.3
+
+### Patch Changes
+
+- [`e84b0d2`](https://github.com/PedakiHQ/pedaki/commit/e84b0d24585eed61fcb3faccbe6d2d3bcd64bcb6) Thanks [@Vahor](https://github.com/Vahor)! - move prettier plugins to dependencies
+
 ## 0.0.2
 
 ### Patch Changes
