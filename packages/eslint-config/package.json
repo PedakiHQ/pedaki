@@ -3,11 +3,13 @@
   "version": "0.0.1",
   "main": "index.js",
   "author": "Nathan David <me@vahor.fr>",
+  "repository": "https://github.com/PedakiHQ/pedaki/tree/main/packages/eslint-config",
+  "homepage": "https://www.pedaki.fr",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "format": "prettier --write .  --cache",
-    "format:check": "prettier --check .  --cache"
+    "format": "prettier --write . --cache",
+    "format:check": "prettier --check . --cache"
   },
   "devDependencies": {
     "@types/eslint": "^8.44.2",

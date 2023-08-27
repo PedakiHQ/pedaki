@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "main": "index.js",
   "author": "Nathan David <me@vahor.fr>",
+  "repository": "https://github.com/PedakiHQ/pedaki/tree/main/packages/prettier-config",
+  "homepage": "https://www.pedaki.fr",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "scripts": {
     "format": "prettier --write .  --cache",
     "format:check": "prettier --check .  --cache"
