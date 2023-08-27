@@ -21,6 +21,10 @@ on:
     # Run at 19:26 UTC every Tuesday
     - cron: "26 19 * * 2"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   analyze:
     name: Analyze
