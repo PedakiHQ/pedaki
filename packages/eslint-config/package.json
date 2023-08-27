@@ -5,6 +5,7 @@
   "author": "Nathan David <me@vahor.fr>",
   "repository": "https://github.com/PedakiHQ/pedaki/tree/main/packages/eslint-config",
   "homepage": "https://www.pedaki.fr",
+  "description": "ESLint configuration for Pedaki projects",
   "license": "MIT",
   "private": false,
   "scripts": {
