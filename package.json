@@ -1,15 +1,38 @@
 {
   "name": "pedaki",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "version": "0.0.0",
+  "private": true,
+  "repository": "https://github.com/PedakiHQ/pedaki",
+  "homepage": "https://www.pedaki.fr",
   "author": "Nathan David <me@vahor.fr>",
-  "license": "MIT",
-  "dependencies": {
-    "@changesets/cli": "^2.26.2"
-  }
+  "license": "CC-BY-NC-SA-4.0",
+  "keywords": [
+    "pedaki"
+  ],
+  "scripts": {
+    "start": "dotenv -- turbo run start",
+    "format:check": "turbo run format:check",
+    "format": "turbo run format",
+    "clean": "turbo run clean",
+    "build": "dotenv -- turbo run build",
+    "test": "NODE_ENV=test dotenv -- turbo run test",
+    "dev": "dotenv -- turbo run dev",
+    "lint": "SKIP_ENV_VALIDATION=true && turbo run lint",
+    "publish:prepare": "turbo run publish:prepare",
+    "publish": "pnpm run publish:prepare && changeset publish",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.2",
+    "@types/node": "^18.17.11",
+    "turbo": "^1.10.13"
+  },
+  "engines": {
+    "node": ">=18.0.0 <19.0.0",
+    "pnpm": ">=8.0.0",
+    "yarn": "use-pnpm",
+    "npm": "use-pnpm"
+  },
+  "packageManager": "pnpm@8.7.0"
 }
