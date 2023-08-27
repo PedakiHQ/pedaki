@@ -1,0 +1,44 @@
+name: Code check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    if: github.event.pull_request.draft == false
+    name: Code check
+    env:
+      SKIP_ENV_VALIDATION: true
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install deps
+        run: pnpm install --child-concurrency 3 --frozen-lockfile --prefer-offline
+
+      - name: Run eslint
+        run: pnpm lint
+
+      - name: Run prettier
+        run: pnpm format:check
+
+      - name: Run typescript
+        run: pnpm typecheck

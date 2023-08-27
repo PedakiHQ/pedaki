@@ -1,0 +1,16 @@
+# https://github.com/github/issue-labeler#create-workflow
+name: Label issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  triage:
+    name: Triage
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Run issue labeler'
+        uses: github/issue-labeler@v3.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

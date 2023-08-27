@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", ":preserveSemverRanges", ":prHourlyLimit2"],
+  "ignorePaths": ["node_modules"],
+  "nvm": {
+    "enabled": true
+  },
+  "npm": {
+    "rollbackPrs": true
+  },
+  "packageRules": [
+  ]
+}
