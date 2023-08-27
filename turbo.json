@@ -4,6 +4,13 @@
     "**/.env.*local"
   ],
   "pipeline": {
+    "publish": {
+      "dependsOn": [
+        "build",
+        "lint",
+        "typecheck"
+      ]
+    },
     "build": {
       "dependsOn": [
         "^build"
