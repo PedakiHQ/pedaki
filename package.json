@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "private": "true",
+  "private": true,
   "packageManager": "pnpm@8.6.10",
   "engines": {
     "node": ">=18.0.0 <19.0.0",
