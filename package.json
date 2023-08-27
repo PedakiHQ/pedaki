@@ -34,5 +34,5 @@
     "yarn": "use-pnpm",
     "npm": "use-pnpm"
   },
-  "packageManager": "pnpm@8.6.10"
+  "packageManager": "pnpm@8.7.0"
 }
