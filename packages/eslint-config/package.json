@@ -1,16 +1,25 @@
 {
   "name": "@pedaki/eslint-config",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "author": "Nathan David <me@vahor.fr>",
+  "repository": "https://github.com/PedakiHQ/pedaki/tree/main/packages/eslint-config",
+  "homepage": "https://www.pedaki.fr",
+  "description": "ESLint configuration for Pedaki projects",
   "license": "MIT",
-  "private": "false",
+  "private": false,
+  "scripts": {
+    "format": "prettier --write . --cache",
+    "format:check": "prettier --check . --cache"
+  },
   "devDependencies": {
     "@types/eslint": "^8.44.2",
     "@typescript-eslint/eslint-plugin": "6.4.1",
     "@typescript-eslint/parser": "6.4.1",
-    "eslint": "^8.47.0",
     "eslint-config-next": "^13.4.19",
     "eslint-config-prettier": "^9.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.47.0"
   }
 }

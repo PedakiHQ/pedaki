@@ -34,6 +34,15 @@
     },
     "typecheck": {
       "cache": false
+    },
+    "publish:prepare": {
+      "dependsOn": [
+        "build",
+        "lint",
+        "format:check",
+        "typecheck"
+      ],
+      "cache": false
     }
   }
 }
