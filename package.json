@@ -20,8 +20,8 @@
     "test": "NODE_ENV=test dotenv -- turbo run test",
     "dev": "dotenv -- turbo run dev",
     "lint": "SKIP_ENV_VALIDATION=true && turbo run lint",
-    "release": "turbo run publish",
-    "publish": "changeset publish",
+    "publish:prepare": "turbo run publish:prepare",
+    "publish": "pnpm run publish:prepare && changeset publish",
     "typecheck": "turbo run typecheck"
   },
   "keywords": [
