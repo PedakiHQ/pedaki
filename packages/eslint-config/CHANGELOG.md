@@ -1,5 +1,11 @@
 # @pedaki/eslint-config
 
+## 0.0.3
+
+### Patch Changes
+
+- [`3c9a600`](https://github.com/PedakiHQ/pedaki/commit/3c9a600862c98437b71952c806910e30a36e85e0) Thanks [@Vahor](https://github.com/Vahor)! - move eslint-config-next and others to dependencies
+
 ## 0.0.2
 
 ### Patch Changes
