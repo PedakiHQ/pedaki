@@ -11,21 +11,24 @@
   ],
   "scripts": {
     "start": "dotenv -- turbo run start",
-    "format:check": "turbo run format:check",
-    "format": "turbo run format",
-    "clean": "turbo run clean",
     "build": "dotenv -- turbo run build",
     "test": "NODE_ENV=test dotenv -- turbo run test",
     "dev": "dotenv -- turbo run dev",
     "lint": "SKIP_ENV_VALIDATION=true && turbo run lint",
-    "publish:prepare": "turbo run publish:prepare",
-    "publish": "pnpm run publish:prepare && changeset publish",
-    "typecheck": "turbo run typecheck"
+    "format:check": "turbo run format:check",
+    "typecheck": "turbo run typecheck",
+    "format": "turbo run format",
+    "clean": "turbo run clean && rimraf node_modules",
+    "check": "turbo typecheck lint format:check",
+    "publish:prepare": "pnpm check && turbo run publish:prepare",
+    "publish": "pnpm run publish:prepare && changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.2",
+    "@manypkg/cli": "^0.21.0",
     "@types/node": "^18.17.11",
+    "rimraf": "^5.0.1",
     "turbo": "^1.10.13"
   },
   "engines": {

@@ -37,10 +37,7 @@
     },
     "publish:prepare": {
       "dependsOn": [
-        "build",
-        "lint",
-        "format:check",
-        "typecheck"
+        "build"
       ],
       "cache": false
     }
