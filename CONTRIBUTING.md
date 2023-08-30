@@ -22,7 +22,7 @@ pnpm install
 
 ### Prerequisites
 
-Before you submit your pull request, start by [opening an issue](https://github.com/PedakiHQ/pedaki/issues/new/choose) describing the problem you want to solve or the feature you want to add.\
+Before you submit your pull request, start by [opening an issue](https://github.com/PedakiHQ/pedaki/issues/new/choose) describing the problem you want to solve.\
 This will allow us to discuss this change and make sure it's not already being worked on.
 
 ### When you are done
