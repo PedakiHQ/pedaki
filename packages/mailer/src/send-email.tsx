@@ -20,7 +20,7 @@ export const sendEmail = async <T,>(
   ) {
     const previewEmail = (await import("preview-email")).default;
     // TODO: add randomId
-// import { randomId } from "../lib/random";
+    // import { randomId } from "../lib/random";
 
     await previewEmail(
       {
@@ -35,7 +35,7 @@ export const sendEmail = async <T,>(
       },
     );
 
-    return Promise.resolve({ MessageId: 'randomId()' });
+    return Promise.resolve({ MessageId: "randomId()" });
   }
 
   return resend.sendEmail({

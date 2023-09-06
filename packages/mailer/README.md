@@ -6,9 +6,9 @@ There is currently multiples issues with `react-mailer`:
 
 - When starting the dev server, you'll have to manually install the dependencies inside the `.react-email` folder.
 
-    ```bash
-    cd packages/mailer/.react-email && yarn install --frozen-lockfile
-    ```
+  ```bash
+  cd packages/mailer/.react-email && yarn install --frozen-lockfile
+  ```
 
 - When killing the dev-server sometimes, the server stays open, so you'll have to kill the app manually.
 

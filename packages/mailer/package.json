@@ -1,6 +1,6 @@
 {
   "name": "@pedaki/mailer",
-  "version": "0.0.4",
+  "version": "0.0.0",
   "author": "Nathan David <me@vahor.fr>",
   "repository": "https://github.com/PedakiHQ/pedaki/tree/main/packages/mailer",
   "homepage": "https://www.pedaki.fr",

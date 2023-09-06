@@ -15,7 +15,7 @@
 - [Next.js](https://nextjs.org/) - Framework React
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
 - [Prisma](https://www.prisma.io/) - ORM
-- [Resend](https://resend.io/) - Email
+- [Resend](https://resend.com/) - Email
 - [NextAuth.js](https://next-auth.js.org/) - Authentication
 
 # Contributing
