@@ -5,7 +5,7 @@ import * as React from "react";
 import { type Mail } from "../type";
 import { FROM_EMAIL_NO_REPLY } from "../constants";
 
-export const ConfirmEmailTemplate: Mail<{
+const ConfirmEmailTemplate: Mail<{
   name: string;
   url: string;
 }> = ({

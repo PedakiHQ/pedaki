@@ -1,1 +1,1 @@
-export * from "./confirm-email";
+export { default as ConfirmEmailTemplate } from "./confirm-email";
