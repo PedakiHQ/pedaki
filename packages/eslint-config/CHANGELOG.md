@@ -1,5 +1,11 @@
 # @pedaki/eslint-config
 
+## 0.0.4
+
+### Patch Changes
+
+- [#12](https://github.com/PedakiHQ/pedaki/pull/12) [`a7f5e50`](https://github.com/PedakiHQ/pedaki/commit/a7f5e50e20947ca800683b0ca90b32647c4ae4ff) Thanks [@renovate](https://github.com/apps/renovate)! - update pnpm to v8.7.4
+
 ## 0.0.3
 
 ### Patch Changes
