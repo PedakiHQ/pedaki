@@ -22,8 +22,7 @@
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "verbatimModuleSyntax": true,
-    "experimentalDecorators": true,
-    "baseUrl": "."
+    "experimentalDecorators": true
   },
-  "exclude": ["node_modules", ".react-email", ".idea", ".github", "src/preview-email.pug"]
+  "exclude": ["node_modules", ".react-email", ".idea", ".github", "src/preview-email.pug", "dist"]
 }

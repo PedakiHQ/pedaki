@@ -5,7 +5,7 @@ import * as React from "react";
 import { type Mail } from "../type";
 import { FROM_EMAIL_NO_REPLY } from "../constants";
 
-const ConfirmEmailEmail: Mail<{
+export const ConfirmEmailTemplate: Mail<{
   name: string;
   url: string;
 }> = ({
@@ -23,7 +23,7 @@ const ConfirmEmailEmail: Mail<{
   );
 };
 
-ConfirmEmailEmail.sender = FROM_EMAIL_NO_REPLY;
-ConfirmEmailEmail.subject = () => `Confirmer votre adresse email`;
+ConfirmEmailTemplate.sender = FROM_EMAIL_NO_REPLY;
+ConfirmEmailTemplate.subject = () => `Confirmer votre adresse email`;
 
-export default ConfirmEmailEmail;
+export default ConfirmEmailTemplate;

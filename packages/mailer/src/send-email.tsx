@@ -1,8 +1,6 @@
 import { Resend } from "resend";
 import { type Mail } from "./type";
 import { render } from "@react-email/render";
-import previewEmail from "preview-email";
-// import { randomId } from "../lib/random";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -20,6 +18,10 @@ export const sendEmail = async <T,>(
     process.env.NODE_ENV === "development" &&
     process.env.MAILER_PREVIEW !== "false"
   ) {
+    const previewEmail = (await import("preview-email")).default;
+    // TODO: add randomId
+// import { randomId } from "../lib/random";
+
     await previewEmail(
       {
         from: sender,
@@ -29,8 +31,7 @@ export const sendEmail = async <T,>(
       },
       {
         openSimulator: false,
-        // TODO: this is not great
-        template: "node_modules/@pedaki/common/mailer/preview-email.pug",
+        template: "./preview-email.pug",
       },
     );
 
