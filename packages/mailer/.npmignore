@@ -1,0 +1,4 @@
+tsconfig.json
+.gitignore
+tsup.config.ts
+src/preview-email.pug

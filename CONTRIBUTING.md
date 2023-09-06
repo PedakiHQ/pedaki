@@ -3,12 +3,12 @@
 ## Table of Contents
 
 - [Development workflow](#development-workflow)
-  - [Install dependencies](#install-dependencies)
+    - [Install dependencies](#install-dependencies)
 - [How to contribute](#how-to-contribute)
 
 ## Development workflow
 
-We use [pnpm](https://pnpm.js.org/) as our package manager. 
+We use [pnpm](https://pnpm.js.org/) as our package manager.
 
 ### Install dependencies
 
@@ -20,9 +20,22 @@ pnpm install
 
 ## How to contribute
 
+### Usefull commands
+
+| Command          | Description                                                            |
+|------------------|------------------------------------------------------------------------|
+| `pnpm build`     | Build the project                                                      |
+| `pnpm dev`       | Start the development server                                           |
+| `pnpm mail:dev`  | Start the mail preview server, alias for `pnpm dev --filter mailer`    |
+| `pnpm test`      | Run the tests                                                          |
+| `pnpm lint`      | Run the linter                                                         |
+| `pnpm check`     | Run the tests and the linter                                           |
+| `pnpm changeset` | Create a changeset                                                     |
+
 ### Prerequisites
 
-Before you submit your pull request, start by [opening an issue](https://github.com/PedakiHQ/pedaki/issues/new/choose) describing the problem you want to solve.\
+Before you submit your pull request, start by [opening an issue](https://github.com/PedakiHQ/pedaki/issues/new/choose)
+describing the problem you want to solve.\
 This will allow us to discuss this change and make sure it's not already being worked on.
 
 ### When you are done
