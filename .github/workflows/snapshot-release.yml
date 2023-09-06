@@ -91,7 +91,7 @@ jobs:
         id: changeset
         run: |
           pnpm exec changeset version --snapshot
-          pnpm run publish:prepare
+          pnpm turbo publish:prepare
           output=$(pnpm exec changeset publish --tag next)
           echo "$output"
            
