@@ -14,6 +14,7 @@
     "build": "dotenv -- turbo run build",
     "test": "NODE_ENV=test dotenv -- turbo run test",
     "dev": "dotenv -- turbo run dev",
+    "dev:mail": "dotenv -- turbo run dev --filter mailer",
     "lint": "SKIP_ENV_VALIDATION=true && turbo run lint",
     "format:check": "turbo run format:check",
     "typecheck": "turbo run typecheck",
@@ -27,7 +28,8 @@
     "@manypkg/cli": "^0.21.0",
     "@types/node": "^18.17.11",
     "rimraf": "^5.0.1",
-    "turbo": "^1.10.13"
+    "turbo": "^1.10.13",
+    "dotenv-cli": "^7.3.0"
   },
   "engines": {
     "node": ">=18.0.0 <19.0.0",

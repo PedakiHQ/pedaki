@@ -1,0 +1,44 @@
+{
+  "name": "@pedaki/mailer",
+  "version": "0.0.4",
+  "author": "Nathan David <me@vahor.fr>",
+  "repository": "https://github.com/PedakiHQ/pedaki/tree/main/packages/mailer",
+  "homepage": "https://www.pedaki.fr",
+  "description": "Mail system and templates for Pedaki",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "email dev -d src/templates -p 4000",
+    "build": "tsup",
+    "format": "prettier --write .  --cache",
+    "format:check": "prettier --check .  --cache"
+  },
+  "devDependencies": {
+    "@types/preview-email": "^3.0.1",
+    "@types/react": "^18.2.21",
+    "preview-email": "^3.0.19",
+    "react": "^18.2.0",
+    "tsup": "^7.2.0"
+  },
+  "peerDependencies": {
+    "@react-email/button": "0.0.10",
+    "@react-email/head": "0.0.5",
+    "@react-email/html": "0.0.4",
+    "@react-email/link": "0.0.5",
+    "@react-email/render": "0.0.7",
+    "@react-email/tailwind": "0.0.8",
+    "react-email": "1.9.4",
+    "resend": "^1.0.0"
+  }
+}
