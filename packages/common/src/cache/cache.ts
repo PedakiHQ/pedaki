@@ -10,7 +10,7 @@ export const cache = async <T>(
     return fn();
   }
 
-  if (options?.type === 'memory') {
+  if (!options?.type || options.type === 'memory') {
     return memoryCache(fn, key, options);
   }
 
@@ -18,7 +18,7 @@ export const cache = async <T>(
 };
 
 export const revalidate = (key: string, options?: Pick<CacheOptions, 'type'>) => {
-  if (options?.type === 'memory') {
+  if (!options?.type || options.type === 'memory') {
     return memoryRevalidate(key);
   }
 
