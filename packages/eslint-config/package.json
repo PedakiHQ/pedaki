@@ -3,7 +3,11 @@
   "version": "0.0.4",
   "main": "index.js",
   "author": "Nathan David <me@vahor.fr>",
-  "repository": "https://github.com/PedakiHQ/pedaki/tree/main/packages/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PedakiHQ/pedaki",
+    "directory": "packages/eslint-config"
+  },
   "homepage": "https://www.pedaki.fr",
   "description": "ESLint configuration for Pedaki projects",
   "license": "MIT",
@@ -13,7 +17,8 @@
     "format:check": "prettier --check . --cache"
   },
   "devDependencies": {
-    "@types/eslint": "^8.44.2"
+    "@types/eslint": "^8.44.2",
+    "@pedaki/prettier-config": "0.0.4"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "6.6.0",
@@ -23,5 +28,6 @@
   },
   "peerDependencies": {
     "eslint": "^8.47.0"
-  }
+  },
+  "prettier": "@pedaki/prettier-config"
 }

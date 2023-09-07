@@ -3,7 +3,11 @@
   "version": "0.0.4",
   "main": "index.js",
   "author": "Nathan David <me@vahor.fr>",
-  "repository": "https://github.com/PedakiHQ/pedaki/tree/main/packages/prettier-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PedakiHQ/pedaki",
+    "directory": "packages/prettier-config"
+  },
   "homepage": "https://www.pedaki.fr",
   "description": "Prettier configuration for Pedaki projects",
   "license": "MIT",

@@ -11,15 +11,15 @@
   "packageRules": [
     {
       "groupName": "react-email",
-      "matchPackageNames": [
-        "react-email",
-
-        "@react-email/button",
-        "@react-email/head",
-        "@react-email/html",
-        "@react-email/link",
-        "@react-email/render",
-        "@react-email/tailwind"
+      "matchPackagePatterns": [
+        "^react-email",
+        "^@react-email/*"
+      ]
+    },
+    {
+      "groupName": "radix-ui",
+      "matchPackagePatterns": [
+        "^@radix-ui/*"
       ]
     }
   ]
