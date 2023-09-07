@@ -12,7 +12,9 @@
   "scripts": {
     "start": "dotenv -- turbo run start",
     "build": "dotenv -- turbo run build",
-    "test": "NODE_ENV=test dotenv -- turbo run test",
+    "test": "NODE_ENV=test dotenv -e .env.test -c -- turbo run test",
+    "test:coverage": "NODE_ENV=test dotenv -e .env.test -c -- turbo run test:coverage",
+    "test:watch": "NODE_ENV=test dotenv -e .env.test -c -- turbo run test:watch",
     "dev": "dotenv -- turbo run dev",
     "dev:mail": "dotenv -- turbo run dev --filter mailer",
     "lint": "SKIP_ENV_VALIDATION=true && turbo run lint",
@@ -23,13 +25,16 @@
     "check": "turbo typecheck lint format:check"
   },
   "devDependencies": {
-    "@types/node": "^18.17.14",
     "@changesets/changelog-github": "latest",
     "@changesets/cli": "latest",
-    "dotenv-cli": "latest",
+    "@types/node": "^18.17.14",
+    "@vitest/coverage-v8": "^0.34.3",
     "copyfiles": "latest",
+    "dotenv-cli": "latest",
     "rimraf": "latest",
-    "turbo": "latest"
+    "turbo": "latest",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.3"
   },
   "engines": {
     "node": ">=18.0.0 <19.0.0",

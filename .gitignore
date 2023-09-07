@@ -6,3 +6,7 @@ node_modules
 yalc.lock
 dist
 .eslintcache
+coverage
+.env.*
+!*.env.test.example
+!*.env.example

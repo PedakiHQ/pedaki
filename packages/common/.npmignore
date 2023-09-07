@@ -4,6 +4,9 @@ tsup.config.ts
 src
 .turbo
 CHANGELOG.md
-.prettierignore
-.react-email
+components.json
 .eslintrc.cjs
+.eslintcache
+.prettierignore
+css.d.ts
+coverage
