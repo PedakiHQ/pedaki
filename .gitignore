@@ -2,3 +2,5 @@
 node_modules
 .envrc
 .turbo
+.yalc
+yalc.lock

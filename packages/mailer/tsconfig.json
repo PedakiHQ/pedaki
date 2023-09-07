@@ -24,12 +24,5 @@
     "verbatimModuleSyntax": true,
     "experimentalDecorators": true
   },
-  "exclude": [
-    "node_modules",
-    ".react-email",
-    ".idea",
-    ".github",
-    "src/preview-email.pug",
-    "dist"
-  ]
+  "exclude": ["node_modules", ".react-email", ".idea", ".github", "src/preview-email.pug", "dist"]
 }
