@@ -7,6 +7,6 @@ CHANGELOG.md
 components.json
 .eslintrc.cjs
 .eslintcache
-../../.prettierignore
+.prettierignore
 css.d.ts
 coverage

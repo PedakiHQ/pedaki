@@ -4,3 +4,6 @@ tsup.config.ts
 src
 .turbo
 CHANGELOG.md
+.prettierignore
+.react-email
+.eslintrc.cjs
