@@ -12,13 +12,14 @@ You need to use this tsconfig:
   }
 }
 ```
+
 or more recent.
 
 If you are using `Next.js`, add this in your configuration:
 
 ```js file=next.config.js
 experimental: {
-    esmExternals: true
+  esmExternals: true;
 }
 ```
 
