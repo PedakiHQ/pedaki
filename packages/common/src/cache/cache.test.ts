@@ -1,28 +1,3 @@
-// export const cache = async <T>(
-//   fn: (() => Promise<T>) | T,
-//   key: string,
-//   options?: CacheOptions,
-// ): Promise<T> => {
-//   if (options?.ignoreCache) {
-//     return fn instanceof Function ? fn() : fn;
-//   }
-//
-//   if (!options?.type || options.type === 'memory') {
-//     return memoryCache(fn, key, options);
-//   }
-//
-//   throw new Error('Invalid cache type');
-// };
-//
-// export const revalidate = (key: string, options?: Pick<CacheOptions, 'type'>) => {
-//   if (!options?.type || options.type === 'memory') {
-//     return memoryRevalidate(key);
-//   }
-//
-//   throw new Error('Invalid cache type');
-// };
-// noinspection DuplicatedCode
-
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import { cache, getCache, isStale, revalidate, revalidateAll } from './cache';
 

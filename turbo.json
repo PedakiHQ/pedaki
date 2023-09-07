@@ -20,10 +20,8 @@
     },
     "lint": {},
     "format": {
-      "cache": false
     },
     "format:check": {
-      "cache": false
     },
     "dev": {
       "cache": false,
