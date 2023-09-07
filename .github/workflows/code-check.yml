@@ -42,3 +42,7 @@ jobs:
 
       - name: Run typescript
         run: pnpm typecheck
+
+      - name: Run tests
+        if: always()
+        run: pnpm test

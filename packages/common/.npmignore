@@ -9,3 +9,4 @@ components.json
 .eslintcache
 .prettierignore
 css.d.ts
+coverage

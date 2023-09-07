@@ -25,6 +25,6 @@
     "experimentalDecorators": true,
     "baseUrl": "."
   },
-  "include": ["css.d.ts", "src/**/*", "tsup.config.ts"],
+  "include": ["css.d.ts", "src/**/*", "tsup.config.ts", "../../vite.config.ts"],
   "exclude": ["node_modules", ".idea", ".github", "dist"]
 }

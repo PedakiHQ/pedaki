@@ -1,3 +1,5 @@
+/* c8 ignore start */
+
 import { useEffect } from 'react';
 
 export const useScrollLock = (isLocked: boolean) => {

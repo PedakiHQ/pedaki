@@ -1,3 +1,5 @@
+/* c8 ignore start */
+
 'use client';
 
 import { toast } from 'sonner';

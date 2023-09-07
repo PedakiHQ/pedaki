@@ -1,3 +1,5 @@
+/* c8 ignore start */
+
 // Based on https://github.com/coffee-cup/gradient-avatars/blob/main/src/gradients.ts
 
 import { hsl } from './colors';

@@ -3,11 +3,11 @@ import { formatData } from './shared';
 import type { CachedData, MemoryCacheOptions } from './types';
 
 export const cache = async <T>(
-  fn: () => Promise<T>,
+  fn: (() => Promise<T>) | T,
   key: string,
   options?: MemoryCacheOptions,
 ): Promise<T> => {
-  const value = cacheData.get(key) as CachedData<T> | null;
+  const value = getCache<T>(key);
   const hit = value !== null && value !== undefined;
 
   if (hit) {
@@ -18,7 +18,7 @@ export const cache = async <T>(
   }
 
   try {
-    const newValue = await fn();
+    const newValue = fn instanceof Function ? await fn() : fn;
 
     cacheData.put(key, formatData(newValue), options?.keepStale ? undefined : options?.ttl);
     return newValue;
@@ -33,4 +33,12 @@ export const cache = async <T>(
 
 export const revalidate = (key: string) => {
   cacheData.del(key);
+};
+
+export const revalidateAll = () => {
+  cacheData.clear();
+};
+
+export const getCache = <T>(key: string): CachedData<T> | null => {
+  return cacheData.get(key) as CachedData<T> | null;
 };

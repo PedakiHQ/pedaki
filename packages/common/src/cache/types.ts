@@ -1,8 +1,9 @@
+/* c8 ignore start */
 export type CacheType = 'memory';
 
 export interface CacheOptions {
   ignoreCache?: boolean;
-  ttl: number | undefined;
+  ttl?: number;
   keepStale?: boolean;
   // Default: memory
   type?: CacheType;

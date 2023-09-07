@@ -35,6 +35,14 @@
     "typecheck": {
       "cache": false
     },
+    "test": {
+    },
+    "test:watch": {
+      "cache": false
+    },
+    "test:coverage": {
+      "cache": false
+    },
     "publish:prepare": {
       "dependsOn": [
         "build"
