@@ -10,7 +10,6 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "build": "tsup",
     "format": "prettier --write . --cache",
     "format:check": "prettier --check . --cache"
   },
