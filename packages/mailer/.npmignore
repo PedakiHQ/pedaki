@@ -2,6 +2,7 @@ tsconfig.json
 .gitignore
 tsup.config.ts
 src
+dist/*.map
 .turbo
 CHANGELOG.md
 .prettierignore
