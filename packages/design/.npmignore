@@ -6,3 +6,6 @@ src
 CHANGELOG.md
 components.json
 .eslintrc.cjs
+.eslintcache
+.prettierignore
+css.d.ts
