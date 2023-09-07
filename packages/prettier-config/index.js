@@ -9,6 +9,7 @@ const config = {
   printWidth: 100,
   arrowParens: "avoid",
   tabWidth: 2,
+  tailwindFunctions: ["cn"],
 };
 
 module.exports = config;

@@ -25,5 +25,6 @@
     "experimentalDecorators": true,
     "baseUrl": "."
   },
-  "exclude": ["node_modules", ".react-email", ".idea", ".github", "src/preview-email.pug", "dist"]
+  "include": ["css.d.ts", "src/**/*", "tsup.config.ts"],
+  "exclude": ["node_modules", ".idea", ".github", "dist"]
 }
