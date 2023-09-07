@@ -1,0 +1,31 @@
+{
+  "name": "@pedaki/design",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Nathan David <me@vahor.fr>",
+  "repository": "https://github.com/PedakiHQ/pedaki/tree/main/packages/eslint-config",
+  "homepage": "https://www.pedaki.fr",
+  "description": "React components and theme for Pedaki",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "format": "prettier --write . --cache",
+    "format:check": "prettier --check . --cache"
+  },
+  "devDependencies": {
+    "@types/preview-email": "^3.0.1",
+    "react": "^18.2.0",
+    "tsup": "^7.2.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "6.6.0",
+    "@typescript-eslint/parser": "6.6.0",
+    "eslint-config-next": "^13.4.19",
+    "eslint-config-prettier": "^9.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.47.0"
+  }
+}

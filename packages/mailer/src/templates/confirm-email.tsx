@@ -1,17 +1,14 @@
-import { Html } from "@react-email/html";
-import { Link } from "@react-email/link";
-import { Head } from "@react-email/head";
-import * as React from "react";
-import { type Mail } from "../type";
-import { FROM_EMAIL_NO_REPLY } from "../constants";
+import { Head } from '@react-email/head';
+import { Html } from '@react-email/html';
+import { Link } from '@react-email/link';
+import * as React from 'react';
+import { FROM_EMAIL_NO_REPLY } from '../constants';
+import type { Mail } from '../type';
 
 const ConfirmEmailTemplate: Mail<{
   name: string;
   url: string;
-}> = ({
-  name = "name",
-  url = "https://example.com/confirm-email?token=123",
-}) => {
+}> = ({ name = 'name', url = 'https://example.com/confirm-email?token=123' }) => {
   return (
     <Html>
       <Head />
