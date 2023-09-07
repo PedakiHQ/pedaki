@@ -22,7 +22,7 @@
     "typecheck": "turbo run typecheck",
     "format": "turbo run format",
     "clean": "turbo run clean && rimraf node_modules",
-    "check": "turbo typecheck lint format:check"
+    "check": "turbo typecheck lint format:check test"
   },
   "devDependencies": {
     "@changesets/changelog-github": "latest",

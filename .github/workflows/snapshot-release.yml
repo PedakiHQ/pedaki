@@ -87,11 +87,14 @@ jobs:
             //registry.npmjs.org/:_authToken=$NPM_TOKEN
           EOF
 
+      - name: Check for errors
+        run: pnpm run check
+
       - name: Run Changeset
         id: changeset
         run: |
           pnpm exec changeset version --snapshot
-          pnpm turbo publish:prepare
+          pnpm turbo build
           output=$(pnpm exec changeset publish --tag next)
           echo "$output"
            

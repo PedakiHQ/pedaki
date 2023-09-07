@@ -40,12 +40,6 @@
     },
     "test:coverage": {
       "cache": false
-    },
-    "publish:prepare": {
-      "dependsOn": [
-        "build"
-      ],
-      "cache": false
     }
   }
 }

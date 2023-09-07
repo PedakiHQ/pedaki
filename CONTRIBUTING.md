@@ -20,17 +20,27 @@ pnpm install
 
 ## How to contribute
 
-### Usefull commands
+### Recommended workflow
 
-| Command          | Description                                                            |
-|------------------|------------------------------------------------------------------------|
-| `pnpm build`     | Build the project                                                      |
-| `pnpm dev`       | Start the development server                                           |
-| `pnpm mail:dev`  | Start the mail preview server, alias for `pnpm dev --filter mailer`    |
-| `pnpm test`      | Run the tests                                                          |
-| `pnpm lint`      | Run the linter                                                         |
-| `pnpm check`     | Run the tests and the linter                                           |
-| `pnpm changeset` | Create a changeset                                                     |
+Open two terminals:
+1. In the first one, run `pnpm dev` to start the development server.
+2. On the second one, run `pnpm build` to rebuild the project when you make changes.
+   1. To sync your changes I recommend to use [yalc](https://github.com/wclr/yalc) to publish your local changes to your local npm registry. (`yalk push` in the packages you want to sync, `yalk add <package-name>` in the project you want to use the local version of the package)
+
+### Useful commands
+
+| Command              | Description                                                            |
+|----------------------|------------------------------------------------------------------------|
+| `pnpm build`         | Build the project                                                      |
+| `pnpm build:watch`   | Build the project                                                      |
+| `pnpm dev`           | Start the development server                                           |
+| `pnpm mail:dev`      | Start the mail preview server, alias for `pnpm dev --filter mailer`    |
+| `pnpm test`          | Run the tests                                                          |
+| `pnpm test:watch`    | Run the tests                                                          |
+| `pnpm test:coverage` | Run the tests                                                          |
+| `pnpm lint`          | Run the linter                                                         |
+| `pnpm check`         | Run the tests and the linter                                           |
+| `pnpm changeset`     | Create a changeset                                                     |
 
 ### Prerequisites
 
