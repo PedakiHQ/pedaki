@@ -1,5 +1,11 @@
 # @pedaki/prettier-config
 
+## 0.0.5
+
+### Patch Changes
+
+- [#18](https://github.com/PedakiHQ/pedaki/pull/18) [`1e63934`](https://github.com/PedakiHQ/pedaki/commit/1e6393416b8101b42674252b12dcfd5130a4b0b2) Thanks [@Vahor](https://github.com/Vahor)! - remove tailwindConfig from the default config
+
 ## 0.0.4
 
 ### Patch Changes
