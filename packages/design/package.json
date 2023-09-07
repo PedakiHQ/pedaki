@@ -22,26 +22,22 @@
   "exports": {
     "./icons": {
       "types": "./dist/ui/icons/index.d.ts",
-      "import": "./dist/ui/icons/index.js",
-      "require": "./dist/ui/icons/index.js"
+      "import": "./dist/ui/icons/index.js"
     },
     ".": {
       "types": "./dist/ui/index.d.ts",
-      "import": "./dist/ui/index.js",
-      "require": "./dist/ui/index.js"
+      "import": "./dist/ui/index.js"
     },
     "./styles.css": "./dist/tailwind/index.css",
     "./tailwind.config": "./dist/tailwind/tailwind.config.ts",
     "./package.json": "./package.json",
     "./fonts": {
       "types": "./dist/fonts.d.ts",
-      "import": "./dist/fonts.js",
-      "require": "./dist/fonts.js"
+      "import": "./dist/fonts.js"
     },
     "./utils": {
       "types": "./dist/utils/index.d.ts",
-      "import": "./dist/utils/index.js",
-      "require": "./dist/utils/index.js"
+      "import": "./dist/utils/index.js"
     }
   },
   "scripts": {
