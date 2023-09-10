@@ -16,33 +16,12 @@
     "**/*.css",
     "**/*.scss"
   ],
-  "main": "dist/ui/index.js",
-  "module": "dist/ui/index.js",
-  "types": "dist/ui/index.d.ts",
-  "exports": {
-    "./icons": {
-      "types": "./dist/ui/icons/index.d.ts",
-      "import": "./dist/ui/icons/index.js"
-    },
-    ".": {
-      "types": "./dist/ui/index.d.ts",
-      "import": "./dist/ui/index.js"
-    },
-    "./styles.css": "./dist/tailwind/index.css",
-    "./tailwind.config": "./dist/tailwind/tailwind.config.ts",
-    "./package.json": "./package.json",
-    "./fonts": {
-      "types": "./dist/fonts.d.ts",
-      "import": "./dist/fonts.js"
-    },
-    "./utils": {
-      "types": "./dist/utils/index.d.ts",
-      "import": "./dist/utils/index.js"
-    }
+  "publishConfig": {
+    "directory": "dist"
   },
   "scripts": {
-    "build": "tsup --onSuccess \"pnpm copy-static\"",
-    "copy-static": "copyfiles -u 1 \"src/**/*.{css,scss,svg,config.ts}\" dist",
+    "build": "tsup && npm run copy-static",
+    "copy-static": "copyfiles -u 1 \"src/**/*.{css,scss,svg,config.ts}\" dist && node ../../scripts/prepare-dist.js && node scripts/add-directive-dist.cjs",
     "lint": "eslint . --cache",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write . --cache",

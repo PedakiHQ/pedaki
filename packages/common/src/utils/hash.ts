@@ -1,5 +1,5 @@
 import * as crypto from 'crypto';
-import bcrypt from '@node-rs/bcrypt';
+import bcrypt from 'bcryptjs';
 
 export const hash256 = (input: string): string => {
   const sha256 = crypto.createHash('sha256');
@@ -12,7 +12,8 @@ export const hmac = (input: string, secret = ''): string => {
 };
 
 export const hashPassword = (password: string, pepper: string): string => {
-  return bcrypt.hashSync(hmac(password, pepper), 12);
+  const salt = bcrypt.genSaltSync(12);
+  return bcrypt.hashSync(hmac(password, pepper), salt);
 };
 
 export const matchPassword = (

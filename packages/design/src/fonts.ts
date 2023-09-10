@@ -1,19 +1,18 @@
 import { Fira_Code, Open_Sans } from 'next/font/google';
-import { cn } from './utils';
 
-export const FontSans = Open_Sans({
+const OpenSansOptions = {
   display: 'swap',
   variable: '--font-sans',
   subsets: ['latin'],
   preload: true,
-});
+} as Parameters<typeof Open_Sans>[0];
 
-export const FontMono = Fira_Code({
+const FireCodeOptions = {
   weight: ['400', '500', '700'],
   display: 'swap',
   subsets: ['latin'],
   variable: '--font-mono',
   preload: false,
-});
+} as Parameters<typeof Fira_Code>[0];
 
-export const fontClassName: string = cn(FontSans.variable, FontMono.variable);
+export { Fira_Code as FireCodeRaw, FireCodeOptions, Open_Sans as OpenSansRaw, OpenSansOptions };
