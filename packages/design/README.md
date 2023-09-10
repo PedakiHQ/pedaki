@@ -41,8 +41,8 @@ Add this to your `tailwind.config.js`:
 
 ```js file=tailwind.config.js
 module.exports = {
-  content: ['@pedaki/design/**/*.{js,ts,jsx,tsx,mdx}'],
-  presets: [require('@pedaki/design/tailwind/tailwind.config')],
+    content: ['node_modules/@pedaki/design/**/*.{js,ts,jsx,tsx,mdx}', "src/**/*.{js,ts,jsx,tsx,mdx}"],
+    presets: [require('@pedaki/design/tailwind/tailwind.config')],
 };
 ```
 
