@@ -14,6 +14,6 @@ export default defineConfig((options: Options) => ({
   clean: true,
   bundle: false,
   external: ['react'],
-  inject: ["./scripts/react-import.js"],
+  inject: ['./scripts/react-import.js'],
   ...options,
 }));
