@@ -1,5 +1,11 @@
 # @pedaki/common
 
+## 0.0.2
+
+### Patch Changes
+
+- [`df77693`](https://github.com/PedakiHQ/pedaki/commit/df77693851bd5b7f0eb81bf288be1b40ec83e89a) Thanks [@Vahor](https://github.com/Vahor)! - replace node-rs/bcrypt with bcryptjs
+
 ## 0.0.1
 
 ### Patch Changes
