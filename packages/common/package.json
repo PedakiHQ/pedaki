@@ -37,7 +37,7 @@
   "peerDependencies": {
     "bcryptjs": "^2.4.3",
     "memory-cache": "^0.2.0",
-    "nanoid": "^4.0.2",
+    "nanoid": "^5.0.0",
     "sonner": "^0.7.0"
   },
   "prettier": "@pedaki/prettier-config"
