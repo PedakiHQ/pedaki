@@ -55,7 +55,6 @@
   html {
     scroll-behavior: smooth;
     @apply min-h-full;
-    color: rgb(var(--text-primary) / 1);
   }
 
   body {
