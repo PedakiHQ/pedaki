@@ -51,3 +51,7 @@ And import the global styles in your `layout.tsx`:
 ```tsx file=index.tsx
 import '@pedaki/design/styles.css';
 ```
+
+### Color system
+
+TODO
