@@ -25,6 +25,7 @@
 
     --background-primary: var(--white);
     --background-secondary: var(--gray-50);
+    --background-tertiary: var(--gray-100);
 
     --text-primary: var(--gray-850);
     --text-secondary: var(--gray-600);
@@ -44,6 +45,11 @@
 
   * {
     border-color: rgb(var(--border) / 1);
+  }
+
+  a {
+    width: fit-content;
+    display: inline-block;
   }
 
   html {

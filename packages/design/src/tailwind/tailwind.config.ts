@@ -53,6 +53,8 @@ export default {
       backgroundColor: {
         primary: 'rgb(var(--background-primary) / <alpha-value>)',
         secondary: 'rgb(var(--background-secondary) / <alpha-value>)',
+        tertiary: 'rgb(var(--background-tertiary) / <alpha-value>)',
+        border: 'rgb(var(--border) / <alpha-value>)',
       },
       textColor: {
         primary: 'rgb(var(--text-primary) / <alpha-value>)',
@@ -62,11 +64,15 @@ export default {
       borderColor: {
         primary: 'rgb(var(--text-primary) / <alpha-value>)',
         secondary: 'rgb(var(--text-secondary) / <alpha-value>)',
+        border: 'rgb(var(--border) / <alpha-value>)',
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+      },
+      ringOffsetColor: {
+        'bg-primary': 'rgb(var(--background-primary) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
