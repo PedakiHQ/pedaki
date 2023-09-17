@@ -8,6 +8,7 @@ export { default as IconChevronRight } from './IconChevronRight';
 export { default as IconChevronDown } from './IconChevronDown';
 export { default as IconTranslation } from './IconTranslation';
 export { default as IconX } from './IconX';
+export { default as IconInfoCircle } from './IconInfoCircle';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB';

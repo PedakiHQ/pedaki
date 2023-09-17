@@ -21,7 +21,7 @@
     --gray-850: 26 26 26; /* #1a1a1a */
     --gray-900: 25 22 21; /* #191615 */
 
-    --radius: 0.5rem;
+    --radius: 0.65rem;
 
     --background-primary: var(--white);
     --background-secondary: var(--gray-50);

@@ -25,7 +25,7 @@ experimental: {
 
 ### Icons
 
-Most of the icons comes from [lucide](https://lucide.dev/).
+Most of the icons comes from [lucide](https://lucide.dev/) or [remixicon](https://remixicon.com/).
 
 TODO
 
