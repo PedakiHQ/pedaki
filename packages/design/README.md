@@ -54,6 +54,4 @@ import '@pedaki/design/styles.css';
 
 ### Color system
 
-| UseCase    | What to use                     |
-|------------|---------------------------------|
-| Focus Ring | `orange-300 dark:orange-500/40` |
+TODO
