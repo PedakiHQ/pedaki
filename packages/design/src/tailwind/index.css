@@ -21,7 +21,6 @@
     --gray-850: 26 26 26; /* #1a1a1a */
     --gray-900: 25 22 21; /* #191615 */
 
-    --ring: var(--orange-300);
     --radius: 0.5rem;
 
     --background-primary: var(--white);
