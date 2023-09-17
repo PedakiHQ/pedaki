@@ -8,7 +8,7 @@ const buttonVariants = cva(
   [
     'group inline-flex items-center text-center justify-center gap-sm text-sm no-underline font-medium transition-colors gap-2',
     'disabled:text-gray-600',
-    'ring-offset-background  focus-visible:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2',
+    'ring-offset-background  focus-visible:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-1',
     'text-primary disabled:text-gray-300',
     'bg-white disabled:bg-gray-200',
     'disabled:cursor-not-allowed',
@@ -17,12 +17,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        outline: 'border-input bg-background hover:bg-accent hover:text-accent-foreground',
-        orange: [
+        outline: '',
+        orange_outline: [
           'bg-orange hover:bg-white',
           'border-orange-500 disabled:border-gray-200',
           'text-white hover:text-primary',
         ],
+        neutral: ['bg-gray-850', 'border-gray-850 hover:border-gray-800', 'text-white'],
+        orange: ['bg-orange', 'border-orange-500 hover:border-orange-600', 'text-white'],
         transparent: [
           'text-primary hover:text-orange',
           'bg-transparent',
@@ -32,6 +34,7 @@ const buttonVariants = cva(
       size: {
         default: 'h-10 px-4 py-2',
         sm: 'h-5 px-2',
+        lg: 'h-12 px-6 py-3',
         icon: 'h-10 w-10',
       },
       rounded: {
@@ -40,7 +43,7 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: 'outline',
+      variant: 'neutral',
       size: 'default',
       rounded: 'default',
     },
