@@ -1,5 +1,17 @@
 # @pedaki/design
 
+## 0.0.3
+
+### Patch Changes
+
+- [#32](https://github.com/PedakiHQ/pedaki/pull/32) [`390898a`](https://github.com/PedakiHQ/pedaki/commit/390898a16b63725803d12f1cfa3f84a293ce5c67) Thanks [@Vahor](https://github.com/Vahor)! - Simpler color system
+
+  Add Separator gradient.
+  You can now use `gradient="gray"` to have a gray gradient separator.
+
+  Add Callout component and InfoCallout.
+  Add ColorPill component.
+
 ## 0.0.2
 
 ### Patch Changes
