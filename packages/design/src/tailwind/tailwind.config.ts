@@ -25,19 +25,19 @@ export default {
     container: {
       center: true,
       padding: {
-        DEFAULT: "1.5rem",
-        sm: "3rem",
-        lg: "6rem",
-        xl: "7.5rem",
-        "2xl": "9rem"
+        DEFAULT: '1.5rem',
+        sm: '3rem',
+        lg: '6rem',
+        xl: '7.5rem',
+        '2xl': '9rem',
       },
       screens: {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-        '2xl': "1400px"
-      }
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1400px',
+      },
     },
     extend: {
       colors: {
