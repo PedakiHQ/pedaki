@@ -6,13 +6,14 @@ export interface BurgerProps {
   onClick?: () => void;
   active?: boolean;
   title?: string;
+  className?: string;
 }
 
-export const Burger = ({ onClick, active, title }: BurgerProps) => {
+export const Burger = ({ onClick, active, title, className }: BurgerProps) => {
   return (
     <button
       role="button"
-      className={classes.root}
+      className={cn(classes.root, className)}
       title={title ?? 'Open navigation'}
       onClick={onClick}
     >
