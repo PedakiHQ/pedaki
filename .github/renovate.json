@@ -6,7 +6,7 @@
     "enabled": true
   },
   "npm": {
-    "rollbackPrs": true
+    "rollbackPrs": false
   },
   "packageRules": [
     {
