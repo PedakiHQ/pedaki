@@ -1,5 +1,11 @@
 # @pedaki/common
 
+## 0.0.3
+
+### Patch Changes
+
+- [#30](https://github.com/PedakiHQ/pedaki/pull/30) [`ca940e9`](https://github.com/PedakiHQ/pedaki/commit/ca940e91fcb48f05fcc1e443a58e58f3b294b4a7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `nanoid` to `^5.0.0`.
+
 ## 0.0.2
 
 ### Patch Changes

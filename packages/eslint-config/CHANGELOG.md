@@ -1,5 +1,12 @@
 # @pedaki/eslint-config
 
+## 0.0.6
+
+### Patch Changes
+
+- [#34](https://github.com/PedakiHQ/pedaki/pull/34) [`2171381`](https://github.com/PedakiHQ/pedaki/commit/21713816c384c26e4d4b56406d5140c94410224d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@typescript-eslint/eslint-plugin` to `6.7.2`.
+  Updated dependency `@typescript-eslint/parser` to `6.7.2`.
+
 ## 0.0.5
 
 ### Patch Changes
