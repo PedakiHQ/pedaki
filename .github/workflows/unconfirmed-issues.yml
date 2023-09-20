@@ -1,0 +1,27 @@
+name: Unconfirmed Issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  labeler:
+    permissions: write-all
+    name: Labeler
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Add unconfirmed label'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            
+            let confirmation_labels = ['template: bug']
+            
+            if (context.payload.issue.labels.some(label => confirmation_labels.includes(label.name))) {
+              github.rest.issues.addLabels({
+                issue_number: context.payload.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: ['unconfirmed']
+              })
+            }
