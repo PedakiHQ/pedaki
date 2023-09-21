@@ -34,7 +34,7 @@ jobs:
         run: pnpm run check
 
       - name: Build
-        run: pnpm turbo build
+        run: pnpm turbo build --filter=!www
 
       - name: Create Release Pull Request or Publish
         id: changesets
