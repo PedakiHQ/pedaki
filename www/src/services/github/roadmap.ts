@@ -122,11 +122,6 @@ const fetchIssues = async (owner: string, name: string): Promise<Issue[]> => {
 
   const { data, errors } = (await response.json()) as JsonResponse;
 
-  console.log({
-    data: JSON.stringify(data),
-    errors: JSON.stringify(errors),
-  });
-
   // log headers
   console.log(`Headers for ${owner}/${name}:`, {
     'X-RateLimit-Limit': response.headers.get('X-RateLimit-Limit'),
