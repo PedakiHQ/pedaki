@@ -3,4 +3,5 @@ module.exports = {
     parserOptions: {
         project: true,
     },
+    ignorePatterns: ['**/dist/**/*', '**/node_modules/**/*', '**/scripts/**/*', ".next"],
 };
