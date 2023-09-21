@@ -31,7 +31,7 @@ jobs:
         run: pnpm install --child-concurrency 3 --frozen-lockfile --prefer-offline
 
       - name: Check for errors
-        run: pnpm run check
+        run: pnpm run check --filter=!www
 
       - name: Build
         run: pnpm turbo build --filter=!www
