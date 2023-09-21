@@ -1,0 +1,4 @@
+html {
+    font-size: 16px;
+    --removed-body-scroll-bar-size: 0px;
+}

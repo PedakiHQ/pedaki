@@ -1,0 +1,50 @@
+{
+  "name": "www",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PedakiApp/pedaki.fr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PedakiApp/pedaki.fr/issues"
+  },
+  "homepage": "https://www.pedaki.fr",
+  "engines": {
+    "node": ">=18.0.0 <19.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.7.5",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev -p 3000",
+    "lint": "next lint",
+    "start": "next start",
+    "clean": "rimraf .next",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
+    "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pedaki/common": "^0.0.3",
+    "@pedaki/design": "^0.0.3",
+    "@t3-oss/env-nextjs": "^0.6.1",
+    "dayjs": "^1.11.10",
+    "million": "^2.6.0",
+    "next": "13.5.1",
+    "next-auth": "^4.23.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-wrap-balancer": "^1.1.0",
+    "sanitize-html": "^2.11.0",
+    "sharp": "^0.32.6",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@pedaki/eslint-config": "^0.0.6",
+    "@pedaki/prettier-config": "^0.0.5",
+    "@types/sanitize-html": "^2.9.0"
+  },
+  "prettier": "@pedaki/prettier-config"
+}

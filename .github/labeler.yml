@@ -1,3 +1,26 @@
-'📦 packages':
+'design':
   - any:
-      - 'packages/**'
+      - 'packages/design/**'
+      - '!packages/design/**/package.json'
+'mailer':
+  - any:
+      - 'packages/mailer/**'
+      - '!packages/mailer/**/package.json'
+'common':
+  - any:
+      - 'packages/common/**'
+      - '!packages/common/**/package.json'
+'packages':
+  - any:
+      - 'packages/eslint-config/**'
+      - '!packages/eslint-config/**/package.json'
+      - 'packages/prettier-config/**'
+      - '!packages/prettier-config/**/package.json'
+'📚 documentation':
+  - any:
+      - 'docs/**'
+      - '!docs/**/package.json'
+'🖥️ www':
+  - any:
+      - 'www/**'
+      - '!www/**/package.json'
