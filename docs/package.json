@@ -1,0 +1,30 @@
+{
+  "name": "docs",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PedakiApp/pedaki.fr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PedakiApp/pedaki.fr/issues"
+  },
+  "homepage": "https://docs.pedaki.fr",
+  "engines": {
+    "node": ">=18.0.0 <19.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.7.5",
+  "scripts": {
+    "dev": "mintlify dev --port 8080",
+    "lint": "mintlify broken-links",
+    "prepare": "bash ./scripts/copy-assets.sh"
+  },
+  "dependencies": {
+    "mintlify": "latest"
+  },
+  "devDependencies": {
+    "@pedaki/prettier-config": "^0.0.5"
+  },
+  "prettier": "@pedaki/prettier-config"
+}

@@ -1,0 +1,132 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Pedaki",
+  "logo": {
+    "dark": "/public/logo-dark.svg",
+    "light": "/public/logo-light.svg"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#F97316",
+    "dark": "#F97316",
+    "light": "#F97316",
+    "background": {
+      "dark": "#0F1118"
+    },
+    "anchors": {
+      "from": "#FBAB73",
+      "to": "#F97316"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Accueil",
+      "url": "https://www.pedaki.fr"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Dashboard",
+    "url": "https://app.pedaki.fr"
+  },
+  "anchors": [
+    {
+      "name": "Communauté",
+      "icon": "discord",
+      "url": "https://www.pedaki.fr/community"
+    },
+    {
+      "name": "FAQs",
+      "icon": "bullseye-pointer",
+      "url": "faq"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Support",
+      "url": "support"
+    },
+    {
+      "name": "Nouveautés",
+      "url": "news"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "documentation/introduction"
+      ]
+    },
+    {
+      "group": "Modules",
+      "pages": [
+        "modules/overview",
+        "modules/class-management"
+      ]
+    },
+    {
+      "group": "Resources",
+      "pages": [
+        "resources/privacy",
+        "resources/self-host",
+        "resources/contributing",
+        "resources/subscription",
+        {
+          "group": "Migration",
+          "icon": "arrows-spin",
+          "pages": [
+            "resources/migration/overview",
+            "resources/migration/from-pronote"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "FAQs",
+      "pages": [
+        "faq/questions"
+      ]
+    },
+    {
+      "group": "Support",
+      "pages": [
+        "support/introduction",
+        "support/roadmap"
+      ]
+    },
+    {
+      "group": "Articles",
+      "pages": [
+        "news/overview"
+      ]
+    },
+    {
+      "group": "Changelog",
+      "pages": [
+        "news/version/0.0.1"
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/news/changelog",
+      "destination": "/news/changelog/2023-08"
+    },
+    {
+      "source": "/news/post",
+      "destination": "/news/post/initial-press-release"
+    }
+  ],
+  "search": {
+    "prompt": "Rechercher..."
+  },
+  "feedback": {
+    "suggestEdit": true,
+    "raiseIssue": true,
+    "thumbsRating": false
+  },
+  "footerSocials": {
+    "github": "https://github.com/vahor",
+    "discord": "https://www.pedaki.fr/community"
+  }
+}
