@@ -6,18 +6,16 @@ import { getScopedI18n } from '~/locales/server';
 import React from 'react';
 
 const Footer = async () => {
-  const footerT = await getScopedI18n('footer');
+  const footerT = await getScopedI18n('components.footer');
 
   return (
     <footer className="container border-t pt-8">
       <div className="flex flex-row items-center justify-between gap-2 pb-4">
         <div className="flex flex-col gap-4">
           <Logo />
-          <div className="">
-            <p className="font-semibold">Lorem ipsum dolor sit amet.</p>
-            <p className="text-sm font-medium text-secondary">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, esse.
-            </p>
+          <div>
+            <p className="font-semibold">{footerT('title')}</p>
+            <p className="text-sm font-medium text-secondary">{footerT('description')}</p>
           </div>
         </div>
         <div>
@@ -40,7 +38,7 @@ const Footer = async () => {
           </div>
           <div className="flex flex-row items-center gap-2">
             <span>© 2023</span>
-            <span>Lorem ipsum dolor sit amet.</span>
+            <span>{footerT('copyright')}</span>
           </div>
         </div>
       </div>

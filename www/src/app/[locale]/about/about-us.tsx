@@ -1,6 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/design/ui/avatar';
 import { Button } from '@pedaki/design/ui/button';
 import { Skeleton } from '@pedaki/design/ui/skeleton';
+import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import SectionTitle from '~/components/section/SectionTitle';
 import { StyledLink } from '~/components/StyledLink';
 import { env } from '~/env.mjs';
@@ -31,7 +32,10 @@ const AboutUs = async () => {
             <p>{aboutUsT('paragraphs.learnMore')}</p>
           </div>
           <Link href={`${env.NEXT_PUBLIC_DOCS_URL}/news/introduction`} prefetch={false}>
-            <Button>{aboutUsT('viewArticles')}</Button>
+            <Button variant="outline">
+              <span>{aboutUsT('viewArticles')}</span>
+              <AnimatedChevronRight />
+            </Button>
           </Link>
         </div>
 
