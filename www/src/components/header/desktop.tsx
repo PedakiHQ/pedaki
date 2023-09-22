@@ -11,61 +11,45 @@ import {
 } from '@pedaki/design/ui/navigation-menu';
 import { cn } from '@pedaki/design/utils';
 import { navigation } from '~/config/navigation';
+import { useScopedI18n } from '~/locales/client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const Desktop = () => {
+  const navT = useScopedI18n('components.header.navigation');
+
   const pathname = usePathname();
   return (
     <NavigationMenu>
       <NavigationMenuList>
         {navigation.map(item => {
-          const isActive =
-            pathname === item.href ||
-            (item.children?.some(subitem => subitem.href === pathname) ?? false);
-          if (item.children) {
-            return (
-              <NavigationMenuItem key={item.name}>
-                <>
-                  <NavigationMenuTrigger className="bg-white font-medium" data-active={isActive}>
-                    {item.name}
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
-                      {item.children.map(subitem => {
-                        const isChildrenActive = pathname === subitem.href;
-
-                        return (
-                          <ListItem
-                            href={subitem.href}
-                            title={subitem.name}
-                            key={subitem.name}
-                            data-active={isChildrenActive}
-                          >
-                            {subitem.description}
-                          </ListItem>
-                        );
-                      })}
-                    </ul>
-                  </NavigationMenuContent>
-                </>
-              </NavigationMenuItem>
-            );
-          }
-
+          const isActive = item.children?.some(subitem => subitem.href === pathname) ?? false;
           return (
-            <NavigationMenuItem key={item.name}>
-              <NavigationMenuLink
-                href={item.href}
-                className={cn(
-                  navigationMenuTriggerStyle(),
-                  'data-[active=true]:text-accent-foreground',
-                )}
-                data-active={isActive}
-              >
-                {item.name}
-              </NavigationMenuLink>
+            <NavigationMenuItem key={item.id}>
+              <>
+                <NavigationMenuTrigger className="bg-white font-medium" data-active={isActive}>
+                  {navT(`${item.id}.label`)}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
+                    {item.children.map(subitem => {
+                      const isChildrenActive = pathname === subitem.href;
+
+                      return (
+                        <ListItem
+                          href={subitem.href}
+                          title={navT(`${item.id}.children.${subitem.id}.label` as any)}
+                          key={navT(`${item.id}.children.${subitem.id}.label` as any)}
+                          data-active={isChildrenActive}
+                        >
+                          {navT(`${item.id}.children.${subitem.id}.description` as any)}
+                        </ListItem>
+                      );
+                    })}
+                  </ul>
+                </NavigationMenuContent>
+              </>
             </NavigationMenuItem>
           );
         })}

@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from '@pedaki/design/ui/dropdown-menu';
 import { Skeleton } from '@pedaki/design/ui/skeleton';
+import { useScopedI18n } from '~/locales/client';
 import type { Session } from 'next-auth';
 import { SessionProvider, useSession } from 'next-auth/react';
 import Link from 'next/link';
@@ -47,16 +48,20 @@ const UserWithProvider = () => {
 };
 
 const Guest = () => {
+  const headerT = useScopedI18n('components.header');
+
   return (
     <Link href="/login" prefetch={false}>
       <Button variant="outline" className="font-semibold">
-        Connexion
+        {headerT('auth.login')}
       </Button>
     </Link>
   );
 };
 
 const Authenticated = ({ session }: { session: Session }) => {
+  const headerT = useScopedI18n('components.header');
+
   return (
     <div className="flex items-center space-x-2">
       <DropdownMenu>
@@ -79,9 +84,9 @@ const Authenticated = ({ session }: { session: Session }) => {
           <DropdownMenuLabel>{session.user.email}</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <a href={env.NEXT_PUBLIC_APP_URL}>
-            <DropdownMenuItem>Dashboard</DropdownMenuItem>
+            <DropdownMenuItem> {headerT('user.dashboard')}</DropdownMenuItem>
           </a>
-          <DropdownMenuItem>Profile</DropdownMenuItem>
+          <DropdownMenuItem>{headerT('user.profile')}</DropdownMenuItem>
           <DropdownMenuSeparator />
           <SignOutItem />
         </DropdownMenuContent>

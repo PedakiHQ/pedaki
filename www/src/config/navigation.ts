@@ -1,67 +1,52 @@
 import { env } from '~/env.mjs';
 
-type Navigation = {
-  name: string;
-} & (
-  | {
-      children?: never;
-      href: string;
-    }
-  | {
-      href?: never;
-      children: (Navigation & { href: string; description: string })[];
-    }
-);
+interface Navigation {
+  id: string;
+  children?: readonly (Navigation & { href: string })[];
+}
 
 export const navigation = [
   {
-    name: 'Modules',
+    id: 'modules',
     children: [
       {
+        id: 'management',
         href: 'https://docs.pedaki.fr/modules/class-management',
-        name: 'Gestion de classes 1',
-        description: 'About the project',
       },
     ],
   },
   {
-    name: 'Resources',
+    id: 'resources',
     children: [
       {
+        id: 'pricing',
         href: '/pricing',
-        name: 'Pricing',
-        description: 'Here comes the money',
       },
       {
+        id: 'about',
         href: '/about',
-        name: 'About',
-        description: 'About the project',
       },
     ],
   },
   {
-    name: 'Documentation',
+    id: 'docs',
     children: [
       {
+        id: 'changelog',
         href: `${env.NEXT_PUBLIC_DOCS_URL}/news/changelog`,
-        name: 'Changelog',
-        description: 'Voir les notes de version',
       },
       {
+        id: 'roadmap',
         href: `${env.NEXT_PUBLIC_DOCS_URL}/support/roadmap`,
-        name: 'Roadmap',
-        description: 'Voir la feuille de route',
       },
       {
+        id: 'faq',
         href: `${env.NEXT_PUBLIC_DOCS_URL}/faq`,
-        name: 'FAQ',
-        description: 'Voir les questions fréquentes',
       },
       {
+        id: 'post',
         href: `${env.NEXT_PUBLIC_DOCS_URL}/news/post`,
-        name: 'Posts',
-        description: 'Voir les articles',
       },
     ],
   },
-] as Navigation[];
+] as const satisfies readonly Navigation[];

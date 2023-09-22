@@ -7,6 +7,7 @@ import { ScrollArea } from '@pedaki/design/ui/scroll-area';
 import { cn } from '@pedaki/design/utils';
 import { Portal } from '@radix-ui/react-portal';
 import { navigation } from '~/config/navigation';
+import { useScopedI18n } from '~/locales/client';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
@@ -49,6 +50,7 @@ const PortalNav = ({
   closeMobile: () => void;
 }) => {
   // FIXME: isClient is a trick to avoid SSR (bug with Portal)
+  const navT = useScopedI18n('components.header.navigation');
 
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
@@ -75,11 +77,13 @@ const PortalNav = ({
               {navigation.map(item => {
                 if (item.children) {
                   return (
-                    <li key={item.name} className="mt-6 first:mt-0">
-                      <div className="mb-3.5 font-semibold text-primary">{item.name}</div>
+                    <li key={item.id} className="mt-6 first:mt-0">
+                      <div className="mb-3.5 font-semibold text-primary">
+                        {navT(`${item.id}.label`)}
+                      </div>
                       <ul className="ml-4 flex flex-col gap-2">
                         {item.children.map(subitem => (
-                          <li key={subitem.name}>
+                          <li key={subitem.id}>
                             <Button
                               asChild
                               variant="transparent"
@@ -87,7 +91,9 @@ const PortalNav = ({
                               className="flex h-min justify-start p-0 font-semibold text-secondary"
                               onClick={closeMobile}
                             >
-                              <Link href={subitem.href}>{subitem.name}</Link>
+                              <Link href={subitem.href}>
+                                {navT(`${item.id}.children.${subitem.id}.label` as any)}
+                              </Link>
                             </Button>
                           </li>
                         ))}
