@@ -1,33 +1,33 @@
 import { cn } from '@pedaki/design/utils';
 import SectionTitle from '~/components/section/SectionTitle';
+import { getScopedI18n } from '~/locales/server';
 import Image from 'next/image';
 import React from 'react';
 
-const Assets = () => {
+const Assets = async () => {
+  const assetsT = await getScopedI18n('pages.about.assets');
+
   return (
     <section>
-      <SectionTitle anchor="assets">Assets</SectionTitle>
-      <p className="mb-8 text-secondary">
-        Tous nos assets sont à votre disposition, la seule chose que nous vous demandons est de nous
-        citer si vous les utilisez, et de ne pas les modifier.
-      </p>
+      <SectionTitle anchor="assets">{assetsT('title')}</SectionTitle>
+      <p className="mb-8 text-secondary">{assetsT('paragraphs.assetsAvailable')}</p>
       <div className="mb-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <AssetImage
           className="dark bg-primary"
-          title="Logo"
-          alt="Le logo de Pedaki"
+          title={assetsT('images.logoDark.title')}
+          alt={assetsT('images.logoDark.alt')}
           image="https://pedaki.fr/logo-dark.svg"
         />
         <AssetImage
           className="bg-secondary"
-          title="Logo"
-          alt="Le logo de Pedaki"
+          title={assetsT('images.logoLight.title')}
+          alt={assetsT('images.logoLight.alt')}
           image="https://pedaki.fr/logo-light.svg"
         />
         <AssetImage
           className="bg-secondary"
-          title="Logo"
-          alt="Icon"
+          title={assetsT('images.logo.title')}
+          alt={assetsT('images.logo.alt')}
           image="https://pedaki.fr/logo.png"
         />
       </div>

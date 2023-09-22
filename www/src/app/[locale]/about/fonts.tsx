@@ -1,30 +1,27 @@
 import { Card } from '@pedaki/design/ui/card';
 import SectionTitle from '~/components/section/SectionTitle';
+import { getScopedI18n } from '~/locales/server';
 import React from 'react';
 
-const Fonts = () => {
+const Fonts = async () => {
+  const fontsT = await getScopedI18n('pages.about.fonts');
+
   return (
     <section>
-      <SectionTitle anchor="assets">Fonts</SectionTitle>
-      <p className="mb-8 text-secondary">
-        Les polices utilisées sur notre site web sont les suivantes.
-      </p>
+      <SectionTitle anchor="assets">{fontsT('title')}</SectionTitle>
+      <p className="mb-8 text-secondary">{fontsT('paragraphs.description')}</p>
       <div className="grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2">
         <Font
           title="OpenSans"
-          fontVar="--font-sans"
-          description="Police utilisée sur la majorité du site"
-          content="Somebody once told me\n
-The world is gonna roll me\n
-I ain't the sharpest tool in the shed"
+          fontFamily="var(--font-sans)"
+          description={fontsT('fonts.openSans.description')}
+          content={fontsT('fonts.openSans.content')}
         />
         <Font
           title="FiraCode"
-          fontVar="--font-mono"
-          description="Police utilisée pour les éléments de code"
-          content="She was looking kind of dumb\n
-With her finger and her thumb\n
-In the shape of an 'L' on her forehead"
+          fontFamily="var(--font-mono)"
+          description={fontsT('fonts.firaCode.description')}
+          content={fontsT('fonts.firaCode.content')}
         />
       </div>
     </section>
@@ -34,12 +31,12 @@ In the shape of an 'L' on her forehead"
 const Font = ({
   title,
   description,
-  fontVar,
+  fontFamily,
   content,
 }: {
   title: string;
   description: string;
-  fontVar: string;
+  fontFamily: string;
   content: string;
 }) => {
   return (
@@ -48,7 +45,7 @@ const Font = ({
         <h4 className="text-lg font-medium text-primary">{title}</h4>
         <p className="text-xs text-secondary">{description}</p>
       </div>
-      <p style={{ fontFamily: `var(${fontVar})` }}>
+      <p style={{ fontFamily }}>
         {content.split('\\n').map(line => (
           <React.Fragment key={line}>
             {line}

@@ -8,34 +8,48 @@ import {
 } from '@pedaki/design/ui/tooltip';
 import { cn } from '@pedaki/design/utils';
 import SectionTitle from '~/components/section/SectionTitle';
+import { getScopedI18n } from '~/locales/server';
 import React from 'react';
 
-const BrandColors = () => {
+const BrandColors = async () => {
+  const brandColorsT = await getScopedI18n('pages.about.brandColors');
+
   return (
     <section>
-      <SectionTitle anchor="assets">Brand colors</SectionTitle>
+      <SectionTitle anchor="assets">{brandColorsT('title')}</SectionTitle>
       <p className="mb-8 text-secondary">
-        Les couleurs de notre marque sont les suivantes, vous pouvez les voir en action sur notre
-        site web.
+        {brandColorsT('paragraphs.description.1')}
         <br />
-        Chaque couleur à plusieurs nuances, mais celles-ci sont les principales.
+        {brandColorsT('paragraphs.description.2')}
       </p>
       <Card>
         <div className="grid grid-cols-1 gap-x-8 gap-y-4 p-6 sm:grid-cols-2 lg:grid-cols-3">
           <TooltipProvider delayDuration={0}>
-            <Color title="Orange" hex="#F76808" tooltip="Couleur d'accentuation" />
             <Color
-              title="Orange-brun"
+              title={brandColorsT('colors.orange.title')}
+              hex="#F76808"
+              tooltip={brandColorsT('colors.orange.tooltip')}
+            />
+            <Color
+              title={brandColorsT('colors.brownOrange.title')}
               hex="#E48844"
-              tooltip="Utilisé pour les ombres et effets où le orange est déjà présent"
+              tooltip={brandColorsT('colors.brownOrange.tooltip')}
             />
-            <Color title="Vert foncé" hex="#4E867E" tooltip="Vert utilisé dans le logo" />
             <Color
-              title="Gris clair"
-              hex="#F9F9F9"
-              tooltip="Gris utilisé pour mettre en avant les éléments comme celui-ci"
+              title={brandColorsT('colors.darkGreen.title')}
+              hex="#4E867E"
+              tooltip={brandColorsT('colors.darkGreen.tooltip')}
             />
-            <Color title="Gris foncé" hex="#1A1A1A" tooltip="Couleur de texte principale" />
+            <Color
+              title={brandColorsT('colors.lightGray.title')}
+              hex="#F9F9F9"
+              tooltip={brandColorsT('colors.lightGray.tooltip')}
+            />
+            <Color
+              title={brandColorsT('colors.darkGray.title')}
+              hex="#1A1A1A"
+              tooltip={brandColorsT('colors.darkGray.tooltip')}
+            />
           </TooltipProvider>
         </div>
       </Card>

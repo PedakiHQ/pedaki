@@ -5,22 +5,25 @@ import BrandColors from '~/app/[locale]/about/brand-colors';
 import Fonts from '~/app/[locale]/about/fonts';
 import Naming from '~/app/[locale]/about/naming';
 import { PageHeader } from '~/components/PageHeader';
+import { getScopedI18n } from '~/locales/server';
 import { pageBaseStyle } from '~/styles/constants';
-import type { Metadata } from 'next';
 import React from 'react';
 
-export const metadata: Metadata = {
-  description: 'lorem ipsum dolor sit amet',
-  title: 'Company',
+export const generateMetadata = async () => {
+  const aboutT = await getScopedI18n('pages.about');
+
+  return {
+    title: aboutT('metadata.title'),
+    description: aboutT('metadata.description'),
+  };
 };
 
-const CompanyPage = () => {
+const AboutPage = async () => {
+  const aboutT = await getScopedI18n('pages.about');
+
   return (
     <div className={pageBaseStyle}>
-      <PageHeader
-        title="A propos de pedaki"
-        description="Page qui regroupe nos assets et informations sur pedaki."
-      />
+      <PageHeader title={aboutT('header.title')} description={aboutT('header.description')} />
       <div className="container mt-8">
         <Separator gradient="gray" className="mb-8" />
         <div className="flex flex-col gap-16">
@@ -35,4 +38,4 @@ const CompanyPage = () => {
   );
 };
 
-export default CompanyPage;
+export default AboutPage;

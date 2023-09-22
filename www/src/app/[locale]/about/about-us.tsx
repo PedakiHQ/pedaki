@@ -4,18 +4,21 @@ import { Skeleton } from '@pedaki/design/ui/skeleton';
 import SectionTitle from '~/components/section/SectionTitle';
 import { StyledLink } from '~/components/StyledLink';
 import { env } from '~/env.mjs';
+import { getScopedI18n } from '~/locales/server';
 import Link from 'next/link';
 import React from 'react';
 
-const AboutUs = () => {
+const AboutUs = async () => {
+  const aboutUsT = await getScopedI18n('pages.about.aboutUs');
+
   return (
     <section>
-      <SectionTitle anchor="about-us">About Us</SectionTitle>
+      <SectionTitle anchor="about-us">{aboutUsT('title')}</SectionTitle>
       <div className="flex flex-col gap-8">
         <div className="flex flex-col items-center md:flex-row md:justify-between">
           <div className="mb-2 text-secondary">
             <p>
-              Ce projet a été initialisé par 3 étudiants de{' '}
+              {aboutUsT('paragraphs.projectStartedFor.1')}{' '}
               <StyledLink
                 href="https://www.mewo.fr/?ref=pedaki"
                 className="text-primary"
@@ -23,34 +26,31 @@ const AboutUs = () => {
               >
                 Mewo
               </StyledLink>{' '}
-              en 2023 en tant que projet de fin d&apos;études.
+              {aboutUsT('paragraphs.projectStartedFor.2')}
             </p>
-            <p>
-              Pour en savoir plus sur le projet, vous pouvez consulter les articles sur notre
-              documentation
-            </p>
+            <p>{aboutUsT('paragraphs.learnMore')}</p>
           </div>
           <Link href={`${env.NEXT_PUBLIC_DOCS_URL}/news/introduction`} prefetch={false}>
-            <Button>Voir les articles</Button>
+            <Button>{aboutUsT('viewArticles')}</Button>
           </Link>
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <Student
             image="https://avatars.githubusercontent.com/u/17593209?s=128&v=4"
-            description="nice description dude"
+            description={aboutUsT('students.vahor.description')}
             href="https://github.com/Vahor"
             name="Nathan David"
           />
           <Student
             image="https://avatars.githubusercontent.com/u/27494805?s=128&v=4"
-            description="nice description dude"
+            description={aboutUsT('students.avan0x.description')}
             href="https://github.com/AvaN0x"
             name="Clément Ricatte"
           />
           <Student
             image="https://avatars.githubusercontent.com/u/91695247?s=128&v=4"
-            description="nice description dude"
+            description={aboutUsT('students.alexpiquard.description')}
             href="https://github.com/AlexPiquard"
             name="Alex Piquard"
           />

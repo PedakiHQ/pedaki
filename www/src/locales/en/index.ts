@@ -1,4 +1,4 @@
-export const en = {
+export default {
   footer: {
     terms: 'Terms',
     privacy: 'Privacy',
@@ -11,5 +11,3 @@ export const en = {
     change: 'Change language',
   },
 } as const;
-
-export default en;

@@ -1,4 +1,6 @@
-export const fr = {
+import pages from './pages';
+
+export default {
   footer: {
     terms: 'Termes',
     privacy: 'Confidentialité',
@@ -10,6 +12,5 @@ export const fr = {
     fr: 'Français',
     change: 'Changer de langue',
   },
+  pages,
 } as const;
-
-export default fr;

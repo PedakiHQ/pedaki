@@ -1,15 +1,14 @@
 import SectionTitle from '~/components/section/SectionTitle';
+import { getScopedI18n } from '~/locales/server';
 import React from 'react';
 
-const Naming = () => {
+const Naming = async () => {
+  const namingT = await getScopedI18n('pages.about.naming');
+
   return (
     <section>
-      <SectionTitle anchor="naming">Naming</SectionTitle>
-      <p className="text-secondary">
-        Là on explique ce qu&apos;est le nom, comment il se dit, comment il s&apos;écrit (en
-        minuscule &ldquo;pedaki&ldquo; et pas &ldquo;Pedaki&ldquo; par exemple). Faudrait le
-        respecter aussi, pas comme sur cette page.
-      </p>
+      <SectionTitle anchor="naming">{namingT('title')}</SectionTitle>
+      <p className="text-secondary">{namingT('paragraphs.description')}</p>
     </section>
   );
 };
