@@ -1,6 +1,6 @@
 import { Separator } from '@pedaki/design/ui/separator';
-import Faq from '~/app/pricing/faq';
-import PriceTable from '~/app/pricing/price-table';
+import Faq from '~/app/[locale]/pricing/faq';
+import PriceTable from '~/app/[locale]/pricing/price-table';
 import { PageHeader } from '~/components/PageHeader';
 import { pageBaseStyle } from '~/styles/constants';
 import type { Metadata } from 'next';

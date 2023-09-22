@@ -1,9 +1,9 @@
 import { Separator } from '@pedaki/design/ui/separator';
-import AboutUs from '~/app/about/about-us';
-import Assets from '~/app/about/assets';
-import BrandColors from '~/app/about/brand-colors';
-import Fonts from '~/app/about/fonts';
-import Naming from '~/app/about/naming';
+import AboutUs from '~/app/[locale]/about/about-us';
+import Assets from '~/app/[locale]/about/assets';
+import BrandColors from '~/app/[locale]/about/brand-colors';
+import Fonts from '~/app/[locale]/about/fonts';
+import Naming from '~/app/[locale]/about/naming';
 import { PageHeader } from '~/components/PageHeader';
 import { pageBaseStyle } from '~/styles/constants';
 import type { Metadata } from 'next';

@@ -1,4 +1,4 @@
-import CallToActionBottom from '~/app/(home)/cta-bottom';
+import CallToActionBottom from '~/app/[locale]/(home)/cta-bottom';
 import type { ReactNode } from 'react';
 import React from 'react';
 

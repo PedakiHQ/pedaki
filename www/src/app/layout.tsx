@@ -6,7 +6,7 @@ import { fontClassName } from '~/config/font';
 import type { Metadata } from 'next';
 import Footer from '../components/footer';
 import Header from '../components/header';
-import { Providers } from './(home)/providers';
+import { Providers } from './[locale]/(home)/providers';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

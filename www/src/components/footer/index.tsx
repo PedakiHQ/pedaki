@@ -2,9 +2,12 @@ import LanguageSelector from '~/components/footer/LanguageSelector';
 import Status from '~/components/footer/Status';
 import Logo from '~/components/header/logo';
 import { StyledLink } from '~/components/StyledLink';
+import { getScopedI18n } from '~/locales/server';
 import React from 'react';
 
-const Footer = () => {
+const Footer = async () => {
+  const footerT = await getScopedI18n('footer');
+
   return (
     <footer className="container border-t pt-8">
       <div className="flex flex-row items-center justify-between gap-2 pb-4">
@@ -25,13 +28,13 @@ const Footer = () => {
         <div className="flex flex-row items-center justify-between gap-2">
           <div className="flex flex-col gap-3.5 text-sm md:flex-row md:items-center">
             <StyledLink href="/legal/terms-of-service" prefetch={false} variant="subtle_secondary">
-              Terms
+              {footerT('terms')}
             </StyledLink>
             <StyledLink href="/legal/privacy-policy" prefetch={false} variant="subtle_secondary">
-              Privacy
+              {footerT('privacy')}
             </StyledLink>
             <StyledLink href="/about" prefetch={false} variant="subtle_secondary">
-              Company
+              {footerT('about')}
             </StyledLink>
             <Status />
           </div>

@@ -1,9 +1,9 @@
 import type { ImageProps } from 'next/image';
 import Image from 'next/image';
 import React from 'react';
-import grandEst from '../../../public/a/sp/grand-est.png';
-import mewo from '../../../public/a/sp/mewo.png';
-import univLorraine from '../../../public/a/sp/univ-lorraine.png';
+import grandEst from '../../../../public/a/sp/grand-est.png';
+import mewo from '../../../../public/a/sp/mewo.png';
+import univLorraine from '../../../../public/a/sp/univ-lorraine.png';
 
 const SocialProof = () => {
   return (

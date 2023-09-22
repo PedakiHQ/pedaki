@@ -298,6 +298,9 @@ importers:
       next-auth:
         specifier: ^4.23.1
         version: 4.23.1(next@13.5.2)(react-dom@18.2.0)(react@18.2.0)
+      next-international:
+        specifier: ^1.0.1
+        version: 1.0.1
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -6030,6 +6033,10 @@ packages:
       has: 1.0.3
       side-channel: 1.0.4
 
+  /international-types@0.8.0:
+    resolution: {integrity: sha512-cJwagIBzMG0FTK81TABeSBU0eReIXWmvW18m/URn8ZA+GLoWIcdL43kfjArwHVmZJ1n+IFchsBj8tQLYUqmwnA==}
+    dev: false
+
   /interpret@1.4.0:
     resolution: {integrity: sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==}
     engines: {node: '>= 0.10'}
@@ -7697,6 +7704,14 @@ packages:
       uuid: 8.3.2
     dev: false
 
+  /next-international@1.0.1:
+    resolution: {integrity: sha512-oIwIJnMkhMtTvebVSaOYEyGznpIIMPo2D69I+aSt0JFh+kPzB1s2oSLaAQ9CuhzXiiUDPiAgMB5OPSkk1HR3yg==}
+    dependencies:
+      client-only: 0.0.1
+      international-types: 0.8.0
+      server-only: 0.0.1
+    dev: false
+
   /next@13.5.2(@babel/core@7.22.20)(react-dom@18.2.0)(react@18.2.0)(sass@1.68.0):
     resolution: {integrity: sha512-vog4UhUaMYAzeqfiAAmgB/QWLW7p01/sg+2vn6bqc/CxHFYizMzLv6gjxKzl31EVFkfl/F+GbxlKizlkTE9RdA==}
     engines: {node: '>=16.14.0'}
@@ -9299,6 +9314,10 @@ packages:
       send: 0.18.0
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /server-only@0.0.1:
+    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
     dev: false
 
   /set-blocking@2.0.0:

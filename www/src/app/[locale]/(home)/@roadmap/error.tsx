@@ -1,9 +1,9 @@
 'use client';
 
 import { TooltipProvider } from '@pedaki/design/ui/tooltip';
-import { GithubCard } from '~/app/(home)/@roadmap/card';
-import Footer from '~/app/(home)/@roadmap/footer';
-import Header from '~/app/(home)/@roadmap/header';
+import { GithubCard } from '~/app/[locale]/(home)/@roadmap/card';
+import Footer from '~/app/[locale]/(home)/@roadmap/footer';
+import Header from '~/app/[locale]/(home)/@roadmap/header';
 import type { Issue } from '~/services/github/roadmap';
 import React from 'react';
 
