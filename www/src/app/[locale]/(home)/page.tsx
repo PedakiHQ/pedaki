@@ -2,24 +2,26 @@ import Features from '~/app/[locale]/(home)/features';
 import Hero from '~/app/[locale]/(home)/hero';
 import SocialProof from '~/app/[locale]/(home)/social-proof';
 import VideoDemo from '~/app/[locale]/(home)/video-demo';
-import type { Metadata } from 'next';
+import { getScopedI18n } from '~/locales/server';
 import React from 'react';
 
-export const metadata: Metadata = {
-  title: {
-    absolute: 'Pedaki: Le futur de la gestion scolaire', // TODO
-  },
-  description: 'lorem ipsum dolor sit amet',
-  openGraph: {
-    images: [
-      // TODO
-    ],
-    locale: 'fr',
-    type: 'website',
-  },
+export const generateMetadata = async () => {
+  const homeT = await getScopedI18n('pages.home');
+
+  return {
+    title: { absolute: homeT('metadata.title') },
+    description: homeT('metadata.description'),
+    openGraph: {
+      images: [
+        // TODO
+      ],
+      locale: 'fr',
+      type: 'website',
+    },
+  };
 };
 
-export default function Page() {
+const Page = () => {
   return (
     <>
       <Hero />
@@ -28,4 +30,6 @@ export default function Page() {
       <Features />
     </>
   );
-}
+};
+
+export default Page;

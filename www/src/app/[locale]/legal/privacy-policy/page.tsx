@@ -1,17 +1,23 @@
 import { PageHeader } from '~/components/PageHeader';
+import { getScopedI18n } from '~/locales/server';
 import { pageBaseStyle } from '~/styles/constants';
-import type { Metadata } from 'next';
 import React from 'react';
 
-export const metadata: Metadata = {
-  description: 'lorem ipsum dolor sit amet',
-  title: 'PrivacyPolicy',
+export const generateMetadata = async () => {
+  const privacyT = await getScopedI18n('pages.privacyPolicy');
+
+  return {
+    title: privacyT('metadata.title'),
+    description: privacyT('metadata.description'),
+  };
 };
 
-const PrivacyPolicyPage = () => {
+const PrivacyPolicyPage = async () => {
+  const privacyT = await getScopedI18n('pages.privacyPolicy');
+
   return (
     <div className={pageBaseStyle}>
-      <PageHeader title="Privacy Policy" />
+      <PageHeader title={privacyT('header.title')} description={privacyT('header.description')} />
       <ul>
         <li>Parler d&apos;aws (europe)</li>
         <li>Parler de vercel</li>

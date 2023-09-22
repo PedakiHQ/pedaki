@@ -1,19 +1,25 @@
 import { PageHeader } from '~/components/PageHeader';
+import { getScopedI18n } from '~/locales/server';
 import { pageBaseStyle } from '~/styles/constants';
-import type { Metadata } from 'next';
 import React from 'react';
 
-export const metadata: Metadata = {
-  description: 'lorem ipsum dolor sit amet',
-  title: 'CguPage',
+export const generateMetadata = async () => {
+  const termsT = await getScopedI18n('pages.termsOfService');
+
+  return {
+    title: termsT('metadata.title'),
+    description: termsT('metadata.description'),
+  };
 };
 
-const CguPage = () => {
+const TermsOfService = async () => {
+  const termsT = await getScopedI18n('pages.termsOfService');
+
   return (
     <div className={pageBaseStyle}>
-      <PageHeader title="Conditions générales d'utilisation" />
+      <PageHeader title={termsT('header.title')} description={termsT('header.description')} />
     </div>
   );
 };
 
-export default CguPage;
+export default TermsOfService;
