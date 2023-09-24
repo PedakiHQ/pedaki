@@ -1,5 +1,11 @@
 # @pedaki/common
 
+## 0.0.4
+
+### Patch Changes
+
+- [#36](https://github.com/PedakiHQ/pedaki/pull/36) [`40a1148`](https://github.com/PedakiHQ/pedaki/commit/40a11482d20ece4a00bd62d25e9f8469909b78cd) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `sonner` to `^1.0.0`.
+
 ## 0.0.3
 
 ### Patch Changes

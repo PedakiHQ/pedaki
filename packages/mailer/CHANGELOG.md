@@ -1,5 +1,11 @@
 # @pedaki/mailer
 
+## 0.0.2
+
+### Patch Changes
+
+- [`5a81c2a`](https://github.com/PedakiHQ/pedaki/commit/5a81c2afcd78eaca85b6129ea47cb957900a6fe7) Thanks [@Vahor](https://github.com/Vahor)! - Fix npm dist
+
 ## 0.0.1
 
 ### Patch Changes
