@@ -2,7 +2,8 @@ import { render } from '@react-email/render';
 import { Resend } from 'resend';
 import type { Mail } from './type';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const isDev = process.env.NODE_ENV === 'development' && process.env.MAILER_PREVIEW !== 'false';
+const resend = isDev ? null : new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async <T,>(to: string[] | string, mail: Mail<T>, props: T) => {
   const react = mail(props);
@@ -10,7 +11,7 @@ export const sendEmail = async <T,>(to: string[] | string, mail: Mail<T>, props:
   const sender = mail.sender;
   const html = render(react, {});
 
-  if (process.env.NODE_ENV === 'development' && process.env.MAILER_PREVIEW !== 'false') {
+  if (isDev) {
     const previewEmail = (await import('preview-email')).default;
     // TODO: add randomId
     // import { randomId } from "../lib/random";
@@ -24,14 +25,14 @@ export const sendEmail = async <T,>(to: string[] | string, mail: Mail<T>, props:
       },
       {
         openSimulator: false,
-        template: './preview-email.pug',
+        template: 'node_modules/@pedaki/mailer/preview-email.pug',
       },
     );
 
     return Promise.resolve({ MessageId: 'randomId()' });
   }
 
-  return resend.sendEmail({
+  return resend!.sendEmail({
     from: sender,
     to,
     subject,
