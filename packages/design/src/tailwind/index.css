@@ -3,81 +3,81 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --orange-300: 228 136 68; /* #E48844 */
-        --orange-500: 247 104 8; /* #F76808 */
+  :root {
+    --orange-300: 228 136 68; /* #E48844 */
+    --orange-500: 247 104 8; /* #F76808 */
 
-        --red-50: 255 250 250; /* #FFFAFA */
-        --red-600: 217 32 56; /* #d92038 */
-        --red-700: 193 16 39; /* #c11027 */
-        --red-950: 32 10 13; /* #200a0d */
+    --red-50: 255 250 250; /* #FFFAFA */
+    --red-600: 217 32 56; /* #d92038 */
+    --red-700: 193 16 39; /* #c11027 */
+    --red-950: 32 10 13; /* #200a0d */
 
-        --white: 255 255 255; /* #FFFFFF */
+    --white: 255 255 255; /* #FFFFFF */
 
-        --gray-50: 249 249 249; /* #F9F9F9 */
-        --gray-100: 244 245 248; /* #F4F5F8 */
-        --gray-200: 225 225 225; /* #E1E1E1 */
-        --gray-300: 193 193 193; /* #C1C1C1 */
-        --gray-400: 161 161 161; /* #A1A1A1 */
-        --gray-500: 129 129 129; /* #818181 */
-        --gray-600: 97 97 97; /* #616161 */
-        --gray-700: 65 65 65; /* #414141 */
-        --gray-800: 28 25 23; /* #1C1917 */
-        --gray-850: 26 26 26; /* #1a1a1a */
-        --gray-900: 25 22 21; /* #191615 */
+    --gray-50: 249 249 249; /* #F9F9F9 */
+    --gray-100: 244 245 248; /* #F4F5F8 */
+    --gray-200: 225 225 225; /* #E1E1E1 */
+    --gray-300: 193 193 193; /* #C1C1C1 */
+    --gray-400: 161 161 161; /* #A1A1A1 */
+    --gray-500: 129 129 129; /* #818181 */
+    --gray-600: 97 97 97; /* #616161 */
+    --gray-700: 65 65 65; /* #414141 */
+    --gray-800: 28 25 23; /* #1C1917 */
+    --gray-850: 26 26 26; /* #1a1a1a */
+    --gray-900: 25 22 21; /* #191615 */
 
-        --radius: 0.6rem;
+    --radius: 0.6rem;
 
-        --background-primary: var(--white);
-        --background-secondary: var(--gray-50);
-        --background-tertiary: var(--gray-100);
+    --background-primary: var(--white);
+    --background-secondary: var(--gray-50);
+    --background-tertiary: var(--gray-100);
 
-        --text-primary: var(--gray-850);
-        --text-secondary: var(--gray-600);
-        --text-muted: var(--gray-500);
+    --text-primary: var(--gray-850);
+    --text-secondary: var(--gray-600);
+    --text-muted: var(--gray-500);
 
-        --border: var(--gray-200);
-    }
+    --border: var(--gray-200);
+  }
 
-    .dark {
-        --text-primary: var(--gray-50);
-        --text-secondary: var(--gray-400);
-        --text-muted: var(--gray-500);
+  .dark {
+    --text-primary: var(--gray-50);
+    --text-secondary: var(--gray-400);
+    --text-muted: var(--gray-500);
 
-        --background-primary: var(--gray-900);
-        --background-secondary: var(--gray-850);
-    }
+    --background-primary: var(--gray-900);
+    --background-secondary: var(--gray-850);
+  }
 
-    * {
-        border-color: rgb(var(--border) / 1);
-    }
+  * {
+    border-color: rgb(var(--border) / 1);
+  }
 
-    a {
-        width: fit-content;
-        display: inline-block;
-    }
+  a {
+    width: fit-content;
+    display: inline-block;
+  }
 
-    html {
-        scroll-behavior: smooth;
-        @apply min-h-full;
-    }
+  html {
+    scroll-behavior: smooth;
+    @apply min-h-full;
+  }
 
-    body {
-        @apply bg-primary text-primary flex min-h-full flex-col justify-between antialiased;
-        text-rendering: optimizeLegibility;
-        font-feature-settings: 'cv11', 'salt', 'ss01', 'ss03', 'cv01', 'cv02', 'cv03', 'cv04', 'cv05',
-        'cv06', 'cv07', 'cv08', 'cv09', 'cv10';
-    }
+  body {
+    @apply bg-primary text-primary flex min-h-full flex-col justify-between antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'cv11', 'salt', 'ss01', 'ss03', 'cv01', 'cv02', 'cv03', 'cv04', 'cv05',
+      'cv06', 'cv07', 'cv08', 'cv09', 'cv10';
+  }
 }
 
 body.lock-scroll {
-    overflow: hidden !important;
-    overscroll-behavior: contain;
-    position: relative !important;
-    padding-left: 0px;
-    padding-top: 0px;
-    padding-right: 0px;
-    margin-left: 0;
-    margin-top: 0;
-    margin-right: 15px !important;
+  overflow: hidden !important;
+  overscroll-behavior: contain;
+  position: relative !important;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 15px !important;
 }

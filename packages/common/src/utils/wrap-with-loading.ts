@@ -13,8 +13,8 @@ interface NotificationBase extends Omit<ToastT, 'id'> {
 
 interface WrapWithLoadingProps<T> {
   loadingProps?: NotificationBase | null;
-  successProps?: ((data: T) => NotificationBase) | NotificationBase  | null;
-  errorProps?: ((error: Error & { message: string }) => NotificationBase) | NotificationBase  | null;
+  successProps?: ((data: T) => NotificationBase) | NotificationBase | null;
+  errorProps?: ((error: Error & { message: string }) => NotificationBase) | NotificationBase | null;
   throwOnError?: boolean;
 }
 
@@ -25,46 +25,46 @@ export const wrapWithLoading = async <T>(
   const id = randomId();
 
   if (loadingProps) {
-      toast.loading(loadingProps.title, {
-          id,
-          ...loadingProps,
-      });
+    toast.loading(loadingProps.title, {
+      id,
+      ...loadingProps,
+    });
   }
 
   try {
     const result = await promise();
 
     if (successProps) {
-        let notificationProps: NotificationBase;
-        if (typeof successProps === 'function') {
-            notificationProps = successProps(result);
-        } else {
-            notificationProps = successProps;
-        }
+      let notificationProps: NotificationBase;
+      if (typeof successProps === 'function') {
+        notificationProps = successProps(result);
+      } else {
+        notificationProps = successProps;
+      }
 
-        toast.message(notificationProps.title, {
-            id,
-            type: 'success',
-            duration: 4000,
-            ...notificationProps,
-        });
+      toast.message(notificationProps.title, {
+        id,
+        type: 'success',
+        duration: 4000,
+        ...notificationProps,
+      });
     }
   } catch (error) {
-      if (errorProps) {
-          let notificationProps: NotificationBase;
-          if (typeof errorProps === 'function') {
-              notificationProps = errorProps(error as Error);
-          } else {
-              notificationProps = errorProps;
-          }
-
-          toast.message(notificationProps.title, {
-              id,
-              type: 'error',
-              duration: 4000,
-              ...notificationProps,
-          });
+    if (errorProps) {
+      let notificationProps: NotificationBase;
+      if (typeof errorProps === 'function') {
+        notificationProps = errorProps(error as Error);
+      } else {
+        notificationProps = errorProps;
       }
+
+      toast.message(notificationProps.title, {
+        id,
+        type: 'error',
+        duration: 4000,
+        ...notificationProps,
+      });
+    }
 
     if (throwOnError) {
       throw error;
