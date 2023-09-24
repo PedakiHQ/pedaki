@@ -12,9 +12,9 @@ interface NotificationBase extends Omit<ToastT, 'id'> {
 }
 
 interface WrapWithLoadingProps<T> {
-  loadingProps: NotificationBase | null;
-  successProps: ((data: T) => NotificationBase) | NotificationBase  | null;
-  errorProps: ((error: Error & { message: string }) => NotificationBase) | NotificationBase  | null;
+  loadingProps?: NotificationBase | null;
+  successProps?: ((data: T) => NotificationBase) | NotificationBase  | null;
+  errorProps?: ((error: Error & { message: string }) => NotificationBase) | NotificationBase  | null;
   throwOnError?: boolean;
 }
 
