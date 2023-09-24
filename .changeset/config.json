@@ -13,7 +13,6 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "www",
     "docs"
   ]
 }

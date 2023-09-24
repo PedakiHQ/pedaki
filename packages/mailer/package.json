@@ -12,27 +12,21 @@
   "license": "MIT",
   "private": false,
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
-    }
+  "publishConfig": {
+    "directory": "dist"
   },
   "scripts": {
     "dev": "email dev -d src/templates -p 4000",
-    "build": "tsup",
+    "build": "tsup && npm run copy-static",
+    "copy-static": "copyfiles -u 1 \"src/**/*.{css,scss,svg,config.ts}\" dist && node ../../scripts/prepare-dist.js",
     "format": "prettier --write .  --cache",
     "format:check": "prettier --check .  --cache"
   },
   "devDependencies": {
     "@pedaki/eslint-config": "0.0.6",
     "@pedaki/prettier-config": "0.0.5",
-    "@types/preview-email": "^3.0.1",
-    "@types/react": "^18.2.21",
+    "@types/preview-email": "^3.0.2",
+    "@types/react": "^18.2.22",
     "preview-email": "^3.0.19",
     "react": "^18.2.0",
     "tsup": "^7.2.0"

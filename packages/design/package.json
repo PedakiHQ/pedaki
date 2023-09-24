@@ -30,13 +30,13 @@
   "devDependencies": {
     "@pedaki/eslint-config": "0.0.6",
     "@pedaki/prettier-config": "0.0.5",
-    "@types/react": "^18.2.21",
-    "esbuild-css-modules-plugin": "^3.0.1",
+    "@types/react": "^18.2.22",
+    "esbuild-css-modules-plugin": "^3.0.2",
     "esbuild-plugin-alias-path": "^2.0.2",
     "esbuild-sass-plugin": "^2.15.0",
     "next": "latest",
     "react": "^18.2.0",
-    "react-hook-form": "^7.46.1",
+    "react-hook-form": "^7.46.2",
     "tsup": "^7.2.0"
   },
   "peerDependencies": {

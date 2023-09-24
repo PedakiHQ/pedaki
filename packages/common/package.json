@@ -28,9 +28,9 @@
   "devDependencies": {
     "@pedaki/eslint-config": "0.0.6",
     "@pedaki/prettier-config": "0.0.5",
-    "@types/bcryptjs": "^2.4.3",
+    "@types/bcryptjs": "^2.4.4",
     "@types/memory-cache": "latest",
-    "@types/react": "^18.2.21",
+    "@types/react": "^18.2.22",
     "react": "^18.2.0",
     "tsup": "^7.2.0"
   },
