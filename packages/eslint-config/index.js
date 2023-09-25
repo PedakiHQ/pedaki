@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'import', "turbo"],
+  plugins: ['@typescript-eslint', 'import', 'turbo'],
   env: {
     browser: true,
     node: true,
@@ -34,12 +34,14 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
     'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
     'node/file-extension-in-import': ['error', 'always'],
-    "turbo/no-undeclared-env-vars": "error",
-    'node/no-unsupported-features/es-syntax': [
+    'turbo/no-undeclared-env-vars': 'error',
+    'node/no-unsupported-features/es-syntax': ['error'],
+    'node/no-missing-import': ['off'],
+    'node/no-extraneous-import': [
       'error',
-    ],
-    'node/no-missing-import': [
-        'off'
+      {
+        allowModules: ['cpy', 'execa', 'vitest', 'tsup'],
+      },
     ],
   },
   reportUnusedDisableDirectives: true,

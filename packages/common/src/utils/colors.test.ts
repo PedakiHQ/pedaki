@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { hexToRgb, hsl, isDark } from './colors';
+import { hexToRgb, hsl, isDark } from './colors.ts';
 
 describe('hsl', () => {
   test('generate a random hsl color', () => {

@@ -2,7 +2,7 @@
 
 // Based on https://github.com/coffee-cup/gradient-avatars/blob/main/src/gradients.ts
 
-import { hsl } from './colors';
+import { hsl } from './colors.ts';
 
 const stringToColour = (): string => {
   const [hue, saturation, lightness] = hsl();

@@ -36,9 +36,6 @@
     "next": "latest",
     "react": "^18.2.0",
     "react-hook-form": "^7.46.2",
-    "tsup": "^7.2.0",
-    "cpy": "^10.1.0",
-    "execa": "^8.0.1",
     "esbuild-plugin-file-path-extensions": "^1.0.0"
   },
   "peerDependencies": {

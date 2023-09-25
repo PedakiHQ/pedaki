@@ -1,5 +1,5 @@
-import React from 'react';
 import { cn } from '~/utils';
+import React from 'react';
 import IconInfoCircle from '../icons/IconInfoCircle.tsx';
 import { Callout, CalloutContent, CalloutIcon } from './index.tsx';
 

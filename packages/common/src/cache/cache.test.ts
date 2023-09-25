@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
-import { cache, getCache, isStale, revalidate, revalidateAll } from './cache';
+import { cache, getCache, isStale, revalidate, revalidateAll } from './cache.ts';
 
 describe('cache - memory', () => {
   const value = 'test';

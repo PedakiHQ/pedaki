@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { generateToken, randomId } from './random';
+import { generateToken, randomId } from './random.ts';
 
 test('generate a randomId of length 9', () => {
   const id = randomId();

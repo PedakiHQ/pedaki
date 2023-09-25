@@ -4,7 +4,7 @@
 
 import { toast } from 'sonner';
 import type { ToastT } from 'sonner';
-import { randomId } from './random';
+import { randomId } from './random.ts';
 
 interface NotificationBase extends Omit<ToastT, 'id'> {
   // @internal
