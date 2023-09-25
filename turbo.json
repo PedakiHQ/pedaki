@@ -18,7 +18,9 @@
         "build"
       ]
     },
-    "lint": {},
+    "lint": {
+      "cache": false
+    },
     "format": {
     },
     "format:check": {

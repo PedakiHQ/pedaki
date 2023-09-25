@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "outDir": "dist",
     "target": "es2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -23,7 +26,9 @@
     "preserveWatchOutput": true,
     "verbatimModuleSyntax": true,
     "experimentalDecorators": true,
-    "baseUrl": "."
+    "paths": {
+      "~/*": ["src/*"]
+    }
   },
   "exclude": ["node_modules", ".react-email", ".idea", ".github", "src/preview-email.pug", "dist"]
 }

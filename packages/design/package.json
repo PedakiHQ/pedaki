@@ -20,8 +20,8 @@
     "directory": "dist"
   },
   "scripts": {
-    "build": "tsup && npm run copy-static",
-    "copy-static": "copyfiles -u 1 \"src/**/*.{css,scss,svg,config.ts}\" dist && node ../../scripts/prepare-dist.js && node scripts/add-directive-dist.cjs",
+    "build": "tsup",
+    "copy-static": " node ",
     "lint": "eslint . --cache",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write . --cache",

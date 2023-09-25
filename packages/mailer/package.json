@@ -17,8 +17,7 @@
   },
   "scripts": {
     "dev": "email dev -d src/templates -p 4000",
-    "build": "tsup && npm run copy-static",
-    "copy-static": "copyfiles -u 1 \"src/**/*.{css,scss,svg,config.ts,pug}\" dist && node ../../scripts/prepare-dist.js",
+    "build": "tsup",
     "format": "prettier --write .  --cache",
     "format:check": "prettier --check .  --cache"
   },

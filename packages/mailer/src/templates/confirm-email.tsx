@@ -1,9 +1,9 @@
 import { Head } from '@react-email/head';
 import { Html } from '@react-email/html';
 import { Link } from '@react-email/link';
+import { FROM_EMAIL_NO_REPLY } from '~/constants';
+import type { Mail } from '~/type';
 import * as React from 'react';
-import { FROM_EMAIL_NO_REPLY } from '../constants';
-import type { Mail } from '../type';
 
 const ConfirmEmailTemplate: Mail<{
   name: string;

@@ -31,9 +31,11 @@
     "@types/node": "^18.17.19",
     "@vitest/coverage-v8": "^0.34.5",
     "copyfiles": "latest",
+    "cpy": "^10.1.0",
     "dotenv-cli": "latest",
     "fs-extra": "^11.1.1",
     "rimraf": "latest",
+    "tsconfig-replace-paths": "^0.0.14",
     "turbo": "latest",
     "typescript": "^5.2.2",
     "vitest": "^0.34.5"
