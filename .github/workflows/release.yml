@@ -35,6 +35,8 @@ jobs:
 
       - name: Build
         run: pnpm turbo build --filter eslint-config
+        env:
+          NODE_ENV: production
 
       - name: Create Release Pull Request or Publish
         id: changesets
