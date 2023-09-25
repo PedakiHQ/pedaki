@@ -1,5 +1,11 @@
 # @pedaki/mailer
 
+## 0.0.4
+
+### Patch Changes
+
+- [`994a8db`](https://github.com/PedakiHQ/pedaki/commit/994a8db854b9153cf432765048995e61b3984a43) Thanks [@Vahor](https://github.com/Vahor)! - fix constants path import
+
 ## 0.0.3
 
 ### Patch Changes
