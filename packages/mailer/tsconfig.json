@@ -31,6 +31,6 @@
       "~/*": ["src/*"]
     }
   },
-  "include": ["src/**/*", "tsup.config.ts", ".eslintrc.cjs"],
+  "include": ["src"],
   "exclude": ["node_modules", ".react-email", ".idea", ".github", "src/preview-email.pug", "dist"]
 }

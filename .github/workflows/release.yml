@@ -31,10 +31,10 @@ jobs:
         run: pnpm install --child-concurrency 3 --frozen-lockfile --prefer-offline
 
       - name: Check for errors
-        run: pnpm run check --filter=!www
+        run: pnpm run check --filter eslint-config
 
       - name: Build
-        run: pnpm turbo build --filter=!www
+        run: pnpm turbo build --filter eslint-config
 
       - name: Create Release Pull Request or Publish
         id: changesets
