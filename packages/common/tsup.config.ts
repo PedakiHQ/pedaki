@@ -1,3 +1,5 @@
+import cpy from 'cpy';
+import { execaCommand } from 'execa';
 import type { Options } from 'tsup';
 import { defineConfig } from 'tsup';
 
@@ -14,5 +16,16 @@ export default defineConfig((options: Options) => ({
   clean: true,
   bundle: false,
   external: ['react'],
+  onSuccess: async () => {
+    await cpy(['package.json', 'src/**/*.{css,scss,svg,config.ts}', 'README.md'], 'dist');
+    await execaCommand('pnpm exec tsconfig-replace-paths', {
+      stdout: process.stdout,
+      stderr: process.stderr,
+    });
+    await execaCommand('node ../../scripts/fix-ts-paths.js', {
+      stdout: process.stdout,
+      stderr: process.stderr,
+    });
+  },
   ...options,
 }));

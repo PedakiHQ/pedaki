@@ -1,7 +1,7 @@
 // https://github.com/juliencrn/usehooks-ts/tree/master
 
 import type { RefObject } from 'react';
-import { useEventListener } from './useEventListener';
+import { useEventListener } from './useEventListener.ts';
 
 type Handler = (event: MouseEvent) => void;
 

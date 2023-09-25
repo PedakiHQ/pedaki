@@ -1,6 +1,6 @@
 import cacheData from 'memory-cache';
-import { formatData } from './shared';
-import type { CachedData, MemoryCacheOptions } from './types';
+import { formatData } from './shared.ts';
+import type { CachedData, MemoryCacheOptions } from './types.ts';
 
 export const cache = async <T>(
   fn: (() => Promise<T>) | T,

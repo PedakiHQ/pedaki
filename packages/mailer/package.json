@@ -17,8 +17,9 @@
   },
   "scripts": {
     "dev": "email dev -d src/templates -p 4000",
-    "build": "tsup && npm run copy-static",
-    "copy-static": "copyfiles -u 1 \"src/**/*.{css,scss,svg,config.ts,pug}\" dist && node ../../scripts/prepare-dist.js",
+    "build": "tsup",
+    "lint": "eslint . --cache",
+    "typecheck": "tsc --noEmit",
     "format": "prettier --write .  --cache",
     "format:check": "prettier --check .  --cache"
   },
@@ -28,8 +29,7 @@
     "@types/preview-email": "^3.0.2",
     "@types/react": "^18.2.22",
     "preview-email": "^3.0.19",
-    "react": "^18.2.0",
-    "tsup": "^7.2.0"
+    "react": "^18.2.0"
   },
   "peerDependencies": {
     "@react-email/button": "0.0.10",
@@ -41,5 +41,12 @@
     "react-email": "1.9.4",
     "resend": "^1.0.0"
   },
+  "engines": {
+    "node": ">=18.0.0 <19.0.0",
+    "pnpm": ">=8.0.0",
+    "yarn": "use-pnpm",
+    "npm": "use-pnpm"
+  },
+  "packageManager": "pnpm@8.7.6",
   "prettier": "@pedaki/prettier-config"
 }

@@ -1,9 +1,9 @@
 import svgToDataUri from 'mini-svg-data-uri';
 import type { Config } from 'tailwindcss';
-import { fontFamily } from 'tailwindcss/defaultTheme';
+import { fontFamily } from 'tailwindcss/defaultTheme.js';
 // @ts-expect-error - no types
-import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
-import plugin from 'tailwindcss/plugin';
+import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette.js';
+import plugin from 'tailwindcss/plugin.js';
 
 const gridBackground = plugin(({ matchUtilities, theme }) => {
   matchUtilities(

@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "rootDir": "src",
+    "baseUrl": ".",
+    "outDir": "dist",
     "target": "es2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -9,6 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "module": "esnext",
+    "allowImportingTsExtensions": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -23,8 +27,10 @@
     "preserveWatchOutput": true,
     "verbatimModuleSyntax": true,
     "experimentalDecorators": true,
-    "baseUrl": "."
+    "paths": {
+      "~/*": ["src/*"]
+    }
   },
-  "include": ["css.d.ts", "src/**/*", "tsup.config.ts"],
+  "include": ["css.d.ts", "src/**/*", "tsup.config.ts", ".eslintrc.cjs"],
   "exclude": ["node_modules", ".idea", ".github", "dist", "scripts"]
 }

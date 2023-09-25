@@ -1,5 +1,5 @@
 import React from 'react';
-import type { IconProps } from './type';
+import type { IconProps } from './type.ts';
 
 const IconFlagFR = (props: IconProps) => (
   <svg viewBox="0 0 640 480" {...props}>

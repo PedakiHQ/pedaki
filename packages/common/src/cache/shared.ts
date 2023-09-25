@@ -1,4 +1,4 @@
-import type { CachedData } from './types';
+import type { CachedData } from './types.ts';
 
 export const formatData = <T>(data: T) => {
   return {

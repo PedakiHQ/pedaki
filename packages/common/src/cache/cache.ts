@@ -3,8 +3,8 @@ import {
   getCache as memoryGetCache,
   revalidate as memoryRevalidate,
   revalidateAll as memoryRevalidateAll,
-} from './memory-cache';
-import type { CachedData, CacheOptions } from './types';
+} from './memory-cache.ts';
+import type { CachedData, CacheOptions } from './types.ts';
 
 export const cache = async <T>(
   fn: (() => Promise<T>) | T,

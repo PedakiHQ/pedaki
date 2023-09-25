@@ -1,11 +1,11 @@
 'use client';
 
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
+import { cn } from '~/utils';
 import * as React from 'react';
-import { cn } from '../utils';
-import IconCheck from './icons/IconCheck';
-import IconChevronRight from './icons/IconChevronRight';
-import IconCircle from './icons/IconCircle';
+import IconCheck from './icons/IconCheck.tsx';
+import IconChevronRight from './icons/IconChevronRight.tsx';
+import IconCircle from './icons/IconCircle.tsx';
 
 const DropdownMenu = DropdownMenuPrimitive.Root;
 

@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { hash256, hashPassword, hmac, matchPassword } from './hash';
+import { hash256, hashPassword, hmac, matchPassword } from './hash.ts';
 
 describe('hash256', () => {
   describe("hash 'hello' with sha256", () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { clamp, parseIntOr } from './math';
+import { clamp, parseIntOr } from './math.ts';
 
 describe('clamp', () => {
   test('clamp a value between min and max', () => {

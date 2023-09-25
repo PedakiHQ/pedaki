@@ -1,7 +1,7 @@
+import { cn } from '~/utils';
 import React from 'react';
-import { cn } from '../../utils';
-import IconInfoCircle from '../icons/IconInfoCircle';
-import { Callout, CalloutContent, CalloutIcon } from './index';
+import IconInfoCircle from '../icons/IconInfoCircle.tsx';
+import { Callout, CalloutContent, CalloutIcon } from './index.tsx';
 
 interface InfoCalloutProps {
   children: React.ReactNode;

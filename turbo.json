@@ -3,6 +3,11 @@
   "globalDependencies": [
     "**/.env.*local"
   ],
+  "globalEnv": [
+    "NODE_ENV",
+    "MAILER_PREVIEW",
+    "RESEND_API_KEY"
+  ],
   "pipeline": {
     "build": {
       "dependsOn": [
@@ -18,7 +23,9 @@
         "build"
       ]
     },
-    "lint": {},
+    "lint": {
+      "cache": false
+    },
     "format": {
     },
     "format:check": {
