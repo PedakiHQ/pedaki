@@ -15,6 +15,7 @@
   "publishConfig": {
     "directory": "dist"
   },
+  "main": "index.js",
   "scripts": {
     "dev": "email dev -d src/templates -p 4000",
     "build": "tsup",
