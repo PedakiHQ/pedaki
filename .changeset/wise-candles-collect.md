@@ -5,4 +5,4 @@
 "@pedaki/mailer": patch
 ---
 
-fix esm build issues
+fix esm build issues.
