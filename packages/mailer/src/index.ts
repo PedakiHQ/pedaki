@@ -1,3 +1,3 @@
-export { sendEmail } from './send-email';
-export * from './constants';
-export * from './type';
+export { sendEmail } from './send-email.tsx';
+export * from './constants.ts';
+export * from './type.ts';
