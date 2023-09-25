@@ -1,5 +1,11 @@
 # @pedaki/design
 
+## 0.0.4
+
+### Patch Changes
+
+- [`034dbeb`](https://github.com/PedakiHQ/pedaki/commit/034dbebec2ae8e7aea457a8b12994cb24b7d33c3) Thanks [@Vahor](https://github.com/Vahor)! - fix esm build import issues
+
 ## 0.0.3
 
 ### Patch Changes
