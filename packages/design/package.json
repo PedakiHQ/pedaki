@@ -37,7 +37,10 @@
     "next": "latest",
     "react": "^18.2.0",
     "react-hook-form": "^7.46.2",
-    "tsup": "^7.2.0"
+    "tsup": "^7.2.0",
+    "cpy": "^10.1.0",
+    "execa": "^8.0.1",
+    "esbuild-plugin-file-path-extensions": "^1.0.0"
   },
   "peerDependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
@@ -66,5 +69,12 @@
       "optional": true
     }
   },
+  "engines": {
+    "node": ">=18.0.0 <19.0.0",
+    "pnpm": ">=8.0.0",
+    "yarn": "use-pnpm",
+    "npm": "use-pnpm"
+  },
+  "packageManager": "pnpm@8.7.6",
   "prettier": "@pedaki/prettier-config"
 }

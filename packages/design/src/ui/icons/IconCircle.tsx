@@ -1,5 +1,5 @@
 import React from 'react';
-import type { IconProps } from './type';
+import type { IconProps } from './type.ts';
 
 // https://lucide.dev/icons/circle
 const IconCircle = (props: IconProps) => (

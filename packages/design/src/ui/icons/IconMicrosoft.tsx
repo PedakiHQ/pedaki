@@ -1,5 +1,5 @@
 import React from 'react';
-import type { IconProps } from './type';
+import type { IconProps } from './type.ts';
 
 const IconMicrosoft = (props: IconProps) => (
   <svg role="img" viewBox="0 0 16 16" {...props}>

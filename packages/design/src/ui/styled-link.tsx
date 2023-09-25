@@ -1,8 +1,8 @@
+import { cn } from '~/utils';
 import type { VariantProps } from 'class-variance-authority';
 import { cva } from 'class-variance-authority';
-import Link from 'next/link';
+import Link from 'next/link.js';
 import * as React from 'react';
-import { cn } from '../utils';
 
 const styledLinkVariants = cva(
   'inline-flex items-center transition-colors disabled:pointer-events-none disabled:opacity-50 focus:ring-offset-bg-primary focus:ring-2 focus:ring-orange focus:outline-none focus:ring-offset-2',

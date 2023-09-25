@@ -1,5 +1,5 @@
+import { cn } from '~/utils';
 import React from 'react';
-import { cn } from '../utils';
 
 export interface ColorPillProps extends React.HTMLAttributes<HTMLDivElement> {
   // CSS color value
