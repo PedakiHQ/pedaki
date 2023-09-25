@@ -1,5 +1,11 @@
 # @pedaki/eslint-config
 
+## 0.0.7
+
+### Patch Changes
+
+- [#40](https://github.com/PedakiHQ/pedaki/pull/40) [`3cd1972`](https://github.com/PedakiHQ/pedaki/commit/3cd1972d4c7dc32ee9103d83b65e8fe575a381dc) Thanks [@Vahor](https://github.com/Vahor)! - Add turbo, esm and allow \_ unused variables
+
 ## 0.0.6
 
 ### Patch Changes
