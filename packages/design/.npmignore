@@ -9,5 +9,5 @@ components.json
 .eslintrc.cjs
 .eslintcache
 .prettierignore
-css.d.ts
+src/css.d.ts
 scripts
