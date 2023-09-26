@@ -38,8 +38,8 @@
     "@react-email/html": "0.0.4",
     "@react-email/link": "0.0.5",
     "@react-email/render": "0.0.7",
-    "@react-email/tailwind": "0.0.8",
-    "react-email": "1.9.4",
+    "@react-email/tailwind": "0.0.9",
+    "react-email": "1.9.5",
     "resend": "^1.0.0"
   },
   "engines": {
