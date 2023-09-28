@@ -32,7 +32,7 @@ jobs:
       - name: Enforce permission requirement
         id: check-permissions
         continue-on-error: true
-        uses: prince-chrismc/check-actor-permissions-action@v2
+        uses: prince-chrismc/check-actor-permissions-action@v3
         with:
           permission: write
 
