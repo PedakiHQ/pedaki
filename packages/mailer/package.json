@@ -28,7 +28,7 @@
     "@pedaki/eslint-config": "0.0.7",
     "@pedaki/prettier-config": "0.0.5",
     "@types/preview-email": "^3.0.2",
-    "@types/react": "^18.2.22",
+    "@types/react": "^18.2.23",
     "preview-email": "^3.0.19",
     "react": "^18.2.0"
   },

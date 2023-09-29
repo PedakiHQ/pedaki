@@ -22,3 +22,6 @@
 
 Pedaki is an open source project. Feel free to contribute by opening issues and/or pull requests.
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+
+Website: [https://www.pedaki.fr](https://www.pedaki.fr)
+Website Repository: [https://github.com/vahor/pedaki.fr](https://github.com/vahor/pedaki.fr)

@@ -29,8 +29,8 @@
   "devDependencies": {
     "@pedaki/eslint-config": "0.0.7",
     "@pedaki/prettier-config": "0.0.5",
-    "@types/react": "^18.2.22",
-    "esbuild-css-modules-plugin": "^3.0.2",
+    "@types/react": "^18.2.23",
+    "esbuild-css-modules-plugin": "^3.0.3",
     "esbuild-plugin-alias-path": "^2.0.2",
     "esbuild-sass-plugin": "^2.15.0",
     "next": "latest",
