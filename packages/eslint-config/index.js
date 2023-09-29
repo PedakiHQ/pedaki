@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'import', 'turbo'],
+  plugins: ['@typescript-eslint', 'import'],
   env: {
     browser: true,
     node: true,

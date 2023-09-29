@@ -17,7 +17,7 @@ export default defineConfig((options: Options) => ({
   bundle: false,
   external: ['react'],
   onSuccess: async () => {
-    await cpy(['package.json', 'src/**/*.{css,scss,svg,config.ts}', 'README.md'], 'dist');
+    await cpy(['package.json', 'src/**/*.{css,scss,svg,config.ts,pug}', 'README.md'], 'dist');
     await execaCommand('pnpm exec tsconfig-replace-paths', {
       stdout: process.stdout,
       stderr: process.stderr,
