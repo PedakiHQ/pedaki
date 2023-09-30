@@ -48,6 +48,8 @@ export const wrapWithLoading = async <T>(
         duration: 4000,
         ...notificationProps,
       });
+
+      return result;
     }
   } catch (error) {
     if (errorProps) {
@@ -69,5 +71,7 @@ export const wrapWithLoading = async <T>(
     if (throwOnError) {
       throw error;
     }
+
+    return null;
   }
 };
