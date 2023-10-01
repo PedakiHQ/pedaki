@@ -13,9 +13,6 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "docs",
-    "@pedaki/common",
-    "@pedaki/design",
-    "@pedaki/mailer"
+    "docs"
   ]
 }
