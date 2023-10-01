@@ -1,9 +1,9 @@
 cd "$(dirname "$0")/.."
 
-echo "Copying assets to public folder"
+echo "Downloading assets and output to public folder"
 mkdir -p ./public
-cp -v ../apps/www/public/logo-dark.svg ./public/logo-dark.svg
-cp -v ../apps/www/public/logo-light.svg ./public/logo-light.svg
-cp -v ../apps/www/public/favicon-32x32.png ./favicon.png
+wget https://raw.githubusercontent.com/Vahor/pedaki.fr/main/apps/www/public/logo-dark.svg -O ./public/logo-dark.svg
+wget https://raw.githubusercontent.com/Vahor/pedaki.fr/main/apps/www/public/logo-light.svg -O ./public/logo-light.svg
+wget https://raw.githubusercontent.com/Vahor/pedaki.fr/main/apps/www/public/favicon-32x32.png -O ./public/favicon.png
 
-echo "Assets copied to public folder"
+echo "Assets downloaded to public folder"
