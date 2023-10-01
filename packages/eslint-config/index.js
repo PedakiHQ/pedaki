@@ -34,7 +34,6 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
     'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
     'node/file-extension-in-import': ['error', 'always'],
-    'turbo/no-undeclared-env-vars': 'error',
     'node/no-unsupported-features/es-syntax': ['error'],
     'node/no-missing-import': ['off'],
     'node/no-extraneous-import': [
