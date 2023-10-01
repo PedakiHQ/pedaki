@@ -9,7 +9,7 @@ export interface CacheOptions {
   type?: CacheType;
 }
 
-export interface MemoryCacheOptions extends Omit<CacheOptions, 'type' | 'ignoreCache'> {
+export interface MemoryCacheOptions extends Omit<CacheOptions, 'type'> {
   type?: 'memory';
 }
 

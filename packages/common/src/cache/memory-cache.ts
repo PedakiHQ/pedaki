@@ -10,7 +10,7 @@ export const cache = async <T>(
   const value = getCache<T>(key);
   const hit = value !== null && value !== undefined;
 
-  if (hit) {
+  if (!options?.ignoreCache && hit) {
     // Check if data is still valid
     if (!options?.ttl || Date.now() - value.createdAt <= options.ttl) {
       return value.data;

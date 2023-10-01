@@ -11,10 +11,6 @@ export const cache = async <T>(
   key: string,
   options?: CacheOptions,
 ): Promise<T> => {
-  if (options?.ignoreCache) {
-    return fn instanceof Function ? fn() : fn;
-  }
-
   if (!options?.type || options.type === 'memory') {
     return memoryCache(fn, key, options);
   }
