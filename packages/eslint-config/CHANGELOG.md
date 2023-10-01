@@ -1,5 +1,14 @@
 # @pedaki/eslint-config
 
+## 0.0.8
+
+### Patch Changes
+
+- [`5f1c995`](https://github.com/PedakiHQ/pedaki/commit/5f1c9958d531b882318d5bda647df4a223dd5174) Thanks [@Vahor](https://github.com/Vahor)! - remove turbo plugin
+
+- [#44](https://github.com/PedakiHQ/pedaki/pull/44) [`b0e9842`](https://github.com/PedakiHQ/pedaki/commit/b0e9842634ad3087f1c273f343103104d9113ae2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@typescript-eslint/eslint-plugin` to `6.7.3`.
+  Updated dependency `@typescript-eslint/parser` to `6.7.3`.
+
 ## 0.0.7
 
 ### Patch Changes
