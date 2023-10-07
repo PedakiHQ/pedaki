@@ -9,6 +9,7 @@ export { default as IconChevronDown } from './IconChevronDown.tsx';
 export { default as IconTranslation } from './IconTranslation.tsx';
 export { default as IconX } from './IconX.tsx';
 export { default as IconInfoCircle } from './IconInfoCircle.tsx';
+export { default as IconCircle } from './IconCircle.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
