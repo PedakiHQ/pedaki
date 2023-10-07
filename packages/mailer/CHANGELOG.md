@@ -1,5 +1,14 @@
 # @pedaki/mailer
 
+## 0.0.5
+
+### Patch Changes
+
+- [`d135538`](https://github.com/PedakiHQ/pedaki/commit/d135538af9d44bfa7b546bfe9b47da03bf10cad7) Thanks [@Vahor](https://github.com/Vahor)! - Updated dependency `packageManager` to `pnpm@8.8.0`.
+
+- [`d135538`](https://github.com/PedakiHQ/pedaki/commit/d135538af9d44bfa7b546bfe9b47da03bf10cad7) Thanks [@Vahor](https://github.com/Vahor)! - Updated dependency `@react-email/tailwind` to `0.0.9`.
+  Updated dependency `react-email` to `1.9.5`.
+
 ## 0.0.4
 
 ### Patch Changes
