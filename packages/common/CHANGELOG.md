@@ -1,5 +1,17 @@
 # @pedaki/common
 
+## 0.1.0
+
+### Minor Changes
+
+- [#53](https://github.com/PedakiHQ/pedaki/pull/53) [`7e11275`](https://github.com/PedakiHQ/pedaki/commit/7e11275364eb1a4f3e2fc1729c0f104a36235f96) Thanks [@Vahor](https://github.com/Vahor)! - add encrypt/decrypt method using aes-256-gcm
+
+### Patch Changes
+
+- [`d135538`](https://github.com/PedakiHQ/pedaki/commit/d135538af9d44bfa7b546bfe9b47da03bf10cad7) Thanks [@Vahor](https://github.com/Vahor)! - Updated dependency `packageManager` to `pnpm@8.8.0`.
+
+- [`d135538`](https://github.com/PedakiHQ/pedaki/commit/d135538af9d44bfa7b546bfe9b47da03bf10cad7) Thanks [@Vahor](https://github.com/Vahor)! - cache result even when using ignoreCache
+
 ## 0.0.5
 
 ### Patch Changes

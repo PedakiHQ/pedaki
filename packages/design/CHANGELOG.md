@@ -1,5 +1,15 @@
 # @pedaki/design
 
+## 0.1.0
+
+### Minor Changes
+
+- [#54](https://github.com/PedakiHQ/pedaki/pull/54) [`9d08512`](https://github.com/PedakiHQ/pedaki/commit/9d085126180c73bba63aa0d2d6329cf1b1029b5f) Thanks [@Vahor](https://github.com/Vahor)! - add select and checkbox components
+
+### Patch Changes
+
+- [`d135538`](https://github.com/PedakiHQ/pedaki/commit/d135538af9d44bfa7b546bfe9b47da03bf10cad7) Thanks [@Vahor](https://github.com/Vahor)! - Updated dependency `packageManager` to `pnpm@8.8.0`.
+
 ## 0.0.4
 
 ### Patch Changes
