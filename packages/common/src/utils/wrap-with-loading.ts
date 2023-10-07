@@ -6,7 +6,7 @@ import { toast } from 'sonner';
 import type { ToastT } from 'sonner';
 import { randomId } from './random.ts';
 
-type NotificationBase = Omit<ToastT, 'id'>
+type NotificationBase = Omit<ToastT, 'id'>;
 
 interface WrapWithLoadingProps<T> {
   loadingProps?: NotificationBase | null;
