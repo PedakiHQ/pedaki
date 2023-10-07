@@ -1,5 +1,6 @@
+import * as crypto from 'crypto';
 import { describe, expect, test } from 'vitest';
-import { hash256, hashPassword, hmac, matchPassword } from './hash.ts';
+import { decrypt, encrypt, hash256, hashPassword, hmac, matchPassword } from './hash.ts';
 
 describe('hash256', () => {
   describe("hash 'hello' with sha256", () => {
@@ -61,6 +62,34 @@ describe('hashPassword/matchPassword', () => {
 
     test('with the same password and pepper, the hash should match', () => {
       expect(matchPassword(password, hash, pepper)).toBe(true);
+    });
+  });
+});
+
+describe('encrypt/decrypt', () => {
+  const key = crypto.randomBytes(32).toString('hex');
+  const text = crypto.randomBytes(32).toString('hex');
+  const encrypted = encrypt(text, key);
+  describe('encrypt', () => {
+    test('the output should not be the same as the input', () => {
+      expect(encrypted).not.toBe(text);
+    });
+    test('with the same input and key, the encrypted data should be different', () => {
+      expect(encrypt(text, key)).not.toBe(encrypted);
+    });
+    test('the encrypted text should be different with a different key', () => {
+      expect(encrypt(text, crypto.randomBytes(32).toString('hex'))).not.toBe(encrypted);
+    });
+    test('the encrypted text should be different with a different input', () => {
+      expect(encrypt('hello world', key)).not.toBe(encrypted);
+    });
+  });
+  describe('decrypt', () => {
+    test('with the same encrypted text and key, the decrypted text should be the same', () => {
+      expect(decrypt(encrypted, key)).toBe(text);
+    });
+    test('with a different key, this should throw an error', () => {
+      expect(() => decrypt(encrypted, crypto.randomBytes(32).toString('hex'))).toThrow();
     });
   });
 });
