@@ -35,9 +35,9 @@ export const encrypt = (text: string, key: string): string => {
 
 export const decrypt = (encrypted: string, key: string): string => {
     const content = Buffer.from(encrypted, 'hex');
-    const iv = content.slice(0, 16);
-    const tag = content.slice(16, 32);
-    const text = content.slice(32);
+    const iv = content.subarray(0, 16);
+    const tag = content.subarray(16, 32);
+    const text = content.subarray(32);
     const decipher = crypto.createDecipheriv(ENCRYPTION_ALGORITHM, Buffer.from(key, 'hex'), iv);
     decipher.setAuthTag(tag);
     return decipher.update(text.toString(), 'base64', 'utf8') + decipher.final('utf8');
