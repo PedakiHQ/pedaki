@@ -6,15 +6,12 @@ import { toast } from 'sonner';
 import type { ToastT } from 'sonner';
 import { randomId } from './random.ts';
 
-interface NotificationBase extends Omit<ToastT, 'id'> {
-  // @internal
-  id?: number | string;
-}
+type NotificationBase = Omit<ToastT, 'id'>
 
 interface WrapWithLoadingProps<T> {
   loadingProps?: NotificationBase | null;
   successProps?: ((data: T) => NotificationBase) | NotificationBase | null;
-  errorProps?: ((error: Error & { message: string }) => NotificationBase) | NotificationBase | null;
+  errorProps?: ((error: Error) => NotificationBase) | NotificationBase | null;
   throwOnError?: boolean;
 }
 
