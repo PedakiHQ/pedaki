@@ -8,17 +8,17 @@ import { randomId } from './random.ts';
 
 type NotificationBase = Omit<ToastT, 'id'>;
 
-interface WrapWithLoadingProps<T> {
+interface WrapWithLoadingProps<T, B extends boolean> {
   loadingProps?: NotificationBase | null;
   successProps?: ((data: T) => NotificationBase) | NotificationBase | null;
   errorProps?: ((error: Error) => NotificationBase) | NotificationBase | null;
-  throwOnError?: boolean;
+  throwOnError?: B;
 }
 
-export const wrapWithLoading = async <T>(
+export const wrapWithLoading = async <T, B extends boolean>(
   promise: () => Promise<T> | T,
-  { loadingProps, successProps, errorProps, throwOnError = true }: WrapWithLoadingProps<T>,
-) => {
+  { loadingProps, successProps, errorProps, throwOnError }: WrapWithLoadingProps<T, B>,
+): Promise<B extends true ? T : T | null> => {
   const id = randomId();
 
   if (loadingProps) {
@@ -69,6 +69,10 @@ export const wrapWithLoading = async <T>(
       throw error;
     }
 
+    // @ts-expect-error: happy compiler
     return null;
   }
+
+  // @ts-expect-error: happy compiler
+  return null;
 };
