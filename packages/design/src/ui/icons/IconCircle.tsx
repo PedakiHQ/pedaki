@@ -1,9 +1,10 @@
 import React from 'react';
 import type { IconProps } from './type.ts';
 
-// https://lucide.dev/icons/circle
+// Lucide icon: https://lucide.dev/icons/circle
 const IconCircle = (props: IconProps) => (
   <svg
+    role="img"
     width="24"
     height="24"
     viewBox="0 0 24 24"
