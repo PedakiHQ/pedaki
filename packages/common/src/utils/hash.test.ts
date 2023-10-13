@@ -67,8 +67,8 @@ describe('hashPassword/matchPassword', () => {
 });
 
 describe('encrypt/decrypt', () => {
-  const key = crypto.randomBytes(32).toString('hex');
-  const text = crypto.randomBytes(32).toString('hex');
+  const key = 'supersecretkeysupersecretkeysupe';
+  const text = crypto.randomBytes(32).toString('utf-8');
   const encrypted = encrypt(text, key);
   describe('encrypt', () => {
     test('the output should not be the same as the input', () => {
@@ -78,7 +78,7 @@ describe('encrypt/decrypt', () => {
       expect(encrypt(text, key)).not.toBe(encrypted);
     });
     test('the encrypted text should be different with a different key', () => {
-      expect(encrypt(text, crypto.randomBytes(32).toString('hex'))).not.toBe(encrypted);
+      expect(encrypt(text, 'notthesamekeynotthesamekeynotthe')).not.toBe(encrypted);
     });
     test('the encrypted text should be different with a different input', () => {
       expect(encrypt('hello world', key)).not.toBe(encrypted);
@@ -89,7 +89,7 @@ describe('encrypt/decrypt', () => {
       expect(decrypt(encrypted, key)).toBe(text);
     });
     test('with a different key, this should throw an error', () => {
-      expect(() => decrypt(encrypted, crypto.randomBytes(32).toString('hex'))).toThrow();
+      expect(() => decrypt(encrypted, crypto.randomBytes(32).toString('utf-8'))).toThrow();
     });
   });
 });
