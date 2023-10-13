@@ -1,5 +1,11 @@
 # @pedaki/common
 
+## 0.1.1
+
+### Patch Changes
+
+- [`b3200d7`](https://github.com/PedakiHQ/pedaki/commit/b3200d75a0ff16c5ac97f179d5abf22effd5d091) Thanks [@Vahor](https://github.com/Vahor)! - use uft8 keys for encrypt/decrypt methods
+
 ## 0.1.0
 
 ### Minor Changes
