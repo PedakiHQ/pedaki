@@ -52,14 +52,14 @@ export default {
         border: 'rgb(var(--border) / <alpha-value>)',
       },
       textColor: {
-        primary: 'rgb(var(--text-primary) / <alpha-value>)',
-        secondary: 'rgb(var(--text-secondary) / <alpha-value>)',
-        muted: 'rgb(var(--text-muted) / <alpha-value>)',
+        primary: 'var(--text-primary)',
+        secondary: 'var(--text-secondary)',
+        muted: 'var(--text-muted)',
       },
       borderColor: {
-        primary: 'rgb(var(--text-primary) / <alpha-value>)',
-        secondary: 'rgb(var(--text-secondary) / <alpha-value>)',
-        border: 'rgb(var(--border) / <alpha-value>)',
+        primary: 'var(--text-primary)',
+        secondary: 'var(--text-secondary)',
+        border: 'var(--border)',
       },
       borderRadius: {
         lg: 'var(--radius)',

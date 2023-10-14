@@ -21,24 +21,25 @@
     --background-secondary: var(--gray-50);
     --background-tertiary: var(--gray-100);
 
-    --text-primary: var(--gray-850);
-    --text-secondary: var(--gray-600);
-    --text-muted: var(--gray-500);
+    --text-primary: var(--gray12);
+    --text-secondary: var(--gray10);
+    --text-muted: var(--gray9);
 
     --border: var(--gray-200);
   }
 
   .dark {
-    --text-primary: var(--gray-50);
-    --text-secondary: var(--gray-400);
-    --text-muted: var(--gray-500);
-
     --background-primary: var(--gray-900);
     --background-secondary: var(--gray-850);
+    color: var(--gray12);
   }
 
   * {
     border-color: rgb(var(--border) / 1);
+  }
+
+  .focus-orange-ring {
+    @apply ring-offset-bg-primary focus-visible:outline-none focus:ring-2 focus:ring-orange-8 focus:ring-offset-1;
   }
 
   a {
@@ -52,7 +53,9 @@
   }
 
   body {
-    @apply bg-primary text-primary flex min-h-full flex-col justify-between antialiased;
+    @apply bg-primary flex min-h-full flex-col justify-between antialiased;
+    color: var(--gray12);
+    -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
     font-feature-settings: 'cv11', 'salt', 'ss01', 'ss03', 'cv01', 'cv02', 'cv03', 'cv04', 'cv05',
       'cv06', 'cv07', 'cv08', 'cv09', 'cv10';
