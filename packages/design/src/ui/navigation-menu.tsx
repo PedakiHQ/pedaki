@@ -35,7 +35,7 @@ const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const navigationMenuTriggerStyle = cva([
   'hover:bg-secondary/80 data-[state=open]:bg-secondary/80 data-[active=true]:bg-secondary/80',
-  'group inline-flex h-10 w-max items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium transition-colors hover:text-orange focus:bg-secondary/50 focus:text-orange focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-orange',
+  'group inline-flex h-10 w-max items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium transition-colors hover:text-orange-9 focus:bg-secondary/50 focus:text-orange-9 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-orange-9',
 ]);
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -49,7 +49,7 @@ const NavigationMenuTrigger = React.forwardRef<
   >
     {children}{' '}
     <IconChevronDown
-      className="group-data-[active=true]:text-orange relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
+      className="group-data-[active=true]:text-orange-9 relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
       aria-hidden="true"
     />
   </NavigationMenuPrimitive.Trigger>

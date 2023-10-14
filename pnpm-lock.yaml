@@ -101,6 +101,9 @@ importers:
 
   packages/design:
     dependencies:
+      '@radix-ui/colors':
+        specifier: ^3.0.0
+        version: 3.0.0
       '@radix-ui/react-accordion':
         specifier: ^1.1.2
         version: 1.1.2(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
@@ -167,6 +170,9 @@ importers:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.3.3)
+      windy-radix-palette:
+        specifier: 2.0.0-beta.2
+        version: 2.0.0-beta.2(@radix-ui/colors@3.0.0)(tailwindcss@3.3.3)
     devDependencies:
       '@pedaki/eslint-config':
         specifier: 0.0.9
@@ -1931,6 +1937,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@radix-ui/colors@3.0.0:
+    resolution: {integrity: sha512-FUOsGBkHrYJwCSEtWRCIfQbZG7q1e6DgxCIOe1SUQzDe/7rXXeA47s8yCn6fuTNQAj1Zq4oTFi9Yjp3wzElcxg==}
+    dev: false
 
   /@radix-ui/number@1.0.1:
     resolution: {integrity: sha512-T5gIdVO2mmPW3NNhjNgEP3cqMXjXL9UbO0BzWcXfvdBs+BohbQxvd/K5hSVKmn9/lbTdsQVKbUcP5WLCwvUbBg==}
@@ -10825,6 +10835,16 @@ packages:
       siginfo: 2.0.0
       stackback: 0.0.2
     dev: true
+
+  /windy-radix-palette@2.0.0-beta.2(@radix-ui/colors@3.0.0)(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-ioGONqTUWqwC8gr7XjqpNOpvLqw3YB0dF/KFlS5+pPr+XBZCxdFkNBaWU1NoRCjFt9kJBRCZSe3UB8UnQdlIDQ==}
+    peerDependencies:
+      '@radix-ui/colors': '>=3.0.0'
+      tailwindcss: '>=3.0.0'
+    dependencies:
+      '@radix-ui/colors': 3.0.0
+      tailwindcss: 3.3.3
+    dev: false
 
   /with@7.0.2:
     resolution: {integrity: sha512-RNGKj82nUPg3g5ygxkQl0R937xLyho1J24ItRCBTr/m1YnZkzJy1hUiHUJrc/VlsDQzsCnInEGSg3bci0Lmd4w==}

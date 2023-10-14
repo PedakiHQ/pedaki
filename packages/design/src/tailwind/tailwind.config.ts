@@ -4,6 +4,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme.js';
 // @ts-expect-error - no types
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette.js';
 import plugin from 'tailwindcss/plugin.js';
+import {createPlugin as radixPlugin} from "windy-radix-palette";
 
 const gridBackground = plugin(({ matchUtilities, theme }) => {
   matchUtilities(
@@ -17,6 +18,9 @@ const gridBackground = plugin(({ matchUtilities, theme }) => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment
     { values: flattenColorPalette(theme('backgroundColor')), type: 'color' },
   );
+});
+
+const radixColorsPlugin = radixPlugin({
 });
 
 export default {
@@ -38,28 +42,9 @@ export default {
         xl: '1280px',
         '2xl': '1400px',
       },
+      colors: {}
     },
     extend: {
-      colors: {
-        gray: {
-          50: 'rgb(var(--gray-50) / <alpha-value>)',
-          100: 'rgb(var(--gray-100) / <alpha-value>)',
-          200: 'rgb(var(--gray-200) / <alpha-value>)',
-          300: 'rgb(var(--gray-300) / <alpha-value>)',
-          400: 'rgb(var(--gray-400) / <alpha-value>)',
-          500: 'rgb(var(--gray-500) / <alpha-value>)',
-          600: 'rgb(var(--gray-600) / <alpha-value>)',
-          700: 'rgb(var(--gray-700) / <alpha-value>)',
-          800: 'rgb(var(--gray-800) / <alpha-value>)',
-          850: 'rgb(var(--gray-850) / <alpha-value>)',
-          900: 'rgb(var(--gray-900) / <alpha-value>)',
-        },
-        orange: {
-          300: 'rgb(var(--orange-300) / <alpha-value>)',
-          500: 'rgb(var(--orange-500) / <alpha-value>)',
-          DEFAULT: 'rgb(var(--orange-500) / <alpha-value>)',
-        },
-      },
       backgroundColor: {
         primary: 'rgb(var(--background-primary) / <alpha-value>)',
         secondary: 'rgb(var(--background-secondary) / <alpha-value>)',
@@ -108,5 +93,5 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), gridBackground],
+  plugins: [require('tailwindcss-animate'), gridBackground, radixColorsPlugin.plugin],
 } satisfies Omit<Config, 'content'>;
