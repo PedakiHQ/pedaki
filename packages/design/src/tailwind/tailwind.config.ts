@@ -14,6 +14,11 @@ const gridBackground = plugin(({ matchUtilities, theme }) => {
           `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`,
         )}")`,
       }),
+      'bgi-grid-dashed': (value: string) => ({
+        backgroundImage: `url("${svgToDataUri(
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><g><path d="M32 32L32.0001 0" stroke-dasharray="6 6"/><path d="M0 0L32 0.000198364" stroke-dasharray="6 6"/></g></svg>`,
+        )}")`,
+      }),
     },
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment
     { values: flattenColorPalette(theme('backgroundColor')), type: 'color' },
