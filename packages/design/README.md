@@ -27,15 +27,8 @@ experimental: {
 
 Most of the icons comes from [lucide](https://lucide.dev/) or [remixicon](https://remixicon.com/).
 
-TODO
-
-### Ui
-
-TODO
 
 ### Tailwind
-
-TODO
 
 Add this to your `tailwind.config.js`:
 
@@ -54,4 +47,6 @@ import '@pedaki/design/styles.css';
 
 ### Color system
 
-TODO
+We are using radix color system.
+- Radix Colors: https://www.radix-ui.com/colors
+
