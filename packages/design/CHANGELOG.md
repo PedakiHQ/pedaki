@@ -1,5 +1,11 @@
 # @pedaki/design
 
+## 0.2.0
+
+### Minor Changes
+
+- [#57](https://github.com/PedakiHQ/pedaki/pull/57) [`3de01ff`](https://github.com/PedakiHQ/pedaki/commit/3de01ff10a1c73cdc40e38a78005454a7819222f) Thanks [@Vahor](https://github.com/Vahor)! - use radix colors
+
 ## 0.1.0
 
 ### Minor Changes
