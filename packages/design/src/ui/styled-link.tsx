@@ -5,7 +5,7 @@ import Link from 'next/link.js';
 import * as React from 'react';
 
 const styledLinkVariants = cva(
-  'inline-flex items-center transition-colors disabled:pointer-events-none disabled:opacity-50 focus:ring-offset-bg-primary focus:ring-2 focus:ring-orange focus:outline-none focus:ring-offset-2',
+  'inline-flex items-center transition-colors disabled:pointer-events-none disabled:opacity-50 focus:ring-offset-bg-primary focus:ring-2 focus:ring-orange-8 focus:outline-none focus:ring-offset-2',
   {
     variants: {
       variant: {
@@ -13,7 +13,8 @@ const styledLinkVariants = cva(
         subtle_secondary: 'text-secondary hover:text-primary',
       },
       decoration: {
-        underline: 'underline underline-offset-2 hover:decoration-2 decoration-1 decoration-orange',
+        underline:
+          'underline underline-offset-2 hover:decoration-2 decoration-1 decoration-orange-9',
       },
     },
     defaultVariants: {
