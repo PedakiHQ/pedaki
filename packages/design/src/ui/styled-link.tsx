@@ -13,7 +13,8 @@ const styledLinkVariants = cva(
         subtle_secondary: 'text-secondary hover:text-primary',
       },
       decoration: {
-        underline: 'underline underline-offset-2 hover:decoration-2 decoration-1 decoration-orange-9',
+        underline:
+          'underline underline-offset-2 hover:decoration-2 decoration-1 decoration-orange-9',
       },
     },
     defaultVariants: {

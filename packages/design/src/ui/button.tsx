@@ -23,7 +23,11 @@ const buttonVariants = cva(
           'text-white hover:text-primary',
         ],
         neutral: ['bg-gray-12', 'border-gray-12 hover:border-gray-11', 'text-white'],
-        orange: ['bg-orange-9 hover:bg-orange-10 focus:bg-orange-10', 'border-transparent', 'text-white'],
+        orange: [
+          'bg-orange-9 hover:bg-orange-10 focus:bg-orange-10',
+          'border-transparent',
+          'text-white',
+        ],
         transparent: [
           'text-primary hover:text-orange-9',
           'bg-transparent',

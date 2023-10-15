@@ -4,7 +4,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme.js';
 // @ts-expect-error - no types
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette.js';
 import plugin from 'tailwindcss/plugin.js';
-import {createPlugin as radixPlugin} from "windy-radix-palette";
+import { createPlugin as radixPlugin } from 'windy-radix-palette';
 
 const gridBackground = plugin(({ matchUtilities, theme }) => {
   matchUtilities(
@@ -20,8 +20,7 @@ const gridBackground = plugin(({ matchUtilities, theme }) => {
   );
 });
 
-const radixColorsPlugin = radixPlugin({
-});
+const radixColorsPlugin = radixPlugin({});
 
 export default {
   darkMode: ['class'],
@@ -42,7 +41,7 @@ export default {
         xl: '1280px',
         '2xl': '1400px',
       },
-      colors: {}
+      colors: {},
     },
     extend: {
       backgroundColor: {
