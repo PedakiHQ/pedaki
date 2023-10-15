@@ -48,7 +48,7 @@ export default {
         primary: 'rgb(var(--background-primary) / <alpha-value>)',
         secondary: 'rgb(var(--background-secondary) / <alpha-value>)',
         tertiary: 'rgb(var(--background-tertiary) / <alpha-value>)',
-        border: 'rgb(var(--border) / <alpha-value>)',
+        border: 'var(--border)',
       },
       textColor: {
         primary: 'var(--text-primary)',

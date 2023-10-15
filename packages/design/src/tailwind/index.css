@@ -21,7 +21,7 @@
     --text-secondary: var(--gray10);
     --text-muted: var(--gray9);
 
-    --border: var(--gray-200);
+    --border: var(--gray6);
   }
 
   .dark {
@@ -31,7 +31,7 @@
   }
 
   * {
-    border-color: rgb(var(--border) / 1);
+    border-color: var(--border);
   }
 
   .focus-orange-ring {
