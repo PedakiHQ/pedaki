@@ -1,5 +1,11 @@
 # @pedaki/common
 
+## 0.1.2
+
+### Patch Changes
+
+- [#55](https://github.com/PedakiHQ/pedaki/pull/55) [`a0a827d`](https://github.com/PedakiHQ/pedaki/commit/a0a827d65352a24c589c950abc8bf85591bc3a4b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@8.9.0`.
+
 ## 0.1.1
 
 ### Patch Changes
