@@ -1,5 +1,11 @@
 # @pedaki/design
 
+## 0.2.2
+
+### Patch Changes
+
+- [`cd7b393`](https://github.com/PedakiHQ/pedaki/commit/cd7b3931fe1a30aeed9ec215154eaaaca369c23c) Thanks [@Vahor](https://github.com/Vahor)! - fix border color
+
 ## 0.2.1
 
 ### Patch Changes
