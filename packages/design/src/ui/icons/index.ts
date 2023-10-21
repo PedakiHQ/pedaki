@@ -8,6 +8,7 @@ export { default as IconTranslation } from './IconTranslation.tsx';
 export { default as IconX } from './IconX.tsx';
 export { default as IconInfoCircle } from './IconInfoCircle.tsx';
 export { default as IconCircle } from './IconCircle.tsx';
+export { default as IconDotsH } from './IconDotsH.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
