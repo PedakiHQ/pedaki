@@ -10,6 +10,8 @@ export { default as IconInfoCircle } from './IconInfoCircle.tsx';
 export { default as IconCircle } from './IconCircle.tsx';
 export { default as IconDotsH } from './IconDotsH.tsx';
 export { default as IconQuestionCircleFill } from './IconQuestionCircleFill.tsx';
+export { default as IconSearch } from './IconSearch.tsx';
+export { default as IconCalendarX } from './IconCalendarX.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
