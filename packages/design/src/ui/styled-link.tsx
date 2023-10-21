@@ -5,7 +5,7 @@ import Link from 'next/link.js';
 import * as React from 'react';
 
 const styledLinkVariants = cva(
-  'inline-flex items-center transition-colors disabled:pointer-events-none disabled:opacity-50 focus:ring-offset-bg-primary focus:ring-2 focus:ring-orange-8 focus:outline-none focus:ring-offset-2',
+  'inline-flex items-center transition-colors disabled:pointer-events-none disabled:opacity-50 focus-orange-ring',
   {
     variants: {
       variant: {

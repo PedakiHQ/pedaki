@@ -46,7 +46,7 @@ const buttonVariants = cva(
       },
       ring: {
         default: [
-          'ring-offset-bg-primary focus-visible:outline-none focus:ring-2 focus:ring-orange-8 focus:ring-offset-1',
+          'focus-orange-ring',
           'data-[state=open]:ring-2 data-[state=open]:ring-orange-8 data-[state=open]:ring-offset-1',
         ],
         none: '',

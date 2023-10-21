@@ -146,6 +146,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.2.28)(react@18.2.0)
+      '@radix-ui/react-switch':
+        specifier: ^1.0.3
+        version: 1.0.3(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-tooltip':
         specifier: ^1.0.6
         version: 1.0.6(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
@@ -197,7 +200,7 @@ importers:
         version: 2.16.0(esbuild@0.19.4)
       next:
         specifier: latest
-        version: 13.5.3(react-dom@18.2.0)(react@18.2.0)(sass@1.68.0)
+        version: 13.5.3(react-dom@18.2.0)(react@18.2.0)
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -2772,6 +2775,32 @@ packages:
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.28)(react@18.2.0)
       '@types/react': 18.2.28
       react: 18.2.0
+    dev: false
+
+  /@radix-ui/react-switch@1.0.3(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-mxm87F88HyHztsI7N+ZUmEoARGkC22YVW5CaC+Byc+HRpuvCrOBPTAnXgf+tZ/7i0Sg/eOePGdMhUKhPaQEqow==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.22.15
+      '@radix-ui/primitive': 1.0.1
+      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.28)(react@18.2.0)
+      '@radix-ui/react-context': 1.0.1(@types/react@18.2.28)(react@18.2.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-use-controllable-state': 1.0.1(@types/react@18.2.28)(react@18.2.0)
+      '@radix-ui/react-use-previous': 1.0.1(@types/react@18.2.28)(react@18.2.0)
+      '@radix-ui/react-use-size': 1.0.1(@types/react@18.2.28)(react@18.2.0)
+      '@types/react': 18.2.28
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /@radix-ui/react-tooltip@1.0.6(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0):
@@ -7894,7 +7923,7 @@ packages:
     resolution: {integrity: sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==}
     dev: true
 
-  /next@13.5.3(react-dom@18.2.0)(react@18.2.0)(sass@1.68.0):
+  /next@13.5.3(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-4Nt4HRLYDW/yRpJ/QR2t1v63UOMS55A38dnWv3UDOWGezuY0ZyFO1ABNbD7mulVzs9qVhgy2+ppjdsANpKP1mg==}
     engines: {node: '>=16.14.0'}
     hasBin: true
@@ -7916,7 +7945,6 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      sass: 1.68.0
       styled-jsx: 5.1.1(react@18.2.0)
       watchpack: 2.4.0
       zod: 3.21.4
@@ -8520,6 +8548,22 @@ packages:
       yaml: 1.10.2
     dev: false
 
+  /postcss-load-config@4.0.1:
+    resolution: {integrity: sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==}
+    engines: {node: '>= 14'}
+    peerDependencies:
+      postcss: '>=8.0.9'
+      ts-node: '>=9.0.0'
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+      ts-node:
+        optional: true
+    dependencies:
+      lilconfig: 2.1.0
+      yaml: 2.3.2
+    dev: true
+
   /postcss-load-config@4.0.1(postcss@8.4.30):
     resolution: {integrity: sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==}
     engines: {node: '>= 14'}
@@ -8535,6 +8579,7 @@ packages:
       lilconfig: 2.1.0
       postcss: 8.4.30
       yaml: 2.3.2
+    dev: false
 
   /postcss-nested@6.0.0(postcss@8.4.21):
     resolution: {integrity: sha512-0DkamqrPcmkBDsLn+vQDIrtkSbNkv5AD/M322ySo9kqFkCIYklym2xEmWkwo+Y3/qZo34tzEPNUw4y7yMCdv5w==}
@@ -10204,7 +10249,7 @@ packages:
       execa: 5.1.1
       globby: 11.1.0
       joycon: 3.1.1
-      postcss-load-config: 4.0.1(postcss@8.4.30)
+      postcss-load-config: 4.0.1
       resolve-from: 5.0.0
       rollup: 3.29.2
       source-map: 0.8.0-beta.0
