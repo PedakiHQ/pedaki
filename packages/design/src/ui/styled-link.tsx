@@ -39,7 +39,7 @@ const StyledLink: React.FC<StyledLinkProps> = ({
 
   return (
     <Link {...other} className={cn('inline-block w-max', linkClassName)}>
-      <button className={cn(styledLinkVariants({ variant, decoration, className }))}>
+      <button className={cn(styledLinkVariants({ variant, decoration, className }))} type="button">
         {children}
       </button>
     </Link>
