@@ -11,7 +11,7 @@ const buttonVariants = cva(
     'text-primary disabled:text-gray-3',
     'bg-white disabled:bg-gray-2',
     'disabled:cursor-not-allowed',
-    'border hover:border-orange-8 disabled:hover:border-gray-2',
+    'border hover:border-orange-8 disabled:hover:border-gray-4',
   ],
   {
     variants: {
@@ -22,7 +22,7 @@ const buttonVariants = cva(
           'border-orange-5 disabled:border-gray-2',
           'text-white hover:text-primary',
         ],
-        neutral: ['bg-gray-12', 'border-gray-12 hover:border-gray-11', 'text-white'],
+        neutral: ['bg-gray-12', 'border-gray-12 disabled:border-gray-4 hover:border-gray-11', 'text-white'],
         orange: [
           'bg-orange-9 hover:bg-orange-10 focus:bg-orange-10',
           'border-transparent',
