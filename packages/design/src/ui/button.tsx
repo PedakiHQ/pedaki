@@ -33,10 +33,15 @@ const buttonVariants = cva(
           'bg-transparent',
           'border-none hover:border-none',
         ],
+        red: [
+            "bg-tomatoA-3 disabled:bg-tomatoA-2",
+            "border-tomatoA-4 hover:border-tomatoA-5 disabled:border-tomatoA-3",
+            "text-tomatoA-10 disabled:text-tomatoA-9",
+          ]
       },
       size: {
         default: 'h-10 px-4 py-2',
-        sm: 'h-5 px-2',
+        sm: 'h-5 px-2 py-1',
         lg: 'h-12 px-6 py-3',
         icon: 'h-10 w-10',
       },
