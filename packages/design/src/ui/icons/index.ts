@@ -13,6 +13,8 @@ export { default as IconQuestionCircleFill } from './IconQuestionCircleFill.tsx'
 export { default as IconSearch } from './IconSearch.tsx';
 export { default as IconCalendarX } from './IconCalendarX.tsx';
 export { default as IconMailSearch } from './IconMailSearch.tsx';
+export { default as IconTada } from './IconTada.tsx';
+export { default as IconTadaColor } from './IconTadaColor.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
