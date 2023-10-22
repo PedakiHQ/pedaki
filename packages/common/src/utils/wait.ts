@@ -25,23 +25,15 @@ const wait: Wait = async (promises, minimumWaitTime ) => {
         ? promises
         : [promises];
 
-    const resolved = (await Promise.allSettled([
+    const resolved = (await Promise.all([
         ...arrayOfPromises,
-        new Promise(resolve => setTimeout(resolve, minimumWaitTime))
+        new Promise(resolve => setTimeout(resolve, minimumWaitTime)),
     ])).slice(0, arrayOfPromises.length);
-
-    const flatResolved = resolved.map(result => {
-        if (result.status === 'rejected') {
-            throw result.reason;
-        }
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-        return result.value;
-    });
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return multiplePromisesProvided
-        ? flatResolved
-        : flatResolved[0];
+        ? resolved
+        : resolved[0];
 };
 
 export default wait;
