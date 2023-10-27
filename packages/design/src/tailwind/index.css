@@ -68,13 +68,6 @@
   }
 }
 
-@supports (scrollbar-gutter: stable) {
-  html {
-    overflow-y: auto;
-    scrollbar-gutter: stable;
-  }
-}
-
 body.lock-scroll {
   overflow: hidden !important;
   overscroll-behavior: contain;
