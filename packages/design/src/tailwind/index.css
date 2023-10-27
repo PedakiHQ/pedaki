@@ -45,11 +45,11 @@
 
   html {
     scroll-behavior: smooth;
-    @apply h-full min-h-full;
+    @apply min-h-full;
   }
 
   body {
-    @apply bg-primary flex  h-full min-h-full flex-col antialiased;
+    @apply bg-primary flex min-h-full flex-col antialiased;
     color: var(--gray12);
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
@@ -57,7 +57,7 @@
       'cv06', 'cv07', 'cv08', 'cv09', 'cv10';
   }
 
-  div#__next {
+  html,body, main, div#__next {
     @apply h-full;
   }
   main {
@@ -66,6 +66,13 @@
 
   .z-1 {
     z-index: 1;
+  }
+}
+
+@supports (scrollbar-gutter: stable) {
+  html {
+    overflow-y: auto;
+    scrollbar-gutter: stable;
   }
 }
 
