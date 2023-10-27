@@ -1,5 +1,17 @@
 # @pedaki/design
 
+## 0.4.0
+
+### Minor Changes
+
+- [`8686d96`](https://github.com/PedakiHQ/pedaki/commit/8686d963fe9cca7d37435c5e0413a8907de9c7de) Thanks [@Vahor](https://github.com/Vahor)! - Add scrollbar-gutter stable by default
+
+### Patch Changes
+
+- [#81](https://github.com/PedakiHQ/pedaki/pull/81) [`18ddcef`](https://github.com/PedakiHQ/pedaki/commit/18ddcefc7d3bcb3fa283cdeb390a172536b9d955) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@8.10.0`.
+
+- [#78](https://github.com/PedakiHQ/pedaki/pull/78) [`529c4de`](https://github.com/PedakiHQ/pedaki/commit/529c4de9ad0174294591607b69bdd908c981c9cf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `windy-radix-palette` to `2.0.0-beta.7`.
+
 ## 0.3.0
 
 ### Minor Changes
