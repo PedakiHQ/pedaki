@@ -1,0 +1,29 @@
+name: Deploy Images to GHCR
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        description: Image version
+
+jobs:
+  push-app-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@v4
+
+      - name: 'Login to GitHub Container Registry'
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.actor}}
+          password: ${{secrets.GITHUB_TOKEN}}
+
+      - name: 'Build Inventory Image'
+        run: |
+          docker build . --tag ghcr.io/pedakihq/pedaki:latest -f ./app/Dockerfile
+          docker push ghcr.io/pedakihq/pedaki:latest
+          docker tag ghcr.io/pedakihq/pedaki:latest ghcr.io/pedakihq/pedaki:${{ github.event.inputs.version }}
+          docker push ghcr.io/pedakihq/pedaki:${{ github.event.inputs.version }}
