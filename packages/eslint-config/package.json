@@ -10,7 +10,7 @@
   },
   "homepage": "https://www.pedaki.fr",
   "description": "ESLint configuration for Pedaki projects",
-  "license": "MIT",
+  "license": "CC-BY-NC-SA-4.0",
   "private": false,
   "scripts": {
     "format": "prettier --write . --cache",
