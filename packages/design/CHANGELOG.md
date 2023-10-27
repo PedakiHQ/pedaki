@@ -1,5 +1,11 @@
 # @pedaki/design
 
+## 0.4.1
+
+### Patch Changes
+
+- [`305dfd1`](https://github.com/PedakiHQ/pedaki/commit/305dfd10fe6a0248ebb49dc9e59e3e1a5acf6efa) Thanks [@Vahor](https://github.com/Vahor)! - revert scrollbar-gutter
+
 ## 0.4.0
 
 ### Minor Changes
