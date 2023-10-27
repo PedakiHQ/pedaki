@@ -48,12 +48,14 @@ COPY --from=builder --chown=nextjs:nodejs /app/app/.next/static ./.next/static
 
 ## Load public env vars
 ARG PORT=80
+ARG NEXT_PUBLIC_TESTVALUE
 
 ENV NEXT_TELEMETRY_DISABLED 1
 ENV PORT=$PORT
 
 ENV NODE_ENV=production
 ENV SKIP_SERVER_ENV_CHECK=true
+ENV NEXT_PUBLIC_TESTVALUE=$NEXT_PUBLIC_TESTVALUE
 
 EXPOSE $PORT
 
