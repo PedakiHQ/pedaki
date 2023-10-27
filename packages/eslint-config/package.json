@@ -1,6 +1,6 @@
 {
   "name": "@pedaki/eslint-config",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "main": "index.js",
   "author": "Nathan David <me@vahor.fr>",
   "repository": {

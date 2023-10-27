@@ -1,5 +1,13 @@
 # @pedaki/common
 
+## 0.1.3
+
+### Patch Changes
+
+- [#65](https://github.com/PedakiHQ/pedaki/pull/65) [`09f6d0d`](https://github.com/PedakiHQ/pedaki/commit/09f6d0d3f8f7ce477c6a77e6e22bc60bfa2f81d3) Thanks [@Vahor](https://github.com/Vahor)! - add wait util
+
+- [#61](https://github.com/PedakiHQ/pedaki/pull/61) [`00e7b49`](https://github.com/PedakiHQ/pedaki/commit/00e7b4972d45a58f4a298a3e1f0a9d266118e723) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@8.9.2`.
+
 ## 0.1.2
 
 ### Patch Changes

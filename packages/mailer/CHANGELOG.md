@@ -1,5 +1,11 @@
 # @pedaki/mailer
 
+## 0.0.7
+
+### Patch Changes
+
+- [#61](https://github.com/PedakiHQ/pedaki/pull/61) [`00e7b49`](https://github.com/PedakiHQ/pedaki/commit/00e7b4972d45a58f4a298a3e1f0a9d266118e723) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@8.9.2`.
+
 ## 0.0.6
 
 ### Patch Changes
