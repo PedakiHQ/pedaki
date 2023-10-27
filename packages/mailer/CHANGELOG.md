@@ -1,5 +1,18 @@
 # @pedaki/mailer
 
+## 0.0.8
+
+### Patch Changes
+
+- [#81](https://github.com/PedakiHQ/pedaki/pull/81) [`18ddcef`](https://github.com/PedakiHQ/pedaki/commit/18ddcefc7d3bcb3fa283cdeb390a172536b9d955) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@8.10.0`.
+
+- [#80](https://github.com/PedakiHQ/pedaki/pull/80) [`75c1e25`](https://github.com/PedakiHQ/pedaki/commit/75c1e25077e808b1ec7ebe727f0e9bbb11bb6291) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@react-email/button` to `0.0.11`.
+  Updated dependency `@react-email/head` to `0.0.6`.
+  Updated dependency `@react-email/html` to `0.0.6`.
+  Updated dependency `@react-email/link` to `0.0.6`.
+  Updated dependency `@react-email/render` to `0.0.8`.
+  Updated dependency `@react-email/tailwind` to `0.0.11`.
+
 ## 0.0.7
 
 ### Patch Changes
