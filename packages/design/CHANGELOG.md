@@ -1,5 +1,32 @@
 # @pedaki/design
 
+## 0.3.0
+
+### Minor Changes
+
+- [#65](https://github.com/PedakiHQ/pedaki/pull/65) [`09f6d0d`](https://github.com/PedakiHQ/pedaki/commit/09f6d0d3f8f7ce477c6a77e6e22bc60bfa2f81d3) Thanks [@Vahor](https://github.com/Vahor)! - add IconCalendarX, IconSearch, IconShoppingBag
+
+### Patch Changes
+
+- [#65](https://github.com/PedakiHQ/pedaki/pull/65) [`09f6d0d`](https://github.com/PedakiHQ/pedaki/commit/09f6d0d3f8f7ce477c6a77e6e22bc60bfa2f81d3) Thanks [@Vahor](https://github.com/Vahor)! - add IconTada
+
+- [`ca1efc4`](https://github.com/PedakiHQ/pedaki/commit/ca1efc4da3cc6a753db8becc4afde2cfc29d6fc4) Thanks [@Vahor](https://github.com/Vahor)! - add bgi-grid-dashed
+
+- [#71](https://github.com/PedakiHQ/pedaki/pull/71) [`50e66d2`](https://github.com/PedakiHQ/pedaki/commit/50e66d2dc8769902982b6a52573a06ea333d1368) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@8.9.2`.
+
+- [#61](https://github.com/PedakiHQ/pedaki/pull/61) [`00e7b49`](https://github.com/PedakiHQ/pedaki/commit/00e7b4972d45a58f4a298a3e1f0a9d266118e723) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@8.9.2`.
+
+- [#64](https://github.com/PedakiHQ/pedaki/pull/64) [`b4d8160`](https://github.com/PedakiHQ/pedaki/commit/b4d816095c8d0fba45e7c7121ab0cb6713803337) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `windy-radix-palette` to `2.0.0-beta.3`.
+
+- [#66](https://github.com/PedakiHQ/pedaki/pull/66) [`67ed875`](https://github.com/PedakiHQ/pedaki/commit/67ed87582ffcc1f40a443ef0700c6da65c5be327) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `windy-radix-palette` to `2.0.0-beta.5`.
+
+- [#65](https://github.com/PedakiHQ/pedaki/pull/65) [`09f6d0d`](https://github.com/PedakiHQ/pedaki/commit/09f6d0d3f8f7ce477c6a77e6e22bc60bfa2f81d3) Thanks [@Vahor](https://github.com/Vahor)! - add IconPedaki, IconDotsH icon.
+  Use red-9 for form error.
+
+- [#65](https://github.com/PedakiHQ/pedaki/pull/65) [`09f6d0d`](https://github.com/PedakiHQ/pedaki/commit/09f6d0d3f8f7ce477c6a77e6e22bc60bfa2f81d3) Thanks [@Vahor](https://github.com/Vahor)! - add Switch component
+
+- [#65](https://github.com/PedakiHQ/pedaki/pull/65) [`09f6d0d`](https://github.com/PedakiHQ/pedaki/commit/09f6d0d3f8f7ce477c6a77e6e22bc60bfa2f81d3) Thanks [@Vahor](https://github.com/Vahor)! - Add SuccessCallout
+
 ## 0.2.2
 
 ### Patch Changes
