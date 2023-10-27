@@ -42,8 +42,8 @@ module.exports = {
         allowModules: ['cpy', 'execa', 'vitest', 'tsup'],
       },
     ],
-    "@tanstack/query/exhaustive-deps": "error",
-    "@tanstack/query/stable-query-client": "error"
+    '@tanstack/query/exhaustive-deps': 'error',
+    '@tanstack/query/stable-query-client': 'error',
   },
   reportUnusedDisableDirectives: true,
 };

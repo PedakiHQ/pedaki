@@ -1,7 +1,7 @@
+import IconCheck from '~/ui/icons/IconCheck.tsx';
 import { cn } from '~/utils';
 import React from 'react';
 import { Callout, CalloutContent, CalloutIcon } from './index.tsx';
-import IconCheck from "~/ui/icons/IconCheck.tsx";
 
 interface InfoCalloutProps {
   children: React.ReactNode;

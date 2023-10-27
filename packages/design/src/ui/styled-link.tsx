@@ -28,17 +28,12 @@ export type StyledLinkProps = React.ComponentProps<typeof Link> &
     linkClassName?: string;
   };
 
-const StyledLink: React.FC<StyledLinkProps> = ({
-  className,
-  variant,
-  decoration,
-  ...props
-}) => {
+const StyledLink: React.FC<StyledLinkProps> = ({ className, variant, decoration, ...props }) => {
   const { children, ...other } = props;
 
   return (
     <Link {...other} className={cn(styledLinkVariants({ variant, decoration }), className)}>
-        {children}
+      {children}
     </Link>
   );
 };
