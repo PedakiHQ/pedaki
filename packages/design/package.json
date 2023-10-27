@@ -78,6 +78,6 @@
     "yarn": "use-pnpm",
     "npm": "use-pnpm"
   },
-  "packageManager": "pnpm@8.9.0",
+  "packageManager": "pnpm@8.9.2",
   "prettier": "@pedaki/prettier-config"
 }
