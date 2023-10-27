@@ -5,7 +5,7 @@ import Link from 'next/link.js';
 import * as React from 'react';
 
 const styledLinkVariants = cva(
-  'inline-flex items-center transition-colors disabled:pointer-events-none disabled:opacity-50 focus:ring-offset-bg-primary focus:ring-2 focus:ring-orange-8 focus:outline-none focus:ring-offset-2',
+  'inline-flex items-center transition-colors disabled:pointer-events-none disabled:opacity-50 focus-orange-ring',
   {
     variants: {
       variant: {
@@ -28,20 +28,12 @@ export type StyledLinkProps = React.ComponentProps<typeof Link> &
     linkClassName?: string;
   };
 
-const StyledLink: React.FC<StyledLinkProps> = ({
-  className,
-  variant,
-  decoration,
-  linkClassName,
-  ...props
-}) => {
+const StyledLink: React.FC<StyledLinkProps> = ({ className, variant, decoration, ...props }) => {
   const { children, ...other } = props;
 
   return (
-    <Link {...other} className={cn('inline-block w-max', linkClassName)}>
-      <button className={cn(styledLinkVariants({ variant, decoration, className }))}>
-        {children}
-      </button>
+    <Link {...other} className={cn(styledLinkVariants({ variant, decoration }), className)}>
+      {children}
     </Link>
   );
 };

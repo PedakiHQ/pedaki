@@ -11,7 +11,7 @@ const buttonVariants = cva(
     'text-primary disabled:text-gray-3',
     'bg-white disabled:bg-gray-2',
     'disabled:cursor-not-allowed',
-    'border hover:border-orange-8 disabled:hover:border-gray-2',
+    'border hover:border-orange-8 disabled:hover:border-gray-4',
   ],
   {
     variants: {
@@ -22,7 +22,11 @@ const buttonVariants = cva(
           'border-orange-5 disabled:border-gray-2',
           'text-white hover:text-primary',
         ],
-        neutral: ['bg-gray-12', 'border-gray-12 hover:border-gray-11', 'text-white'],
+        neutral: [
+          'bg-gray-12',
+          'border-gray-12 disabled:border-gray-4 hover:border-gray-11',
+          'text-white',
+        ],
         orange: [
           'bg-orange-9 hover:bg-orange-10 focus:bg-orange-10',
           'border-transparent',
@@ -33,10 +37,15 @@ const buttonVariants = cva(
           'bg-transparent',
           'border-none hover:border-none',
         ],
+        red: [
+          'bg-tomatoA-3 disabled:bg-tomatoA-2',
+          'border-tomatoA-4 hover:border-tomatoA-5 disabled:border-tomatoA-3',
+          'text-tomatoA-10 disabled:text-tomatoA-9',
+        ],
       },
       size: {
         default: 'h-10 px-4 py-2',
-        sm: 'h-5 px-2',
+        sm: 'h-5 px-2 py-1',
         lg: 'h-12 px-6 py-3',
         icon: 'h-10 w-10',
       },
@@ -46,7 +55,7 @@ const buttonVariants = cva(
       },
       ring: {
         default: [
-          'ring-offset-bg-primary focus-visible:outline-none focus:ring-2 focus:ring-orange-8 focus:ring-offset-1',
+          'focus-orange-ring',
           'data-[state=open]:ring-2 data-[state=open]:ring-orange-8 data-[state=open]:ring-offset-1',
         ],
         none: '',

@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'import'],
+  plugins: ['@typescript-eslint', 'import', '@tanstack/query'],
   env: {
     browser: true,
     node: true,
@@ -42,6 +42,8 @@ module.exports = {
         allowModules: ['cpy', 'execa', 'vitest', 'tsup'],
       },
     ],
+    '@tanstack/query/exhaustive-deps': 'error',
+    '@tanstack/query/stable-query-client': 'error',
   },
   reportUnusedDisableDirectives: true,
 };

@@ -4,16 +4,16 @@
 
 import { hsl } from './colors.ts';
 
-const stringToColour = (): string => {
+const randomHsl = (): string => {
   const [hue, saturation, lightness] = hsl();
   return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 };
 
 const generateColours = (): [string, string] => {
-  return [stringToColour(), stringToColour()];
+  return [randomHsl(), randomHsl()];
 };
 
-export const generateSVG = (s: string, size = 256): string => {
+export const generateSVG = (size = 256): string => {
   const [c1, c2] = generateColours();
   const rotate = Math.floor(Math.random() * 360);
 
@@ -30,7 +30,7 @@ export const generateSVG = (s: string, size = 256): string => {
   `.trim();
 };
 
-export const generateDataURL = (s: string, size = 256): string => {
-  const svg = generateSVG(s, size);
+export const generateDataURL = (size = 256): string => {
+  const svg = generateSVG(size);
   return `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`;
 };

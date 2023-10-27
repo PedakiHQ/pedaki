@@ -42,3 +42,11 @@ export const decrypt = (encrypted: string, key: string): string => {
   decipher.setAuthTag(tag);
   return decipher.update(text.toString(), 'base64', 'utf8') + decipher.final('utf8');
 };
+
+export const hashCode = (s: string): number => {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) {
+    h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
+  }
+  return h;
+};

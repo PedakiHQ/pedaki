@@ -37,7 +37,6 @@ export default {
         sm: '2rem',
         lg: '4rem',
         xl: '7.5rem',
-        '2xl': '9rem',
       },
       screens: {
         sm: '640px',
