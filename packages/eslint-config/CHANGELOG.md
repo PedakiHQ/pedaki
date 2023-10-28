@@ -1,5 +1,11 @@
 # @pedaki/eslint-config
 
+## 0.1.2
+
+### Patch Changes
+
+- [#83](https://github.com/PedakiHQ/pedaki/pull/83) [`1336039`](https://github.com/PedakiHQ/pedaki/commit/13360396730387655defda7949f86041134c6a46) Thanks [@Vahor](https://github.com/Vahor)! - remove eslint rule es-syntax
+
 ## 0.1.1
 
 ### Patch Changes
