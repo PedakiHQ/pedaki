@@ -28,7 +28,7 @@
     "format:check": "prettier --check . --cache"
   },
   "devDependencies": {
-    "@pedaki/eslint-config": "0.1.1",
+    "@pedaki/eslint-config": "0.1.2",
     "@pedaki/prettier-config": "0.0.5",
     "@types/react": "^18.2.33",
     "esbuild-css-modules-plugin": "^3.0.3",
