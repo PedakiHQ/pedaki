@@ -1,4 +1,4 @@
-[![Pedaki](.github/images/banner.png)](https://www.pedaki.fr)
+[![Pedaki](https://static.pedaki.fr/github/banner.png)](https://www.pedaki.fr)
 
 <p align="center">
   <a aria-label="License" href="https://github.com/PedakiHQ/pedaki/blob/main/LICENSE-CC-BY-NC-SA">

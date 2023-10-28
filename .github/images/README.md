@@ -1,1 +1,0 @@
-TODO: upload those images on s3
