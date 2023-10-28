@@ -29,5 +29,8 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-node": "^11.1.0"
   },
-  "prettier": "@pedaki/prettier-config"
+  "prettier": "@pedaki/prettier-config",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
