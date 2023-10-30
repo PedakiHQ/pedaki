@@ -29,6 +29,15 @@ const questions = [
         name: 'version',
         message: 'What version do you want to release?',
         when: (answers) => answers.versionType === 'manual',
+        validate: (input) => {
+            if (!input) {
+                return 'Please enter a version!';
+            }
+            if (!input.match(/^\d+\.\d+\.\d+$/)) {
+                return 'Please enter a valid version!';
+            }
+            return true;
+        }
     },
     {
         type: 'confirm',
@@ -135,7 +144,6 @@ const checkCurrentBranch = async () => {
 const commitChanges = async (newVersion) => {
     const spinner = ora('Committing changes...');
     spinner.start();
-    await $`git pull origin main --rebase`;
     await $`git add .`;
     await $`git commit -m ${`v${newVersion}`} --author ${"pedaki-release[bot] <noreply@pedaki.fr>"}`;
     await $`git push origin main`;
