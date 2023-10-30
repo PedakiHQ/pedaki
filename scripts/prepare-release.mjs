@@ -1,14 +1,15 @@
 import chalk from "chalk";
 import inquirer from "inquirer";
-import package_json from '../package.json' assert {type: 'json'};
+import { getPackages } from "@manypkg/get-packages";
 import {$} from 'execa';
 import ora from "ora";
 import open from "open";
 import fs from "fs";
 import path from "path";
 
-const __dirname = path.resolve();
 const githubBaseUrl = 'https://github.com/pedakihq/pedaki';
+const packages = await getPackages(process.cwd());
+const currentVersion = packages.rootPackage.packageJson.version;
 
 const questions = [
     {
@@ -38,7 +39,6 @@ const questions = [
 ];
 
 const nextVersion = (versionType) => {
-    const currentVersion = package_json.version;
     const versionParts = currentVersion.split('.');
     const major = parseInt(versionParts[0]) || 0;
     const minor = parseInt(versionParts[1]) || 0;
@@ -60,7 +60,6 @@ const nextVersion = (versionType) => {
 
 const preReleaseSuffix = (useOld, preRelease) => {
     if (preRelease) {
-        const currentVersion = package_json.version;
         const versionParts = currentVersion.split('-', 2);
         if (!useOld || versionParts.length === 1) {
             return '-beta.0';
@@ -86,22 +85,18 @@ const updatePackageJson = async (newVersion) => {
     const spinner = ora('Updating package.json files...');
     spinner.start();
 
-    const {stdout} = await $`find . -name package.json \
-        -not -path **/node_modules/** \
-        -not -path **/.next/** \
-        -not -path **/.yalc/** \
-        -not -path **/.react-email/** \
-    `;
-    const packageJsonFiles = stdout.split('\n');
+    const packageJsonFiles = [
+        ...packages.packages.map((pkg) => path.join(pkg.dir, 'package.json')),
+        path.join(packages.rootPackage.dir, 'package.json')
+    ]
 
     for (const packageJsonFile of packageJsonFiles) {
-        console.log(`Updating ${chalk.cyan(packageJsonFile)}...`);
-        const packageJsonPath = path.join(__dirname, packageJsonFile);
-        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath));
+        console.log(`Updating ${chalk.cyan(path.basename(path.dirname(packageJsonFile)))}...`);
+        const packageJson = JSON.parse(fs.readFileSync(packageJsonFile));
         packageJson.version = newVersion;
         packageJson.dependencies = updateDependencies(packageJson.dependencies, newVersion);
         packageJson.devDependencies = updateDependencies(packageJson.devDependencies, newVersion);
-        fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+        fs.writeFileSync(packageJsonFile, JSON.stringify(packageJson, null, 2));
     }
 
     spinner.succeed();
@@ -125,8 +120,8 @@ const checkCurrentBranch = async () => {
     const {stdout} = await $`git branch --show-current`;
     const currentBranch = stdout.trim();
     if (currentBranch !== 'main') {
-        console.error(`You are on ${chalk.cyan(currentBranch)} branch. Please switch to ${chalk.cyan('main')} branch.`);
-        process.exit(1);
+        // console.error(`You are on ${chalk.cyan(currentBranch)} branch. Please switch to ${chalk.cyan('main')} branch.`);
+        // process.exit(1);
     }
 }
 

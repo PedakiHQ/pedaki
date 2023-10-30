@@ -1,6 +1,6 @@
 {
   "name": "pedaki",
-  "version": "0.4.2-beta.4",
+  "version": "0.4.2-beta.0",
   "private": true,
   "repository": "https://github.com/PedakiHQ/pedaki",
   "homepage": "https://www.pedaki.fr",
@@ -24,11 +24,13 @@
     "clean": "turbo run clean && rimraf node_modules",
     "check": "SKIP_ENV_VALIDATION=true && turbo typecheck lint format:check test",
     "prepare": "husky install",
-    "prepare-release": "node --no-warnings=ExperimentalWarning scripts/release.mjs"
+    "prepare-release": "node --no-warnings=ExperimentalWarning scripts/prepare-release.mjs",
+    "publish-release": "node --no-warnings=ExperimentalWarning scripts/publish-release.mjs"
   },
   "devDependencies": {
     "@changesets/changelog-github": "latest",
     "@changesets/cli": "latest",
+    "@manypkg/get-packages": "^2.2.0",
     "@types/fs-extra": "^11.0.3",
     "@types/node": "^18.18.4",
     "@vitest/coverage-v8": "^0.34.6",
@@ -40,6 +42,7 @@
     "lint-staged": "^15.0.2",
     "open": "^9.1.0",
     "rimraf": "latest",
+    "throat": "^6.0.2",
     "tsconfig-replace-paths": "^0.0.14",
     "tsup": "^7.2.0",
     "turbo": "^1.10.16",

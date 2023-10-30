@@ -14,6 +14,9 @@ importers:
       '@changesets/cli':
         specifier: latest
         version: 2.26.2
+      '@manypkg/get-packages':
+        specifier: ^2.2.0
+        version: 2.2.0
       '@types/fs-extra':
         specifier: ^11.0.3
         version: 11.0.3
@@ -47,6 +50,9 @@ importers:
       rimraf:
         specifier: latest
         version: 5.0.4
+      throat:
+        specifier: ^6.0.2
+        version: 6.0.2
       tsconfig-replace-paths:
         specifier: ^0.0.14
         version: 0.0.14
@@ -70,7 +76,7 @@ importers:
         version: 4.0.22
     devDependencies:
       '@pedaki/prettier-config':
-        specifier: 0.4.2-beta.4
+        specifier: 0.4.2-beta.0
         version: link:../packages/prettier-config
 
   packages/common:
@@ -89,10 +95,10 @@ importers:
         version: 1.0.3(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
       '@pedaki/eslint-config':
-        specifier: 0.4.2-beta.4
+        specifier: 0.4.2-beta.0
         version: link:../eslint-config
       '@pedaki/prettier-config':
-        specifier: 0.4.2-beta.4
+        specifier: 0.4.2-beta.0
         version: link:../prettier-config
       '@types/bcryptjs':
         specifier: ^2.4.5
@@ -187,10 +193,10 @@ importers:
         version: 2.0.0-beta.7(@radix-ui/colors@3.0.0)(tailwindcss@3.3.3)
     devDependencies:
       '@pedaki/eslint-config':
-        specifier: 0.4.2-beta.4
+        specifier: 0.4.2-beta.0
         version: link:../eslint-config
       '@pedaki/prettier-config':
-        specifier: 0.4.2-beta.4
+        specifier: 0.4.2-beta.0
         version: link:../prettier-config
       '@types/react':
         specifier: ^18.2.33
@@ -243,7 +249,7 @@ importers:
         version: 11.1.0(eslint@8.49.0)
     devDependencies:
       '@pedaki/prettier-config':
-        specifier: 0.4.2-beta.4
+        specifier: 0.4.2-beta.0
         version: link:../prettier-config
       '@types/eslint':
         specifier: ^8.44.6
@@ -277,10 +283,10 @@ importers:
         version: 1.1.0
     devDependencies:
       '@pedaki/eslint-config':
-        specifier: 0.4.2-beta.4
+        specifier: 0.4.2-beta.0
         version: link:../eslint-config
       '@pedaki/prettier-config':
-        specifier: 0.4.2-beta.4
+        specifier: 0.4.2-beta.0
         version: link:../prettier-config
       '@types/preview-email':
         specifier: ^3.0.3
@@ -1546,7 +1552,6 @@ packages:
       '@manypkg/tools': 1.1.0
       find-up: 4.1.0
       fs-extra: 8.1.0
-    dev: false
 
   /@manypkg/get-packages@1.1.3:
     resolution: {integrity: sha512-fo+QhuU3qE/2TQMQmbVMqaQ6EWbMhi4ABWP+O4AM1NqPBuy0OrApV5LO6BrrgnhtAHS2NH6RrVk9OL181tTi8A==}
@@ -1559,6 +1564,14 @@ packages:
       read-yaml-file: 1.1.0
     dev: true
 
+  /@manypkg/get-packages@2.2.0:
+    resolution: {integrity: sha512-B5p5BXMwhGZKi/syEEAP1eVg5DZ/9LP+MZr0HqfrHLgu9fq0w4ZwH8yVen4JmjrxI2dWS31dcoswYzuphLaRxg==}
+    engines: {node: '>=14.18.0'}
+    dependencies:
+      '@manypkg/find-root': 2.2.1
+      '@manypkg/tools': 1.1.0
+    dev: true
+
   /@manypkg/tools@1.1.0:
     resolution: {integrity: sha512-SkAyKAByB9l93Slyg8AUHGuM2kjvWioUTCckT/03J09jYnfEzMO/wSXmEhnKGYs6qx9De8TH4yJCl0Y9lRgnyQ==}
     engines: {node: '>=14.18.0'}
@@ -1567,7 +1580,6 @@ packages:
       globby: 11.1.0
       jju: 1.4.0
       read-yaml-file: 1.1.0
-    dev: false
 
   /@mintlify/cli@4.0.22:
     resolution: {integrity: sha512-P66/0JrvekiYimJ5m2uSWHp3wS2d/iq8Rge77iXCyUjaPA/BOizrstPsEUIfoy3ANCIiNXe1hP8fdz3qa/AGww==}
@@ -6843,7 +6855,6 @@ packages:
 
   /jju@1.4.0:
     resolution: {integrity: sha512-8wb9Yw966OSxApiCt0K3yNJL8pnNeIv+OEq2YMidz4FKP6nonSRoOXc80iXY4JaN2FC11B9qsNmDsm+ZOfMROA==}
-    dev: false
 
   /joycon@3.1.1:
     resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
@@ -10346,6 +10357,10 @@ packages:
     resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
     dependencies:
       any-promise: 1.3.0
+
+  /throat@6.0.2:
+    resolution: {integrity: sha512-WKexMoJj3vEuK0yFEapj8y64V0A6xcuPuK9Gt1d0R+dzCSJc0lHqQytAbSB4cDAK0dWh4T0E2ETkoLE2WZ41OQ==}
+    dev: true
 
   /tinybench@2.5.1:
     resolution: {integrity: sha512-65NKvSuAVDP/n4CqH+a9w2kTlLReS9vhsAP06MWx+/89nMinJyB2icyl58RIcqCmIggpojIGeuJGhjU1aGMBSg==}

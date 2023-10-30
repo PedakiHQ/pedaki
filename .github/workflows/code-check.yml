@@ -22,7 +22,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v2
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -32,7 +35,7 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
 
       - name: Install deps
-        run: pnpm install --child-concurrency 3 --frozen-lockfile --prefer-offline
+        run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Run eslint
         run: pnpm lint
