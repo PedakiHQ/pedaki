@@ -23,6 +23,7 @@
     "format": "turbo run format",
     "clean": "turbo run clean && rimraf node_modules",
     "check": "SKIP_ENV_VALIDATION=true && turbo typecheck lint format:check test",
+    "prepare": "husky install",
     "prepare-release": "node --no-warnings=ExperimentalWarning scripts/release.mjs"
   },
   "devDependencies": {
@@ -35,12 +36,20 @@
     "dotenv-cli": "latest",
     "execa": "^8.0.1",
     "fs-extra": "^11.1.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
     "rimraf": "latest",
     "tsconfig-replace-paths": "^0.0.14",
     "tsup": "^7.2.0",
     "turbo": "^1.10.16",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "engines": {
     "node": ">=18.0.0 <19.0.0",
