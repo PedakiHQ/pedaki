@@ -1,12 +1,14 @@
 import chalk from "chalk";
 import inquirer from "inquirer";
 import package_json from '../package.json' assert {type: 'json'};
-import fs from 'fs';
-import path from 'path';
 import {$} from 'execa';
 import ora from "ora";
+import open from "open";
+import fs from "fs";
+import path from "path";
 
 const __dirname = path.resolve();
+const githubBaseUrl = 'https://github.com/pedakihq/pedaki';
 
 const questions = [
     {
@@ -14,10 +16,10 @@ const questions = [
         name: 'versionType',
         message: 'What type of version do you want to release?',
         choices: [
+            {name: "Don't change", value: 'skip'},
             {name: 'Major', value: 'major'},
             {name: 'Minor', value: 'minor'},
             {name: 'Patch', value: 'patch'},
-            {name: "Skip", value: "skip"},
             {name: "Manual", value: "manual"},
         ],
     },
@@ -31,7 +33,7 @@ const questions = [
         type: 'confirm',
         name: 'preRelease',
         message: 'Is this a pre-release?)',
-        default: false,
+        default: true,
     }
 ];
 
@@ -60,7 +62,11 @@ const preReleaseSuffix = (preRelease) => {
     if (preRelease) {
         const currentVersion = package_json.version;
         const versionParts = currentVersion.split('-', 2);
-        const preReleaseNumber = versionParts.length === 2 ? parseInt(versionParts[1]) + 1 : 0;
+        if (versionParts.length === 1) {
+            return '-beta.0';
+        }
+        const preReleaseParts = versionParts[1].split('.');
+        const preReleaseNumber =  (parseInt(preReleaseParts[1]) + 1) || 0;
         return `-beta.${preReleaseNumber}`;
     }
     return '';
@@ -80,7 +86,7 @@ const updatePackageJson = async (newVersion) => {
     const spinner = ora('Updating package.json files...');
     spinner.start();
 
-    const {stdout, command} = await $`find . -name package.json \
+    const {stdout} = await $`find . -name package.json \
         -not -path **/node_modules/** \
         -not -path **/.next/** \
         -not -path **/.yalc/** \
@@ -108,6 +114,24 @@ const updateLockFiles = async () => {
     spinner.succeed();
 }
 
+const openNewTagPage = async (newVersion, preRelease) => {
+    const spinner = ora('Opening new tag page...');
+    spinner.start();
+    await open(`${githubBaseUrl}/releases/new?tag=v${newVersion}&title=v${newVersion}&prerelease=${preRelease}`);
+    spinner.succeed();
+}
+
+const checkCurrentBranch = async () => {
+    const {stdout} = await $`git branch --show-current`;
+    const currentBranch = stdout.trim();
+    if (currentBranch !== 'main') {
+        console.error(`You are on ${chalk.cyan(currentBranch)} branch. Please switch to ${chalk.cyan('main')} branch.`);
+        process.exit(1);
+    }
+}
+
+await checkCurrentBranch();
+
 inquirer.prompt(questions).then(async (answers) => {
     const {versionType} = answers;
     console.log(`You have selected to release a ${chalk.cyan(versionType)} version.`);
@@ -116,5 +140,6 @@ inquirer.prompt(questions).then(async (answers) => {
     console.log(`The new version will be ${chalk.cyan(newVersion)}.`);
     await updatePackageJson(newVersion);
     await updateLockFiles();
+    await openNewTagPage(newVersion, answers.preRelease);
 });
 
