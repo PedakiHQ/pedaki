@@ -136,7 +136,7 @@ const commitChanges = async (newVersion) => {
     const spinner = ora('Committing changes...');
     spinner.start();
     await $`git add .`;
-    await $`git commit -m "v${newVersion}" --author ${"pedaki-release-bot <noreply@pedaki.fr>"}`;
+    await $`git commit -m "v${newVersion}" --author ${"pedaki-release[bot] <noreply@pedaki.fr>"}`;
     await $`git push origin main`;
     spinner.succeed();
 }
