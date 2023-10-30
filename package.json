@@ -1,6 +1,6 @@
 {
   "name": "pedaki",
-  "version": "0.0.0",
+  "version": "1.3.3",
   "private": true,
   "repository": "https://github.com/PedakiHQ/pedaki",
   "homepage": "https://www.pedaki.fr",
@@ -22,7 +22,8 @@
     "typecheck": "turbo run typecheck",
     "format": "turbo run format",
     "clean": "turbo run clean && rimraf node_modules",
-    "check": "SKIP_ENV_VALIDATION=true && turbo typecheck lint format:check test"
+    "check": "SKIP_ENV_VALIDATION=true && turbo typecheck lint format:check test",
+    "prepare-release": "node --no-warnings=ExperimentalWarning scripts/release.mjs"
   },
   "devDependencies": {
     "@changesets/changelog-github": "latest",
