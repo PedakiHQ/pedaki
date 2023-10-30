@@ -33,7 +33,7 @@ const questions = [
             if (!input) {
                 return 'Please enter a version!';
             }
-            if (!input.match(/^\d+\.\d+\.\d+$/)) {
+            if (!input.match(/^\d+\.\d+\.\d+(?:-beta\.\d+)?$/)) {
                 return 'Please enter a valid version!';
             }
             return true;
@@ -43,7 +43,8 @@ const questions = [
         type: 'confirm',
         name: 'preRelease',
         message: 'Is this a pre-release?',
-        default: true
+        default: true,
+        when: (answers) => answers.versionType !== 'manual'
     }
 ];
 
@@ -157,11 +158,25 @@ inquirer.prompt(questions).then(async (answers) => {
     const {versionType} = answers;
     console.log(`You have selected to release a ${chalk.cyan(versionType)} version.`);
     let newVersion = answers.version || nextVersion(versionType);
+    const isPreRelease = answers.preRelease || answers.version.includes('-beta');
     newVersion += preReleaseSuffix((answers.versionType === 'skip' || answers.version === currentVersion.split("-", 1)[0]), answers.preRelease);
-    console.log(`The new version will be ${chalk.cyan(newVersion)}.`);
+    console.log(`The new version will be ${chalk.cyan(newVersion)} - ${isPreRelease ? 'pre-release' : 'stable'}.`);
+    await inquirer.prompt([
+        {
+            type: 'confirm',
+            name: 'confirm',
+            message: 'Do you want to proceed?',
+            default: false,
+        }
+    ]).then((answers) => {
+        if (!answers.confirm) {
+            console.log('Aborting...');
+            process.exit(0);
+        }
+    });
     await updatePackageJson(newVersion);
     await updateLockFiles();
     await commitChanges(newVersion);
-    await openNewTagPage(newVersion, answers.preRelease);
+    await openNewTagPage(newVersion, isPreRelease);
 });
 
