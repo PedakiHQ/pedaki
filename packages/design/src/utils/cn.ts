@@ -1,14 +1,16 @@
-import { clsx } from 'clsx';
 import type { ClassValue } from 'clsx';
+import { clsx } from 'clsx';
 import { extendTailwindMerge } from 'tailwind-merge';
 
 const twMerge = extendTailwindMerge({
-  classGroups: {
-    shadow: [
-      {
-        shadow: ['outline', 'outline-lg'],
-      },
-    ],
+  override: {
+    classGroups: {
+      shadow: [
+        {
+          shadow: ['outline', 'outline-lg'],
+        },
+      ],
+    },
   },
 });
 
