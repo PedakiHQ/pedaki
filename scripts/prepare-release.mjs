@@ -151,32 +151,46 @@ const commitChanges = async (newVersion) => {
     spinner.succeed();
 }
 
+const revertChanges = async () => {
+    const spinner = ora('Reverting changes...');
+    spinner.start();
+    await $`git reset --hard HEAD~1`;
+    await $`git push origin main --force`;
+    spinner.succeed();
+}
+
 
 await checkCurrentBranch();
 
 inquirer.prompt(questions).then(async (answers) => {
-    const {versionType} = answers;
-    console.log(`You have selected to release a ${chalk.cyan(versionType)} version.`);
-    let newVersion = answers.version || nextVersion(versionType);
-    const isPreRelease = answers.preRelease || answers.version.includes('-beta');
-    newVersion += preReleaseSuffix((answers.versionType === 'skip' || answers.version === currentVersion.split("-", 1)[0]), answers.preRelease);
-    console.log(`The new version will be ${chalk.cyan(newVersion)} - ${isPreRelease ? 'pre-release' : 'stable'}.`);
-    await inquirer.prompt([
-        {
-            type: 'confirm',
-            name: 'confirm',
-            message: 'Do you want to proceed?',
-            default: false,
-        }
-    ]).then((answers) => {
-        if (!answers.confirm) {
-            console.log('Aborting...');
-            process.exit(0);
-        }
-    });
-    await updatePackageJson(newVersion);
-    await updateLockFiles();
-    await commitChanges(newVersion);
-    await openNewTagPage(newVersion, isPreRelease);
+    try {
+        const {versionType} = answers;
+        console.log(`You have selected to release a ${chalk.cyan(versionType)} version.`);
+        let newVersion = answers.version || nextVersion(versionType);
+        const isPreRelease = answers.preRelease || answers.version.includes('-beta');
+        newVersion += preReleaseSuffix((answers.versionType === 'skip' || answers.version === currentVersion.split("-", 1)[0]), answers.preRelease);
+        console.log(`The new version will be ${chalk.cyan(newVersion)} - ${isPreRelease ? 'pre-release' : 'stable'}.`);
+        await inquirer.prompt([
+            {
+                type: 'confirm',
+                name: 'confirm',
+                message: 'Do you want to proceed?',
+                default: false,
+            }
+        ]).then((answers) => {
+            if (!answers.confirm) {
+                console.log('Aborting...');
+                process.exit(0);
+            }
+        });
+        await updatePackageJson(newVersion);
+        await updateLockFiles();
+        await commitChanges(newVersion);
+        await openNewTagPage(newVersion, isPreRelease);
+    } catch (e) {
+        await revertChanges();
+        console.error(e);
+        process.exit(1);
+    }
 });
 
