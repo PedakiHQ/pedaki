@@ -50,3 +50,5 @@ jobs:
 
       - name: Publish to NPM
         run: pnpm publish-release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
