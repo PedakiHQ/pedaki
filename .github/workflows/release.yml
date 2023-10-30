@@ -2,8 +2,8 @@ name: Release
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - v*
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -17,8 +17,13 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - uses: pnpm/action-setup@v2
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -26,9 +31,11 @@ jobs:
           node-version-file: .nvmrc
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@pedaki'
 
       - name: Install deps
-        run: pnpm install --child-concurrency 3 --frozen-lockfile --prefer-offline
+        run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Check for errors
         run: pnpm run check
@@ -38,15 +45,7 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Create Release Pull Request or Publish
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          commit: "chore(release): version packages"
-          title: "chore(release): version packages"
-          version: node .github/changeset-version.mjs
-          publish: pnpm exec changeset publish
+      - name: Publish to NPM
+        run: pnpm publish-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_ENV: production
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
