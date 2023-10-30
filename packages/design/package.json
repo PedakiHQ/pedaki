@@ -22,10 +22,10 @@
   "scripts": {
     "build": "tsup",
     "build:watch": "tsup --watch",
-    "lint": "eslint . --cache",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "format": "prettier --write . --cache",
-    "format:check": "prettier --check . --cache"
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
     "@pedaki/eslint-config": "0.4.2-beta.4",

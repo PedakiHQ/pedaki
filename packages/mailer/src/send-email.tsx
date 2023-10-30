@@ -12,7 +12,6 @@ export const sendEmail = async <T,>(to: string[] | string, mail: Mail<T>, props:
   const html = render(react, {});
 
   if (isDev) {
-    // eslint-disable-next-line node/no-unsupported-features/es-syntax -- That's a lie
     const previewEmail = (await import('preview-email')).default;
     // TODO: add randomId
     // import { randomId } from "../lib/random";

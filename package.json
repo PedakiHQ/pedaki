@@ -25,6 +25,7 @@
     "check": "SKIP_ENV_VALIDATION=true && turbo typecheck lint format:check test",
     "prepare": "husky install",
     "prepare-release": "node --no-warnings=ExperimentalWarning scripts/prepare-release.mjs",
+    "preprepare-release": "pnpm check",
     "publish-release": "node --no-warnings=ExperimentalWarning scripts/publish-release.mjs"
   },
   "devDependencies": {
