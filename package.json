@@ -29,8 +29,6 @@
     "publish-release": "node --no-warnings=ExperimentalWarning scripts/publish-release.mjs"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "latest",
-    "@changesets/cli": "latest",
     "@manypkg/get-packages": "^2.2.0",
     "@types/fs-extra": "^11.0.3",
     "@types/node": "^18.18.4",
