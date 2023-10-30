@@ -1,6 +1,6 @@
 import chalk from "chalk";
 import inquirer from "inquirer";
-import { getPackages } from "@manypkg/get-packages";
+import {getPackages} from "@manypkg/get-packages";
 import {$} from 'execa';
 import ora from "ora";
 import open from "open";
@@ -65,7 +65,7 @@ const preReleaseSuffix = (useOld, preRelease) => {
             return '-beta.0';
         }
         const preReleaseParts = versionParts[1].split('.');
-        const preReleaseNumber =  (parseInt(preReleaseParts[1]) + 1) || 0;
+        const preReleaseNumber = (parseInt(preReleaseParts[1]) + 1) || 0;
         return `-beta.${preReleaseNumber}`;
     }
     return '';
@@ -135,6 +135,7 @@ const checkCurrentBranch = async () => {
 const commitChanges = async (newVersion) => {
     const spinner = ora('Committing changes...');
     spinner.start();
+    await $`git pull origin main --rebase`;
     await $`git add .`;
     await $`git commit -m ${`v${newVersion}`} --author ${"pedaki-release[bot] <noreply@pedaki.fr>"}`;
     await $`git push origin main`;
@@ -148,7 +149,7 @@ inquirer.prompt(questions).then(async (answers) => {
     const {versionType} = answers;
     console.log(`You have selected to release a ${chalk.cyan(versionType)} version.`);
     let newVersion = answers.version || nextVersion(versionType);
-    newVersion += preReleaseSuffix(answers.versionType === 'skip', answers.preRelease);
+    newVersion += preReleaseSuffix((answers.versionType === 'skip' || answers.version === currentVersion.split("-", 1)[0]), answers.preRelease);
     console.log(`The new version will be ${chalk.cyan(newVersion)}.`);
     await updatePackageJson(newVersion);
     await updateLockFiles();
