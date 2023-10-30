@@ -120,10 +120,27 @@ const checkCurrentBranch = async () => {
     const {stdout} = await $`git branch --show-current`;
     const currentBranch = stdout.trim();
     if (currentBranch !== 'main') {
-        // console.error(`You are on ${chalk.cyan(currentBranch)} branch. Please switch to ${chalk.cyan('main')} branch.`);
-        // process.exit(1);
+        console.error(`You are on ${chalk.cyan(currentBranch)} branch. Please switch to ${chalk.cyan('main')} branch.`);
+        process.exit(1);
+    }
+
+    // Check that the branch is clean
+    const {stdout: status} = await $`git status --porcelain`;
+    if (status.trim() !== '') {
+        console.error(`You have uncommitted changes. Please commit or stash them before releasing.`);
+        process.exit(1);
     }
 }
+
+const commitChanges = async (newVersion) => {
+    const spinner = ora('Committing changes...');
+    spinner.start();
+    await $`git add .`;
+    await $`git commit -m "v${newVersion}" --author ${"pedaki-release-bot <noreply@pedaki.fr>"}`;
+    await $`git push origin main`;
+    spinner.succeed();
+}
+
 
 await checkCurrentBranch();
 
@@ -135,6 +152,7 @@ inquirer.prompt(questions).then(async (answers) => {
     console.log(`The new version will be ${chalk.cyan(newVersion)}.`);
     await updatePackageJson(newVersion);
     await updateLockFiles();
+    await commitChanges(newVersion);
     await openNewTagPage(newVersion, answers.preRelease);
 });
 
