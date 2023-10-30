@@ -32,8 +32,8 @@ const questions = [
     {
         type: 'confirm',
         name: 'preRelease',
-        message: 'Is this a pre-release?)',
-        default: true,
+        message: 'Is this a pre-release?',
+        default: true
     }
 ];
 
@@ -58,11 +58,11 @@ const nextVersion = (versionType) => {
     }
 }
 
-const preReleaseSuffix = (preRelease) => {
+const preReleaseSuffix = (useOld, preRelease) => {
     if (preRelease) {
         const currentVersion = package_json.version;
         const versionParts = currentVersion.split('-', 2);
-        if (versionParts.length === 1) {
+        if (!useOld || versionParts.length === 1) {
             return '-beta.0';
         }
         const preReleaseParts = versionParts[1].split('.');
@@ -136,7 +136,7 @@ inquirer.prompt(questions).then(async (answers) => {
     const {versionType} = answers;
     console.log(`You have selected to release a ${chalk.cyan(versionType)} version.`);
     let newVersion = answers.version || nextVersion(versionType);
-    newVersion += preReleaseSuffix(answers.preRelease);
+    newVersion += preReleaseSuffix(answers.versionType === 'skip', answers.preRelease);
     console.log(`The new version will be ${chalk.cyan(newVersion)}.`);
     await updatePackageJson(newVersion);
     await updateLockFiles();
