@@ -5,7 +5,13 @@ import type { Mail } from './type.ts';
 const isDev = process.env.NODE_ENV === 'development' && process.env.MAILER_PREVIEW !== 'false';
 const resend = isDev ? null : new Resend(process.env.RESEND_API_KEY);
 
-export const sendEmail = async <T,>(to: string[] | string, mail: Mail<T>, props: T) => {
+export const sendEmail = async <T,>(
+  to: string[] | string,
+  mail: Mail<T>,
+  props: T,
+): Promise<{
+  MessageId: string;
+}> => {
   const react = mail(props);
   const subject = mail.subject(props);
   const sender = mail.sender;
@@ -13,9 +19,6 @@ export const sendEmail = async <T,>(to: string[] | string, mail: Mail<T>, props:
 
   if (isDev) {
     const previewEmail = (await import('preview-email')).default;
-    // TODO: add randomId
-    // import { randomId } from "../lib/random";
-
     await previewEmail(
       {
         from: sender,
@@ -30,12 +33,18 @@ export const sendEmail = async <T,>(to: string[] | string, mail: Mail<T>, props:
     );
 
     return Promise.resolve({ MessageId: 'randomId()' });
-  }
+  } else {
+    const { data, error } = await resend!.emails.send({
+      from: sender,
+      to,
+      subject,
+      html,
+    });
 
-  return resend!.sendEmail({
-    from: sender,
-    to,
-    subject,
-    html,
-  });
+    if (error ?? !data) {
+      return Promise.reject(error?.message ?? 'Unknown error');
+    }
+
+    return Promise.resolve({ MessageId: data.id });
+  }
 };
