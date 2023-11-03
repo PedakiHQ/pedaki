@@ -17,12 +17,12 @@
     "test:watch": "NODE_ENV=test dotenv -e .env.test -c -- turbo run test:watch",
     "dev": "dotenv -- turbo run dev",
     "dev:mail": "dotenv -- turbo run dev --filter mailer",
-    "lint": "SKIP_ENV_VALIDATION=true && turbo run lint",
+    "lint": "cross-env SKIP_ENV_VALIDATION=true && turbo run lint",
     "format:check": "turbo run format:check",
     "typecheck": "turbo run typecheck",
     "format": "turbo run format",
     "clean": "turbo run clean && rimraf node_modules",
-    "check": "SKIP_ENV_VALIDATION=true && turbo typecheck lint format:check test",
+    "check": "cross-env SKIP_ENV_VALIDATION=true && turbo typecheck lint format:check test",
     "prepare": "husky install",
     "prepare-release": "node --no-warnings=ExperimentalWarning scripts/prepare-release.mjs",
     "preprepare-release": "pnpm check",
@@ -49,7 +49,8 @@
     "tsup": "^7.2.0",
     "turbo": "^1.10.16",
     "typescript": "^5.2.2",
-    "vitest": "^0.34.6"
+    "vitest": "^0.34.6",
+    "cross-env": "^7.0.3"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
