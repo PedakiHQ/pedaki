@@ -1,6 +1,6 @@
 {
   "name": "@pedaki/design",
-  "version": "0.4.2-beta.6",
+  "version": "0.4.2-beta.7",
   "author": "Nathan David <me@vahor.fr>",
   "repository": {
     "type": "git",
@@ -28,8 +28,8 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@pedaki/eslint-config": "0.4.2-beta.6",
-    "@pedaki/prettier-config": "0.4.2-beta.6",
+    "@pedaki/eslint-config": "0.4.2-beta.7",
+    "@pedaki/prettier-config": "0.4.2-beta.7",
     "@types/react": "^18.2.33",
     "esbuild-css-modules-plugin": "^3.0.3",
     "esbuild-plugin-alias-path": "^2.0.2",
