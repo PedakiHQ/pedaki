@@ -155,7 +155,7 @@ const revertChanges = async () => {
     const spinner = ora('Reverting changes...');
     spinner.start();
     await $`git reset --hard HEAD~1`;
-    await $`git push origin main --force`;
+    await $`git pull origin main --force`;
     spinner.succeed();
 }
 
