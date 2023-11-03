@@ -1,5 +1,11 @@
 # @pedaki/eslint-config
 
+## 0.1.1
+
+### Patch Changes
+
+- [#70](https://github.com/PedakiHQ/pedaki/pull/70) [`bfe850b`](https://github.com/PedakiHQ/pedaki/commit/bfe850b540a4921ed4df7e9ac8084e88f16c8cec) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint-config-next` to `^14.0.0`.
+
 ## 0.1.0
 
 ### Minor Changes
