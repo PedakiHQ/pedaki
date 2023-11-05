@@ -34,7 +34,7 @@
     "@types/node": "^18.18.4",
     "@vitest/coverage-v8": "^0.34.6",
     "chalk": "^5.3.0",
-    "cpy": "^10.1.0",
+    "cpy": "^11.0.0",
     "dotenv-cli": "latest",
     "execa": "^8.0.1",
     "fs-extra": "^11.1.1",
