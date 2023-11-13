@@ -15,6 +15,7 @@ export { default as IconCalendarX } from './IconCalendarX.tsx';
 export { default as IconMailSearch } from './IconMailSearch.tsx';
 export { default as IconTada } from './IconTada.tsx';
 export { default as IconTadaColor } from './IconTadaColor.tsx';
+export { default as IconShoppingBag } from './IconShoppingBag.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
