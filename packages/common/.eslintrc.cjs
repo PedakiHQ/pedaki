@@ -3,4 +3,5 @@ module.exports = {
   parserOptions: {
     project: true,
   },
+  ignorePatterns: ['vitest.config.js'],
 };
