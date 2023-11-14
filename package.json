@@ -12,9 +12,9 @@
   "scripts": {
     "start": "dotenv -- turbo run start",
     "build": "dotenv -- turbo run build",
-    "test": "NODE_ENV=test dotenv -e .env.test -c -- turbo run test",
-    "test:coverage": "NODE_ENV=test dotenv -e .env.test -c -- turbo run test:coverage",
-    "test:watch": "NODE_ENV=test dotenv -e .env.test -c -- turbo run test:watch",
+    "test": "NODE_ENV=test dotenv -e .env.test -c -- vitest",
+    "test:coverage": "NODE_ENV=test dotenv -e .env.test -c -- vitest --coverage",
+    "test:watch": "NODE_ENV=test dotenv -e .env.test -c -- vitest --watch",
     "dev": "dotenv -- turbo run dev",
     "dev:mail": "dotenv -- turbo run dev --filter mailer",
     "lint": "cross-env SKIP_ENV_VALIDATION=true && turbo run lint",
