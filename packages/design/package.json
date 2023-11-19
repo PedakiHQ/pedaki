@@ -30,14 +30,14 @@
   "devDependencies": {
     "@pedaki/eslint-config": "0.4.2-beta.7",
     "@pedaki/prettier-config": "0.4.2-beta.7",
-    "@types/react": "^18.2.33",
+    "@types/react": "^18.2.37",
     "esbuild-css-modules-plugin": "^3.0.3",
     "esbuild-plugin-alias-path": "^2.0.2",
     "esbuild-plugin-file-path-extensions": "^1.0.0",
     "esbuild-sass-plugin": "^2.16.0",
     "next": "latest",
     "react": "^18.2.0",
-    "react-hook-form": "^7.47.0"
+    "react-hook-form": "^7.48.2"
   },
   "peerDependencies": {
     "@radix-ui/colors": "^3.0.0",
