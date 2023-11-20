@@ -1,8 +1,8 @@
 /* c8 ignore start */
 
-export const safeHistoryReplaceState = (state: unknown, title: string, url: string) => {
+export const safeHistoryReplaceState = (url: string) => {
   try {
-    history.replaceState(state, title, url);
+    history.replaceState(null, "", url);
   } catch (e) {
     console.error(e);
   }
