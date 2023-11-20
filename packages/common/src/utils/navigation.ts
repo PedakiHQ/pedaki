@@ -2,7 +2,7 @@
 
 export const safeHistoryReplaceState = (url: string) => {
   try {
-    history.replaceState(null, "", url);
+    history.replaceState(null, '', url);
   } catch (e) {
     console.error(e);
   }
