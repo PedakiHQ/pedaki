@@ -16,7 +16,7 @@ const buttonVariants = cva(
       variant: {
         // Filled
         'filled-primary': ['bg-primary-base hover:bg-primary-dark', 'text-white'],
-        'filled-neutral': ['bg-surface', 'text-white'],
+        'filled-neutral': ['bg-surface hover:bg-strong', 'text-white'],
 
         // Stroke
         'stroke-primary-gray': [
