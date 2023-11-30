@@ -5,34 +5,43 @@ import Link from 'next/link.js';
 import * as React from 'react';
 
 const styledLinkVariants = cva(
-  'inline-flex items-center transition-colors disabled:pointer-events-none disabled:opacity-50 focus-orange-ring',
+  'inline-flex items-center transition-colors disabled:pointer-events-none data-[disabled]:text-disabled data-[disabled]:decoration-stroke-disabled data-[disabled]:pointer-events-none data-[disabled]:cursor-not-allowed focus-ring underline-offset-4 hover:decoration-2 decoration-1',
   {
     variants: {
       variant: {
-        subtle: 'text-primary hover:text-secondary',
-        subtle_secondary: 'text-secondary hover:text-primary',
+        gray: 'text-sub decoration-text-sub',
+        black: 'text-black decoration-black',
+        blue: 'text-blue-base decoration-blue-base',
+        primary: 'text-primary-base decoration-primary-light',
+        error: 'text-state-error decoration-state-error',
       },
       decoration: {
-        underline:
-          'underline underline-offset-2 hover:decoration-2 decoration-1 decoration-orange-9',
+        underline: 'underline',
+        hover: 'hover:underline',
+        none: undefined,
       },
     },
     defaultVariants: {
-      variant: 'subtle',
-      decoration: undefined,
+      variant: 'black',
+      decoration: 'hover',
     },
   },
 );
 export type StyledLinkProps = React.ComponentProps<typeof Link> &
   VariantProps<typeof styledLinkVariants> & {
     linkClassName?: string;
+    disabled?: boolean;
   };
 
 const StyledLink: React.FC<StyledLinkProps> = ({ className, variant, decoration, ...props }) => {
   const { children, ...other } = props;
 
   return (
-    <Link {...other} className={cn(styledLinkVariants({ variant, decoration }), className)}>
+    <Link
+      {...other}
+      className={cn(styledLinkVariants({ variant, decoration }), className)}
+      data-disabled={other.disabled}
+    >
       {children}
     </Link>
   );
