@@ -146,6 +146,171 @@ export default {
       textSoft: 'var(--tw-neutral-400)',
       textDisabled: 'var(--tw-neutral-300)',
     },
+    fontSize: {
+      'title-1': [
+        '56px',
+        {
+          letterSpacing: '-0.01em',
+          lineHeight: '64px',
+          fontWeight: '500',
+        },
+      ],
+      'title-2': [
+        '48px',
+        {
+          letterSpacing: '-0.01em',
+          lineHeight: '56px',
+          fontWeight: '500',
+        },
+      ],
+      'title-3': [
+        '40px',
+        {
+          letterSpacing: '-0.01em',
+          lineHeight: '48px',
+          fontWeight: '500',
+        },
+      ],
+      'title-4': [
+        '32px',
+        {
+          letterSpacing: '0',
+          lineHeight: '40px',
+          fontWeight: '500',
+        },
+      ],
+      'title-5': [
+        '24px',
+        {
+          letterSpacing: '0',
+          lineHeight: '32px',
+          fontWeight: '500',
+        },
+      ],
+      'title-6': [
+        '20px',
+        {
+          letterSpacing: '0',
+          lineHeight: '28px',
+          fontWeight: '500',
+        },
+      ],
+      //
+      'label-xl': [
+        '24px',
+        {
+          letterSpacing: '-0.015em',
+          lineHeight: '32px',
+          fontWeight: '500',
+        },
+      ],
+      'label-lg': [
+        '18px',
+        {
+          letterSpacing: '-0.015em',
+          lineHeight: '24px',
+          fontWeight: '500',
+        },
+      ],
+      'label-md': [
+        '16px',
+        {
+          letterSpacing: '-0.011em',
+          lineHeight: '24px',
+          fontWeight: '500',
+        },
+      ],
+      'label-sm': [
+        '14px',
+        {
+          letterSpacing: '-0.06em',
+          lineHeight: '20px',
+          fontWeight: '500',
+        },
+      ],
+      'label-xs': [
+        '12px',
+        {
+          letterSpacing: '0',
+          lineHeight: '16px',
+          fontWeight: '500',
+        },
+      ],
+      //
+      'p-xl': [
+        '24px',
+        {
+          letterSpacing: '-0.015em',
+          lineHeight: '32px',
+          fontWeight: '400',
+        },
+      ],
+      'p-lg': [
+        '18px',
+        {
+          letterSpacing: '-0.015em',
+          lineHeight: '24px',
+          fontWeight: '400',
+        },
+      ],
+      'p-md': [
+        '16px',
+        {
+          letterSpacing: '-0.011em',
+          lineHeight: '24px',
+          fontWeight: '400',
+        },
+      ],
+      'p-sm': [
+        '14px',
+        {
+          letterSpacing: '-0.06em',
+          lineHeight: '20px',
+          fontWeight: '400',
+        },
+      ],
+      'p-xs': [
+        '12px',
+        {
+          letterSpacing: '0',
+          lineHeight: '16px',
+          fontWeight: '400',
+        },
+      ],
+      //
+      'sub-md': [
+        '16px',
+        {
+          letterSpacing: '0.06em',
+          lineHeight: '24px',
+          fontWeight: '500',
+        },
+      ],
+      'sub-sm': [
+        '14px',
+        {
+          letterSpacing: '0.06em',
+          lineHeight: '20px',
+          fontWeight: '500',
+        },
+      ],
+      'sub-xs': [
+        '12px',
+        {
+          letterSpacing: '0.04em',
+          lineHeight: '16px',
+          fontWeight: '500',
+        },
+      ],
+      'sub-2xs': [
+        '11px',
+        {
+          letterSpacing: '0.02em',
+          lineHeight: '12px',
+          fontWeight: '500',
+        },
+      ],
+    },
     extend: {
       backgroundColor: {
         success: 'var(--tw-state-success)',
