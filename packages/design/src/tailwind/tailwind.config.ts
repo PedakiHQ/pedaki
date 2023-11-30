@@ -150,7 +150,7 @@ export default {
       'title-1': [
         '56px',
         {
-          letterSpacing: '-0.01em',
+          letterSpacing: '-0.001em',
           lineHeight: '64px',
           fontWeight: '500',
         },
@@ -158,7 +158,7 @@ export default {
       'title-2': [
         '48px',
         {
-          letterSpacing: '-0.01em',
+          letterSpacing: '-0.001em',
           lineHeight: '56px',
           fontWeight: '500',
         },
@@ -166,7 +166,7 @@ export default {
       'title-3': [
         '40px',
         {
-          letterSpacing: '-0.01em',
+          letterSpacing: '-0.001em',
           lineHeight: '48px',
           fontWeight: '500',
         },
@@ -199,7 +199,7 @@ export default {
       'label-xl': [
         '24px',
         {
-          letterSpacing: '-0.015em',
+          letterSpacing: '-0.0015em',
           lineHeight: '32px',
           fontWeight: '500',
         },
@@ -207,7 +207,7 @@ export default {
       'label-lg': [
         '18px',
         {
-          letterSpacing: '-0.015em',
+          letterSpacing: '-0.0015em',
           lineHeight: '24px',
           fontWeight: '500',
         },
@@ -215,7 +215,7 @@ export default {
       'label-md': [
         '16px',
         {
-          letterSpacing: '-0.011em',
+          letterSpacing: '-0.0011em',
           lineHeight: '24px',
           fontWeight: '500',
         },
@@ -223,7 +223,7 @@ export default {
       'label-sm': [
         '14px',
         {
-          letterSpacing: '-0.06em',
+          letterSpacing: '-0.006em',
           lineHeight: '20px',
           fontWeight: '500',
         },
@@ -240,7 +240,7 @@ export default {
       'p-xl': [
         '24px',
         {
-          letterSpacing: '-0.015em',
+          letterSpacing: '-0.0015em',
           lineHeight: '32px',
           fontWeight: '400',
         },
@@ -248,7 +248,7 @@ export default {
       'p-lg': [
         '18px',
         {
-          letterSpacing: '-0.015em',
+          letterSpacing: '-0.0015em',
           lineHeight: '24px',
           fontWeight: '400',
         },
@@ -256,7 +256,7 @@ export default {
       'p-md': [
         '16px',
         {
-          letterSpacing: '-0.011em',
+          letterSpacing: '-0.0011em',
           lineHeight: '24px',
           fontWeight: '400',
         },
@@ -264,7 +264,7 @@ export default {
       'p-sm': [
         '14px',
         {
-          letterSpacing: '-0.06em',
+          letterSpacing: '-0.006em',
           lineHeight: '20px',
           fontWeight: '400',
         },
@@ -281,7 +281,7 @@ export default {
       'sub-md': [
         '16px',
         {
-          letterSpacing: '0.06em',
+          letterSpacing: '0.006em',
           lineHeight: '24px',
           fontWeight: '500',
         },
@@ -289,7 +289,7 @@ export default {
       'sub-sm': [
         '14px',
         {
-          letterSpacing: '0.06em',
+          letterSpacing: '0.006em',
           lineHeight: '20px',
           fontWeight: '500',
         },
@@ -297,7 +297,7 @@ export default {
       'sub-xs': [
         '12px',
         {
-          letterSpacing: '0.04em',
+          letterSpacing: '0.004em',
           lineHeight: '16px',
           fontWeight: '500',
         },
@@ -305,7 +305,7 @@ export default {
       'sub-2xs': [
         '11px',
         {
-          letterSpacing: '0.02em',
+          letterSpacing: '0.002em',
           lineHeight: '12px',
           fontWeight: '500',
         },
