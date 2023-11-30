@@ -31,6 +31,13 @@ const buttonVariants = cva(
           'border border-transparent',
           'text-main hover:text-primary-base',
         ],
+
+        // Lighter
+        'lighter-primary': [
+          'bg-primary-lighter hover:bg-primary-light',
+          'border border-transparent',
+          'text-primary-base hover:text-primary-dark',
+        ],
       },
       size: {
         lg: 'h-12 space-x-3 px-6 py-3',
