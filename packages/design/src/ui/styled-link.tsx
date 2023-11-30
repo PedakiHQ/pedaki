@@ -9,16 +9,16 @@ const styledLinkVariants = cva(
   {
     variants: {
       variant: {
-          gray: 'text-sub decoration-text-sub',
-          black: 'text-black decoration-black',
-          blue: 'text-blue-base decoration-blue-base',
-          primary: 'text-primary-base decoration-primary-light',
-          error: 'text-state-error decoration-state-error',
+        gray: 'text-sub decoration-text-sub',
+        black: 'text-black decoration-black',
+        blue: 'text-blue-base decoration-blue-base',
+        primary: 'text-primary-base decoration-primary-light',
+        error: 'text-state-error decoration-state-error',
       },
       decoration: {
         underline: 'underline',
-          hover: 'hover:underline',
-          none: undefined,
+        hover: 'hover:underline',
+        none: undefined,
       },
     },
     defaultVariants: {
@@ -37,7 +37,11 @@ const StyledLink: React.FC<StyledLinkProps> = ({ className, variant, decoration,
   const { children, ...other } = props;
 
   return (
-    <Link {...other} className={cn(styledLinkVariants({ variant, decoration }), className)} data-disabled={other.disabled}>
+    <Link
+      {...other}
+      className={cn(styledLinkVariants({ variant, decoration }), className)}
+      data-disabled={other.disabled}
+    >
       {children}
     </Link>
   );
