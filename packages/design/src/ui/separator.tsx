@@ -14,7 +14,7 @@ const separatorVariants = cva('bg-border shrink-0', {
     },
     gradient: {
       none: '',
-      gray: 'bg-gradient-to-r from-gray-50 via-gray-2 to-gray-50',
+      gray: 'bg-gradient-to-r from-neutral-100 via-gray-2 to-neutral-100',
     },
   },
   defaultVariants: {

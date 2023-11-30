@@ -48,7 +48,7 @@ export default {
 
       white: 'rgb(255 255 255 / <alpha-value>)',
       'neutral-0': 'rgb(255 255 255 / <alpha-value>)',
-      'neutral-100': 'rgb(246 248 250 / <alpha-value>)',
+      'neutral-100': 'rgb(249 249 249 / <alpha-value>)',
       'neutral-200': 'rgb(226 228 233 / <alpha-value>)',
       'neutral-300': 'rgb(205 208 213 / <alpha-value>)',
       'neutral-400': 'rgb(134 140 152 / <alpha-value>)',
@@ -58,8 +58,6 @@ export default {
       'neutral-800': 'rgb(22 25 34 / <alpha-value>)',
       'neutral-900': 'rgb(10 13 20 / <alpha-value>)',
       black: 'rgb(10 13 20 / <alpha-value>)',
-
-      'gray-50': 'rgb(249 249 249 / <alpha-value>)',
 
       'blue-base': 'rgb(55 93 251 / <alpha-value>)',
       'blue-dark': 'rgb(37 62 167 / <alpha-value>)',
@@ -166,9 +164,7 @@ export default {
         // 'surface': 'var(--tw-neutral-700)',
         surface: 'rgb(32 35 45 / <alpha-value>)',
         // 'weak': 'var(--tw-neutral-100)',
-        weak: 'rgb(246 248 250 / <alpha-value>)',
-        // 'weaker': 'var(--tw-gray-50)',
-        weaker: 'rgb(249 249 249 / <alpha-value>)',
+        weak: 'rgb(249 249 249 / <alpha-value>)',
         // 'white': 'var(--tw-white)',
         white: 'rgb(255 255 255 / <alpha-value>)',
       },
