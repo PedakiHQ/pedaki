@@ -29,7 +29,7 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <IconChevronDown className="text-secondary h-4 w-4 shrink-0 transition-transform duration-200" />
+      <IconChevronDown className="text-soft h-4 w-4 shrink-0 transition-transform duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
@@ -42,7 +42,7 @@ const AccordionContent = React.forwardRef<
   <AccordionPrimitive.Content
     ref={ref}
     className={cn(
-      'text-secondary',
+      'text-soft',
       'overflow-hidden text-sm transition-all',
       'data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
       className,

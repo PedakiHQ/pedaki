@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-
   :root {
     --radius: 0.6rem;
 
+    --tw-white: theme('colors.white');
     --tw-neutral-0: theme('colors.neutral-0');
     --tw-neutral-100: theme('colors.neutral-100');
     --tw-neutral-200: theme('colors.neutral-200');
@@ -17,6 +17,8 @@
     --tw-neutral-700: theme('colors.neutral-700');
     --tw-neutral-800: theme('colors.neutral-800');
     --tw-neutral-900: theme('colors.neutral-900');
+
+    --tw-gray-50: theme('colors.gray-50');
 
     --tw-blue-base: theme('colors.blue-base');
     --tw-blue-dark: theme('colors.blue-dark');
@@ -71,6 +73,7 @@
     --tw-bg-surface-700: var(--tw-neutral-700);
     --tw-bg-weak-100: var(--tw-neutral-100);
     --tw-bg-white-0: var(--tw-neutral-0);
+    --tw-bg-white: var(--tw-white);
 
     --tw-icon-disabled-300: var(--tw-neutral-300);
     --tw-icon-soft-400: var(--tw-neutral-400);
@@ -92,14 +95,28 @@
     --tw-stroke-strong-900: var(--tw-neutral-900);
     --tw-stroke-sub-300: var(--tw-neutral-300);
     --tw-stroke-white-0: var(--tw-neutral-0);
+
+    --tw-primary-base: theme('colors.primary-base');
+    --tw-primary-dark: theme('colors.primary-dark');
+    --tw-primary-darker: theme('colors.primary-darker');
+    --tw-primary-light: theme('colors.primary-light');
+    --tw-primary-lighter: theme('colors.primary-lighter');
+
+    --tw-shadow-stroke-important: theme('colors.shadow-stroke-important');
+    --tw-shadow-stroke-primary: theme('colors.shadow-stroke-primary');
+    --tw-shadow-stroke-error: theme('colors.shadow-stroke-error');
+
+    --tw-shadow-focus-important: theme('colors.shadow-focus-important');
+    --tw-shadow-focus-primary: theme('colors.shadow-focus-primary');
+    --tw-shadow-focus-error: theme('colors.shadow-focus-error');
   }
 
   * {
-    border-color: var(--bg-weak-100);
+    @apply border-border outline-primary-base;
   }
 
   .focus-ring {
-    @apply ring-offset-bg-white-0 focus-visible:ring-shadow-focus-primary focus:ring-shadow-focus-primary focus:ring-2 focus:ring-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    @apply focus-visible:ring-primary-light focus:ring-primary-light ring-offset-white focus:ring-2 focus:ring-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
 
   a {
@@ -113,7 +130,7 @@
   }
 
   body {
-    @apply bg-bg-white-0 flex min-h-full flex-col antialiased text-main;
+    @apply text-main flex min-h-full flex-col bg-white antialiased;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
     font-feature-settings: 'cv11', 'salt', 'ss01', 'ss03', 'cv01', 'cv02', 'cv03', 'cv04', 'cv05',

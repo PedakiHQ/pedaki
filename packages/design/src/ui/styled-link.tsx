@@ -9,8 +9,8 @@ const styledLinkVariants = cva(
   {
     variants: {
       variant: {
-        subtle: 'text-primary hover:text-secondary',
-        subtle_secondary: 'text-secondary hover:text-primary',
+        subtle: 'text-primary hover:text-soft',
+        subtle_secondary: 'text-soft hover:text-primary',
       },
       decoration: {
         underline:
