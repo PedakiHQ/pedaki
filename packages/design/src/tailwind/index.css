@@ -3,39 +3,103 @@
 @tailwind utilities;
 
 @layer base {
+
   :root {
-    --white: 255 255 255; /* #FFFFFF */
-
-    --gray-50: 249 249 249; /* #F9F9F9 */
-    --gray-100: 244 245 248; /* #F4F5F8 */
-    --gray-850: 26 26 26; /* #1a1a1a */
-    --gray-900: 25 22 21; /* #191615 */
-
     --radius: 0.6rem;
 
-    --background-primary: var(--white);
-    --background-secondary: var(--gray-50);
-    --background-tertiary: var(--gray-100);
+    --tw-neutral-0: theme('colors.neutral-0');
+    --tw-neutral-100: theme('colors.neutral-100');
+    --tw-neutral-200: theme('colors.neutral-200');
+    --tw-neutral-300: theme('colors.neutral-300');
+    --tw-neutral-400: theme('colors.neutral-400');
+    --tw-neutral-500: theme('colors.neutral-500');
+    --tw-neutral-600: theme('colors.neutral-600');
+    --tw-neutral-700: theme('colors.neutral-700');
+    --tw-neutral-800: theme('colors.neutral-800');
+    --tw-neutral-900: theme('colors.neutral-900');
 
-    --text-primary: var(--gray12);
-    --text-secondary: var(--gray10);
-    --text-muted: var(--gray9);
+    --tw-blue-base: theme('colors.blue-base');
+    --tw-blue-dark: theme('colors.blue-dark');
+    --tw-blue-darker: theme('colors.blue-darker');
+    --tw-blue-light: theme('colors.blue-light');
+    --tw-blue-lighter: theme('colors.blue-lighter');
 
-    --border: var(--gray6);
-  }
+    --tw-green-base: theme('colors.green-base');
+    --tw-green-dark: theme('colors.green-dark');
+    --tw-green-darker: theme('colors.green-darker');
+    --tw-green-light: theme('colors.green-light');
+    --tw-green-lighter: theme('colors.green-lighter');
 
-  .dark {
-    --background-primary: var(--gray-900);
-    --background-secondary: var(--gray-850);
-    color: var(--gray12);
+    --tw-orange-base: theme('colors.orange-base');
+    --tw-orange-dark: theme('colors.orange-dark');
+    --tw-orange-darker: theme('colors.orange-darker');
+    --tw-orange-light: theme('colors.orange-light');
+    --tw-orange-lighter: theme('colors.orange-lighter');
+
+    --tw-pink-base: theme('colors.pink-base');
+    --tw-pink-dark: theme('colors.pink-dark');
+    --tw-pink-darker: theme('colors.pink-darker');
+    --tw-pink-light: theme('colors.pink-light');
+    --tw-pink-lighter: theme('colors.pink-lighter');
+
+    --tw-purple-base: theme('colors.purple-base');
+    --tw-purple-dark: theme('colors.purple-dark');
+    --tw-purple-darker: theme('colors.purple-darker');
+    --tw-purple-light: theme('colors.purple-light');
+    --tw-purple-lighter: theme('colors.purple-lighter');
+
+    --tw-red-base: theme('colors.red-base');
+    --tw-red-dark: theme('colors.red-dark');
+    --tw-red-darker: theme('colors.red-darker');
+    --tw-red-light: theme('colors.red-light');
+    --tw-red-lighter: theme('colors.red-lighter');
+
+    --tw-teal-base: theme('colors.teal-base');
+    --tw-teal-dark: theme('colors.teal-dark');
+    --tw-teal-darker: theme('colors.teal-darker');
+    --tw-teal-light: theme('colors.teal-light');
+    --tw-teal-lighter: theme('colors.teal-lighter');
+
+    --tw-yellow-base: theme('colors.yellow-base');
+    --tw-yellow-dark: theme('colors.yellow-dark');
+    --tw-yellow-darker: theme('colors.yellow-darker');
+    --tw-yellow-light: theme('colors.yellow-light');
+    --tw-yellow-lighter: theme('colors.yellow-lighter');
+
+    --tw-bg-soft-200: var(--tw-neutral-200);
+    --tw-bg-strong-900: var(--tw-neutral-900);
+    --tw-bg-surface-700: var(--tw-neutral-700);
+    --tw-bg-weak-100: var(--tw-neutral-100);
+    --tw-bg-white-0: var(--tw-neutral-0);
+
+    --tw-icon-disabled-300: var(--tw-neutral-300);
+    --tw-icon-soft-400: var(--tw-neutral-400);
+    --tw-icon-strong-900: var(--tw-neutral-900);
+    --tw-icon-sub-500: var(--tw-neutral-500);
+    --tw-icon-white-0: var(--tw-neutral-0);
+
+    --tw-state-away: var(--tw-yellow-base);
+    --tw-state-error: var(--tw-red-base);
+    --tw-state-feature: var(--tw-purple-base);
+    --tw-state-information: var(--tw-blue-base);
+    --tw-state-neutral: var(--tw-neutral-400);
+    --tw-state-success: var(--tw-green-base);
+    --tw-state-verified: var(--tw-teal-base);
+    --tw-state-warning: var(--tw-orange-base);
+
+    --tw-stroke-disabled-100: var(--tw-neutral-100);
+    --tw-stroke-soft-200: var(--tw-neutral-200);
+    --tw-stroke-strong-900: var(--tw-neutral-900);
+    --tw-stroke-sub-300: var(--tw-neutral-300);
+    --tw-stroke-white-0: var(--tw-neutral-0);
   }
 
   * {
-    border-color: var(--border);
+    border-color: var(--bg-weak-100);
   }
 
-  .focus-orange-ring {
-    @apply ring-offset-bg-primary focus-visible:ring-orange-8 focus:ring-orange-8 focus:ring-2 focus:ring-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  .focus-ring {
+    @apply ring-offset-bg-white-0 focus-visible:ring-shadow-focus-primary focus:ring-shadow-focus-primary focus:ring-2 focus:ring-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
 
   a {
@@ -49,8 +113,7 @@
   }
 
   body {
-    @apply bg-primary flex min-h-full flex-col antialiased;
-    color: var(--gray12);
+    @apply bg-bg-white-0 flex min-h-full flex-col antialiased text-main;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
     font-feature-settings: 'cv11', 'salt', 'ss01', 'ss03', 'cv01', 'cv02', 'cv03', 'cv04', 'cv05',
