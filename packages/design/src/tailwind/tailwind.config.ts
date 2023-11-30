@@ -57,6 +57,7 @@ export default {
       'neutral-700': 'rgb(32 35 45 / <alpha-value>)',
       'neutral-800': 'rgb(22 25 34 / <alpha-value>)',
       'neutral-900': 'rgb(10 13 20 / <alpha-value>)',
+      black: 'rgb(10 13 20 / <alpha-value>)',
 
       'gray-50': 'rgb(249 249 249 / <alpha-value>)',
 
@@ -108,12 +109,6 @@ export default {
       'yellow-light': 'rgb(251 223 177 / <alpha-value>)',
       'yellow-lighter': 'rgb(254 247 236 / <alpha-value>)',
 
-      'icon-disabled-300': 'var(--tw-neutral-300)',
-      'icon-soft-400': 'var(--tw-neutral-400)',
-      'icon-strong-900': 'var(--tw-neutral-900)',
-      'icon-sub-500': 'var(--tw-neutral-500)',
-      'icon-white-0': 'var(--tw-neutral-0)',
-
       'state-away': 'var(--tw-yellow-base)',
       'state-error': 'var(--tw-red-base)',
       'state-feature': 'var(--tw-purple-base)',
@@ -123,11 +118,11 @@ export default {
       'state-verified': 'var(--tw-teal-base)',
       'state-warning': 'var(--tw-orange-base)',
 
-      'stroke-disabled-100': 'var(--tw-neutral-100)',
-      'stroke-soft-200': 'var(--tw-neutral-200)',
-      'stroke-strong-900': 'var(--tw-neutral-900)',
-      'stroke-sub-300': 'var(--tw-neutral-300)',
-      'stroke-white-0': 'var(--tw-neutral-0)',
+      'stroke-disabled': 'var(--tw-neutral-100)',
+      'stroke-soft': 'var(--tw-neutral-200)',
+      'stroke-strong': 'var(--tw-neutral-900)',
+      'stroke-sub': 'var(--tw-neutral-300)',
+      'stroke-white': 'var(--tw-neutral-0)',
 
       'shadow-stroke-important': 'rgba(55, 93, 251, 0.08)', // 'var(--tw-neutral-500) / 0.08',
       'shadow-stroke-primary': 'rgba(241, 123, 44, 0.08)', // 'var(--tw-orange-base) / 0.08',
@@ -147,6 +142,11 @@ export default {
       'primary-light': 'rgb(255 218 194 / <alpha-value>)',
       // 'primary-lighter': 'var(--tw-orange-lighter)',
       'primary-lighter': 'rgb(254 243 235 / <alpha-value>)',
+
+      textMain: 'var(--tw-neutral-900)',
+      textSub: 'var(--tw-neutral-500)',
+      textSoft: 'var(--tw-neutral-400)',
+      textDisabled: 'var(--tw-neutral-300)',
     },
     extend: {
       backgroundColor: {
@@ -180,11 +180,11 @@ export default {
         white: 'var(--tw-neutral-0)',
       },
       borderColor: {
-        disabled: 'var(--tw-stroke-disabled-100)',
-        white: 'var(--tw-stroke-white-0)',
-        sub: 'var(--tw-stroke-sub-300)',
-        strong: 'var(--tw-stroke-strong-900)',
-        border: 'var(--tw-stroke-soft-200)',
+        disabled: 'var(--tw-stroke-disabled)',
+        white: 'var(--tw-stroke-white)',
+        sub: 'var(--tw-stroke-sub)',
+        strong: 'var(--tw-stroke-strong)',
+        border: 'var(--tw-stroke-soft)',
 
         success: 'var(--tw-state-success)',
         warning: 'var(--tw-state-warning)',

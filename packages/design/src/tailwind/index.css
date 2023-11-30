@@ -68,19 +68,6 @@
     --tw-yellow-light: theme('colors.yellow-light');
     --tw-yellow-lighter: theme('colors.yellow-lighter');
 
-    --tw-bg-soft-200: var(--tw-neutral-200);
-    --tw-bg-strong-900: var(--tw-neutral-900);
-    --tw-bg-surface-700: var(--tw-neutral-700);
-    --tw-bg-weak-100: var(--tw-neutral-100);
-    --tw-bg-white-0: var(--tw-neutral-0);
-    --tw-bg-white: var(--tw-white);
-
-    --tw-icon-disabled-300: var(--tw-neutral-300);
-    --tw-icon-soft-400: var(--tw-neutral-400);
-    --tw-icon-strong-900: var(--tw-neutral-900);
-    --tw-icon-sub-500: var(--tw-neutral-500);
-    --tw-icon-white-0: var(--tw-neutral-0);
-
     --tw-state-away: var(--tw-yellow-base);
     --tw-state-error: var(--tw-red-base);
     --tw-state-feature: var(--tw-purple-base);
@@ -90,11 +77,11 @@
     --tw-state-verified: var(--tw-teal-base);
     --tw-state-warning: var(--tw-orange-base);
 
-    --tw-stroke-disabled-100: var(--tw-neutral-100);
-    --tw-stroke-soft-200: var(--tw-neutral-200);
-    --tw-stroke-strong-900: var(--tw-neutral-900);
-    --tw-stroke-sub-300: var(--tw-neutral-300);
-    --tw-stroke-white-0: var(--tw-neutral-0);
+    --tw-stroke-disabled: var(--tw-neutral-100);
+    --tw-stroke-soft: var(--tw-neutral-200);
+    --tw-stroke-strong: var(--tw-neutral-900);
+    --tw-stroke-sub: var(--tw-neutral-300);
+    --tw-stroke-white: var(--tw-neutral-0);
 
     --tw-primary-base: theme('colors.primary-base');
     --tw-primary-dark: theme('colors.primary-dark');
