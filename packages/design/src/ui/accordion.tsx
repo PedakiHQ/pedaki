@@ -50,7 +50,7 @@ const AccordionContent = React.forwardRef<
     ref={ref}
     className={cn(
       'text-sub',
-      'overflow-hidden text-sub-xs transition-all',
+      'text-sub-xs overflow-hidden transition-all',
       'data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
       className,
     )}
