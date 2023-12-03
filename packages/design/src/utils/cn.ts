@@ -12,7 +12,7 @@ const twMerge = extendTailwindMerge({
       ],
       'font-size': [
         {
-          'text': [
+          text: [
             'title-1',
             'title-2',
             'title-3',
