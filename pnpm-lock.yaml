@@ -208,8 +208,8 @@ importers:
         specifier: ^2.0.2
         version: 2.0.2(esbuild@0.19.4)
       esbuild-plugin-file-path-extensions:
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^2.0.0
+        version: 2.0.0
       esbuild-sass-plugin:
         specifier: ^2.16.0
         version: 2.16.0(esbuild@0.19.4)
@@ -4805,8 +4805,8 @@ packages:
       jsonfile: 6.1.0
     dev: true
 
-  /esbuild-plugin-file-path-extensions@1.0.0:
-    resolution: {integrity: sha512-v5LpSkml+CbsC0+xAaETEGDECdvKp1wKkD4aXMdI4zLjXP0EYfK4GjGhphumt4N+kjR3A8Q+DIkpgxX1XTqO4Q==}
+  /esbuild-plugin-file-path-extensions@2.0.0:
+    resolution: {integrity: sha512-VzVJhuegxLeg8VhsHmxRXtz1Kxf3QMQb1xIuKWivGHoOmZdU6O6xJ5iHhfCDyR+Vs+JE5GrvSpCsZ3GvaqlkUA==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
     dev: true
 
