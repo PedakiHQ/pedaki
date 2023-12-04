@@ -18,6 +18,6 @@ jobs:
 
     steps:
       - name: Labeler
-        uses: actions/labeler@v4.3.0
+        uses: actions/labeler@v5.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
