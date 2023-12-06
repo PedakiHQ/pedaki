@@ -7,6 +7,7 @@ export { default as IconChevronDown } from './IconChevronDown.tsx';
 export { default as IconTranslation } from './IconTranslation.tsx';
 export { default as IconX } from './IconX.tsx';
 export { default as IconInfoCircle } from './IconInfoCircle.tsx';
+export { default as IconInfoCircleFill } from './IconInfoCircleFill.tsx';
 export { default as IconCircle } from './IconCircle.tsx';
 export { default as IconDotsH } from './IconDotsH.tsx';
 export { default as IconQuestionCircleFill } from './IconQuestionCircleFill.tsx';
