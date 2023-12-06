@@ -19,6 +19,9 @@ export { default as IconTadaColor } from './IconTadaColor.tsx';
 export { default as IconShoppingBag } from './IconShoppingBag.tsx';
 export { default as IconBookText } from './IconBookText.tsx';
 export { default as IconAccountPin } from './IconAccountPin.tsx';
+export { default as IconUser } from './IconUser.tsx';
+export { default as IconLink } from './IconLink.tsx';
+export { default as IconMail } from './IconMail.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
