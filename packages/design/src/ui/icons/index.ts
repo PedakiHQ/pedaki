@@ -7,6 +7,7 @@ export { default as IconChevronDown } from './IconChevronDown.tsx';
 export { default as IconTranslation } from './IconTranslation.tsx';
 export { default as IconX } from './IconX.tsx';
 export { default as IconInfoCircle } from './IconInfoCircle.tsx';
+export { default as IconInfoCircleFill } from './IconInfoCircleFill.tsx';
 export { default as IconCircle } from './IconCircle.tsx';
 export { default as IconDotsH } from './IconDotsH.tsx';
 export { default as IconQuestionCircleFill } from './IconQuestionCircleFill.tsx';
@@ -18,6 +19,10 @@ export { default as IconTadaColor } from './IconTadaColor.tsx';
 export { default as IconShoppingBag } from './IconShoppingBag.tsx';
 export { default as IconBookText } from './IconBookText.tsx';
 export { default as IconAccountPin } from './IconAccountPin.tsx';
+export { default as IconUser } from './IconUser.tsx';
+export { default as IconLink } from './IconLink.tsx';
+export { default as IconMail } from './IconMail.tsx';
+export { default as IconSchool } from './IconSchool.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
