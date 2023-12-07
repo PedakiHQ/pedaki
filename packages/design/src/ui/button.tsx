@@ -17,6 +17,7 @@ const buttonVariants = cva(
         // Filled
         'filled-primary': ['bg-primary-base hover:bg-primary-dark', 'text-white'],
         'filled-neutral': ['bg-surface hover:bg-strong', 'text-white'],
+        'filled-error': ['bg-red-base hover:bg-red-dark', 'text-white'],
 
         // Stroke
         'stroke-primary-main': ['bg-transparent', 'border hover:border-primary-base', 'text-main'],
@@ -43,7 +44,7 @@ const buttonVariants = cva(
       size: {
         lg: 'h-12 space-x-3 px-6 py-3',
         md: 'h-10 space-x-2 px-4 py-2.5',
-        sm: 'h-9 space-x-1 px-2 py-2',
+        sm: 'h-9 space-x-1 px-2.5 py-2',
         xs: 'h-8 space-x-0.5 px-1.5 py-1.5',
       },
       onlyIcon: {
