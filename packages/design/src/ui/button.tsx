@@ -19,11 +19,7 @@ const buttonVariants = cva(
         'filled-neutral': ['bg-surface hover:bg-strong', 'text-white'],
 
         // Stroke
-        'stroke-primary-main': [
-          'bg-transparent',
-          'border hover:border-primary-base',
-          'text-main',
-        ],
+        'stroke-primary-main': ['bg-transparent', 'border hover:border-primary-base', 'text-main'],
         'stroke-primary': [
           'bg-transparent',
           'border hover:border-primary-base',
