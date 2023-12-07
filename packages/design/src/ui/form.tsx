@@ -81,13 +81,21 @@ const FormLabel = React.forwardRef<
   return (
     <Label
       ref={ref}
-      className={cn(className, 'text-main text-label-sm')}
+      className={cn(className, 'text-main text-label-sm flex items-center space-x-1')}
       htmlFor={formItemId}
       {...props}
     />
   );
 });
 FormLabel.displayName = 'FormLabel';
+
+const FormSubLabel = React.forwardRef<
+  React.ElementRef<typeof LabelPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
+>(({ className, ...props }, ref) => {
+  return <span ref={ref} className={cn(className, 'text-sub text-p-sm')} {...props} />;
+});
+FormSubLabel.displayName = 'FormSubLabel';
 
 const FormControl = React.forwardRef<
   React.ElementRef<typeof Slot>,
@@ -142,7 +150,7 @@ const FormMessage = React.forwardRef<
       id={formMessageId}
       className={cn(
         error ? '!text-state-error' : 'text-sub',
-        'text-p-sm py-0.5 font-medium flex items-center space-x-1',
+        'text-p-sm flex items-center space-x-1 py-0.5 font-medium',
         className,
       )}
       {...props}
@@ -158,6 +166,7 @@ export {
   Form,
   FormItem,
   FormLabel,
+  FormSubLabel,
   FormControl,
   FormDescription,
   FormMessage,
