@@ -25,7 +25,6 @@ const buttonVariants = cva(
           'text-primary-base',
         ],
 
-
         // Ghost
         'ghost-primary': [
           'bg-transparent',
