@@ -142,7 +142,7 @@ const FormMessage = React.forwardRef<
       id={formMessageId}
       className={cn(
         error ? '!text-state-error' : 'text-sub',
-        'text-p-sm py-0.5 font-medium',
+        'text-p-sm py-0.5 font-medium flex items-center space-x-1',
         className,
       )}
       {...props}
