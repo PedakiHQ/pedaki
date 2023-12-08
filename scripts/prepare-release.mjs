@@ -167,7 +167,7 @@ inquirer.prompt(questions).then(async (answers) => {
         const {versionType} = answers;
         console.log(`You have selected to release a ${chalk.cyan(versionType)} version.`);
         let newVersion = answers.version || nextVersion(versionType);
-        const isPreRelease = answers.preRelease || answers.version.includes('-beta');
+        const isPreRelease = answers.preRelease || answers.version?.includes('-beta');
         newVersion += preReleaseSuffix((answers.versionType === 'skip' || answers.version === currentVersion.split("-", 1)[0]), answers.preRelease);
         console.log(`The new version will be ${chalk.cyan(newVersion)} - ${isPreRelease ? 'pre-release' : 'stable'}.`);
         await inquirer.prompt([
