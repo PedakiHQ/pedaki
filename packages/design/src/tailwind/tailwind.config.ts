@@ -152,7 +152,6 @@ export default {
         {
           letterSpacing: '-0.001em',
           lineHeight: '64px',
-          fontWeight: '500',
         },
       ],
       'title-2': [
@@ -160,7 +159,6 @@ export default {
         {
           letterSpacing: '-0.001em',
           lineHeight: '56px',
-          fontWeight: '500',
         },
       ],
       'title-3': [
@@ -168,7 +166,6 @@ export default {
         {
           letterSpacing: '-0.001em',
           lineHeight: '48px',
-          fontWeight: '500',
         },
       ],
       'title-4': [
@@ -176,7 +173,6 @@ export default {
         {
           letterSpacing: '0',
           lineHeight: '40px',
-          fontWeight: '500',
         },
       ],
       'title-5': [
@@ -184,7 +180,6 @@ export default {
         {
           letterSpacing: '0',
           lineHeight: '32px',
-          fontWeight: '500',
         },
       ],
       'title-6': [
@@ -192,7 +187,6 @@ export default {
         {
           letterSpacing: '0',
           lineHeight: '28px',
-          fontWeight: '500',
         },
       ],
       //
@@ -201,7 +195,6 @@ export default {
         {
           letterSpacing: '-0.0015em',
           lineHeight: '32px',
-          fontWeight: '500',
         },
       ],
       'label-lg': [
@@ -209,7 +202,6 @@ export default {
         {
           letterSpacing: '-0.0015em',
           lineHeight: '24px',
-          fontWeight: '500',
         },
       ],
       'label-md': [
@@ -217,7 +209,6 @@ export default {
         {
           letterSpacing: '-0.0011em',
           lineHeight: '24px',
-          fontWeight: '500',
         },
       ],
       'label-sm': [
@@ -225,7 +216,6 @@ export default {
         {
           letterSpacing: '-0.006em',
           lineHeight: '20px',
-          fontWeight: '500',
         },
       ],
       'label-xs': [
@@ -233,7 +223,6 @@ export default {
         {
           letterSpacing: '0',
           lineHeight: '16px',
-          fontWeight: '500',
         },
       ],
       //
@@ -242,7 +231,6 @@ export default {
         {
           letterSpacing: '-0.0015em',
           lineHeight: '32px',
-          fontWeight: '400',
         },
       ],
       'p-lg': [
@@ -250,7 +238,6 @@ export default {
         {
           letterSpacing: '-0.0015em',
           lineHeight: '24px',
-          fontWeight: '400',
         },
       ],
       'p-md': [
@@ -258,7 +245,6 @@ export default {
         {
           letterSpacing: '-0.0011em',
           lineHeight: '24px',
-          fontWeight: '400',
         },
       ],
       'p-sm': [
@@ -266,7 +252,6 @@ export default {
         {
           letterSpacing: '-0.006em',
           lineHeight: '20px',
-          fontWeight: '400',
         },
       ],
       'p-xs': [
@@ -274,7 +259,6 @@ export default {
         {
           letterSpacing: '0',
           lineHeight: '16px',
-          fontWeight: '400',
         },
       ],
       //
@@ -283,7 +267,6 @@ export default {
         {
           letterSpacing: '0.006em',
           lineHeight: '24px',
-          fontWeight: '500',
         },
       ],
       'sub-sm': [
@@ -291,7 +274,6 @@ export default {
         {
           letterSpacing: '0.006em',
           lineHeight: '20px',
-          fontWeight: '500',
         },
       ],
       'sub-xs': [
@@ -299,7 +281,6 @@ export default {
         {
           letterSpacing: '0.004em',
           lineHeight: '16px',
-          fontWeight: '500',
         },
       ],
       'sub-2xs': [
@@ -307,7 +288,6 @@ export default {
         {
           letterSpacing: '0.002em',
           lineHeight: '12px',
-          fontWeight: '500',
         },
       ],
     },
