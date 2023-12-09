@@ -1,5 +1,5 @@
-import IconChevronRight from '../../../../../../../app.pedaki.fr/apps/store/.yalc/@pedaki/design/ui/icons/IconChevronRight';
-import { cn } from '../../../../../../../app.pedaki.fr/apps/store/.yalc/@pedaki/design/utils/cn';
+import IconChevronRight from '~/ui/icons/IconChevronRight';
+import { cn } from '~/utils/cn';
 import type { VariantProps } from 'class-variance-authority';
 import { cva } from 'class-variance-authority';
 import * as React from 'react';
@@ -25,7 +25,7 @@ const StepIndicatorHorizontal = ({
       {children.map((child, index) => (
         <React.Fragment key={index}>
           {child}
-          {index !== children.length - 1 && <IconChevronRight className="h-4 w-4 text-sub" />}
+          {index !== children.length - 1 && <IconChevronRight className="text-sub h-4 w-4" />}
         </React.Fragment>
       ))}
     </div>
