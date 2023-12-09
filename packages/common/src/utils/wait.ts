@@ -5,15 +5,15 @@ type Wait = <T>(
   promises: T extends number
     ? T
     : T extends ArrayElement<T>[]
-    ? (Promise<ArrayElement<T>> | ArrayElement<T>)[]
-    : T | Promise<T>,
+      ? (Promise<ArrayElement<T>> | ArrayElement<T>)[]
+      : T | Promise<T>,
   minimumWaitTime?: T extends number ? never : number,
 ) => Promise<
   T extends number
     ? void
     : T extends ArrayElement<T>[]
-    ? ResolveType<ArrayElement<T>>[]
-    : ResolveType<T>
+      ? ResolveType<ArrayElement<T>>[]
+      : ResolveType<T>
 >;
 
 const wait: Wait = async (promises, minimumWaitTime) => {
