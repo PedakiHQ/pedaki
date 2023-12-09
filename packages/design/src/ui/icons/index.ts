@@ -23,6 +23,7 @@ export { default as IconUser } from './IconUser.tsx';
 export { default as IconLink } from './IconLink.tsx';
 export { default as IconMail } from './IconMail.tsx';
 export { default as IconSchool } from './IconSchool.tsx';
+export { default as IconLock } from './IconLock.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
