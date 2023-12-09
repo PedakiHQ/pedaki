@@ -22,8 +22,8 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@pedaki/eslint-config": "0.4.2",
-    "@pedaki/prettier-config": "0.4.2",
+    "@pedaki/eslint-config": "workspace:*",
+    "@pedaki/prettier-config": "workspace:*",
     "@types/bcryptjs": "^2.4.6",
     "@types/memory-cache": "latest",
     "@types/react": "^18.2.42",

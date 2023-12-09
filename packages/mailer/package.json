@@ -25,8 +25,8 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@pedaki/eslint-config": "0.4.2",
-    "@pedaki/prettier-config": "0.4.2",
+    "@pedaki/eslint-config": "workspace:*",
+    "@pedaki/prettier-config": "workspace:*",
     "@types/preview-email": "^3.0.4",
     "@types/react": "^18.2.42",
     "preview-email": "^3.0.19",
