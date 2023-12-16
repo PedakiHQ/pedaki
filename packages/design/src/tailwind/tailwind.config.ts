@@ -312,6 +312,8 @@ export default {
         weak: 'rgb(249 249 249 / <alpha-value>)',
         // 'white': 'var(--tw-white)',
         white: 'rgb(255 255 255 / <alpha-value>)',
+
+        border: 'var(--tw-stroke-soft)',
       },
       textColor: {
         main: 'var(--tw-neutral-900)',
