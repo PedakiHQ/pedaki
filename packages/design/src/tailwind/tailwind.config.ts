@@ -387,5 +387,9 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), gridBackground],
+  plugins: [
+    require('tailwindcss-animate'),
+    gridBackground,
+    require('@tailwindcss/container-queries'),
+  ],
 } satisfies Omit<Config, 'content'>;
