@@ -27,6 +27,8 @@ export { default as IconLock } from './IconLock.tsx';
 export { default as IconPanelLeftOpen } from './IconPanelLeftOpen.tsx';
 export { default as IconPanelLeftClose } from './IconPanelLeftClose.tsx';
 export { default as IconSettings } from './IconSettings.tsx';
+export { default as IconUserGroups } from './IconUserGroups.tsx';
+export { default as IconBookUser } from './IconBookUser.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
