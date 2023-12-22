@@ -82,7 +82,7 @@ importers:
         version: 4.0.71(acorn@8.11.2)(axios@1.6.2)(openapi-types@12.1.3)
     devDependencies:
       '@pedaki/prettier-config':
-        specifier: 0.4.3-beta.0
+        specifier: 0.4.3-beta.1
         version: link:../packages/prettier-config
 
   packages/common:
@@ -101,10 +101,10 @@ importers:
         version: 1.2.4(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
       '@pedaki/eslint-config':
-        specifier: 0.4.3-beta.0
+        specifier: 0.4.3-beta.1
         version: link:../eslint-config
       '@pedaki/prettier-config':
-        specifier: 0.4.3-beta.0
+        specifier: 0.4.3-beta.1
         version: link:../prettier-config
       '@types/bcryptjs':
         specifier: ^2.4.6
@@ -196,10 +196,10 @@ importers:
         version: 1.0.7(tailwindcss@3.3.6)
     devDependencies:
       '@pedaki/eslint-config':
-        specifier: 0.4.3-beta.0
+        specifier: 0.4.3-beta.1
         version: link:../eslint-config
       '@pedaki/prettier-config':
-        specifier: 0.4.3-beta.0
+        specifier: 0.4.3-beta.1
         version: link:../prettier-config
       '@types/react':
         specifier: ^18.2.42
@@ -252,7 +252,7 @@ importers:
         version: 11.1.0(eslint@8.55.0)
     devDependencies:
       '@pedaki/prettier-config':
-        specifier: 0.4.3-beta.0
+        specifier: 0.4.3-beta.1
         version: link:../prettier-config
       '@types/eslint':
         specifier: ^8.44.8
@@ -286,10 +286,10 @@ importers:
         version: 2.0.0
     devDependencies:
       '@pedaki/eslint-config':
-        specifier: 0.4.3-beta.0
+        specifier: 0.4.3-beta.1
         version: link:../eslint-config
       '@pedaki/prettier-config':
-        specifier: 0.4.3-beta.0
+        specifier: 0.4.3-beta.1
         version: link:../prettier-config
       '@types/preview-email':
         specifier: ^3.0.4
