@@ -4,12 +4,13 @@ import * as React from 'react';
 
 export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   icon?: IconType;
+  wrapperClassName?: string;
 };
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ icon: Icon, className, type, ...props }, ref) => {
+  ({ icon: Icon, wrapperClassName, className, type, ...props }, ref) => {
     return (
-      <div className="relative">
+      <div className={cn('relative', wrapperClassName)}>
         {Icon && (
           <Icon className="text-sub pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform" />
         )}
