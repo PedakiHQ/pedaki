@@ -292,6 +292,10 @@ export default {
       ],
     },
     extend: {
+      transitionProperty: {
+        height: 'height',
+        spacing: 'margin, padding',
+      },
       backgroundColor: {
         success: 'var(--tw-state-success)',
         warning: 'var(--tw-state-warning)',
