@@ -1,6 +1,7 @@
 'use client';
 
 import * as SelectPrimitive from '@radix-ui/react-select';
+import type { IconProps, IconType } from '~/ui/icons';
 import IconCheck from '~/ui/icons/IconCheck.tsx';
 import IconChevronDown from '~/ui/icons/IconChevronDown.tsx';
 import { cn } from '~/utils';
@@ -19,12 +20,15 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      'border-input bg-background focus-ring placeholder:text-soft text-sub-xs flex h-10 w-full items-center justify-between rounded-md border px-3 py-2 disabled:cursor-not-allowed disabled:opacity-50',
+      'focus-ring placeholder:text-soft text-p-sm flex h-10 w-full items-center justify-between rounded-md border px-3 py-2 disabled:cursor-not-allowed',
+      'data-[disabled]:bg-weak bg-white',
+      'text-sub data-[disabled]:text-disabled',
+      'data-[disabled]:border-transparent',
       className,
     )}
     {...props}
   >
-    {children}
+    <div className={SelectItemClassName}>{children}</div>
     <SelectPrimitive.Icon asChild>
       <IconChevronDown className="h-4 w-4 opacity-50" />
     </SelectPrimitive.Icon>
@@ -48,6 +52,7 @@ const SelectContent = React.forwardRef<
       position={position}
       {...props}
     >
+      <SelectPrimitive.ScrollUpButton />
       <SelectPrimitive.Viewport
         className={cn(
           'p-1',
@@ -57,6 +62,7 @@ const SelectContent = React.forwardRef<
       >
         {children}
       </SelectPrimitive.Viewport>
+      <SelectPrimitive.ScrollDownButton />
     </SelectPrimitive.Content>
   </SelectPrimitive.Portal>
 ));
@@ -74,27 +80,46 @@ const SelectLabel = React.forwardRef<
 ));
 SelectLabel.displayName = SelectPrimitive.Label.displayName;
 
+const SelectItemClassName = 'flex items-center gap-2 pr-4';
+
 const SelectItem = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
->(({ className, children, ...props }, ref) => (
-  <SelectPrimitive.Item
-    ref={ref}
-    className={cn(
-      'focus:bg-secondary focus:text-primary text-sub-xs relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
-      className,
-    )}
-    {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <SelectPrimitive.ItemIndicator>
-        <IconCheck className="h-4 w-4" />
-      </SelectPrimitive.ItemIndicator>
-    </span>
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item> & {
+    icon?: IconType;
+    iconProps?: IconProps;
+  }
+>(({ icon: Icon, iconProps, className, children, ...props }, ref) => {
+  const { className: iconClassName, ...restIconProps } = iconProps ?? {};
+  return (
+    <SelectPrimitive.Item
+      ref={ref}
+      className={cn(
+        'relative flex w-full cursor-default select-none items-center justify-between rounded-sm outline-none data-[disabled]:pointer-events-none',
+        'text-p-sm',
+        'p-2',
+        'focus:bg-weak bg-white disabled:bg-white',
+        'text-main data-[disabled]:text-soft',
+        className,
+      )}
+      {...props}
+    >
+      <SelectPrimitive.ItemText>
+        <div className={SelectItemClassName}>
+          {Icon && (
+            <SelectPrimitive.Icon>
+              <Icon className={cn('h-4 w-4', iconClassName)} {...restIconProps} />
+            </SelectPrimitive.Icon>
+          )}
+          {children}
+        </div>
+      </SelectPrimitive.ItemText>
 
-    <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
-  </SelectPrimitive.Item>
-));
+      <SelectPrimitive.ItemIndicator>
+        <IconCheck className="text-sub h-4 w-4" />
+      </SelectPrimitive.ItemIndicator>
+    </SelectPrimitive.Item>
+  );
+});
 SelectItem.displayName = SelectPrimitive.Item.displayName;
 
 const SelectSeparator = React.forwardRef<
@@ -103,7 +128,7 @@ const SelectSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
     ref={ref}
-    className={cn('bg-secondary -mx-1 my-1 h-px', className)}
+    className={cn('bg-border -mx-1 my-1 h-px', className)}
     {...props}
   />
 ));
