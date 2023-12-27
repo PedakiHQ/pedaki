@@ -1,6 +1,6 @@
 {
   "name": "@pedaki/prettier-config",
-  "version": "0.4.3-beta.3",
+  "version": "0.5.2-beta.0",
   "main": "index.js",
   "author": "Nathan David <me@vahor.fr>",
   "repository": {
