@@ -9,21 +9,29 @@ import { randomId } from './random.ts';
 type NotificationBase = Omit<ToastT, 'id'>;
 
 interface WrapWithLoadingProps<T, B extends boolean> {
-  loadingProps?: NotificationBase | null;
-  successProps?: ((data: T) => NotificationBase) | NotificationBase | null;
-  errorProps?: ((error: Error) => NotificationBase) | NotificationBase | null;
+  sharedProps?: NotificationBase;
+  loadingProps?: NotificationBase;
+  successProps?: ((data: T) => NotificationBase) | NotificationBase;
+  errorProps?: ((error: Error) => NotificationBase) | NotificationBase;
   throwOnError?: B;
 }
 
 export const wrapWithLoading = async <T, B extends boolean>(
   promise: () => Promise<T> | T,
-  { loadingProps, successProps, errorProps, throwOnError }: WrapWithLoadingProps<T, B>,
+  {
+    sharedProps = {},
+    loadingProps,
+    successProps,
+    errorProps,
+    throwOnError,
+  }: WrapWithLoadingProps<T, B>,
 ): Promise<B extends true ? T : T | null> => {
   const id = randomId();
 
   if (loadingProps) {
     toast.loading(loadingProps.title, {
       id,
+      ...sharedProps,
       ...loadingProps,
     });
   }
@@ -43,6 +51,7 @@ export const wrapWithLoading = async <T, B extends boolean>(
         id,
         type: 'success',
         duration: 4000,
+        ...sharedProps,
         ...notificationProps,
       });
 
@@ -61,6 +70,7 @@ export const wrapWithLoading = async <T, B extends boolean>(
         id,
         type: 'error',
         duration: 4000,
+        ...sharedProps,
         ...notificationProps,
       });
     }
