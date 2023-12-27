@@ -126,7 +126,7 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn('text-soft text-sub-xs', className)}
+      className={cn('text-soft text-p-xs', className)}
       {...props}
     />
   );
@@ -144,19 +144,21 @@ const FormMessage = React.forwardRef<
     return null;
   }
 
+  const Component = typeof body === 'string' ? 'p' : 'div';
+
   return (
-    <p
+    <Component
       ref={ref}
       id={formMessageId}
       className={cn(
-        error ? '!text-state-error' : 'text-sub',
-        'text-p-sm flex items-center space-x-1 py-0.5 font-medium',
+        error ? '!text-state-error font-medium' : 'text-soft',
+        'text-p-xs flex items-center space-x-1 py-0.5',
         className,
       )}
       {...props}
     >
       {body}
-    </p>
+    </Component>
   );
 });
 FormMessage.displayName = 'FormMessage';
