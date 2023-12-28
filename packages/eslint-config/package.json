@@ -1,6 +1,6 @@
 {
   "name": "@pedaki/eslint-config",
-  "version": "0.5.2-beta.0",
+  "version": "0.5.2-beta.1",
   "main": "index.js",
   "author": "Nathan David <me@vahor.fr>",
   "repository": {
@@ -17,7 +17,7 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@pedaki/prettier-config": "0.5.2-beta.0",
+    "@pedaki/prettier-config": "0.5.2-beta.1",
     "@types/eslint": "^8.56.0"
   },
   "peerDependencies": {
