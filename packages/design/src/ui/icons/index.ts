@@ -30,6 +30,7 @@ export { default as IconSettings } from './IconSettings.tsx';
 export { default as IconUserGroups } from './IconUserGroups.tsx';
 export { default as IconBookUser } from './IconBookUser.tsx';
 export { default as IconHome } from './IconHome.tsx';
+export { default as IconLogout } from './IconLogout.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
