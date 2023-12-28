@@ -31,6 +31,12 @@ export { default as IconUserGroups } from './IconUserGroups.tsx';
 export { default as IconBookUser } from './IconBookUser.tsx';
 export { default as IconHome } from './IconHome.tsx';
 export { default as IconLogout } from './IconLogout.tsx';
+export { default as IconOpenBookText } from './IconOpenBookText.tsx';
+export { default as IconPaintBrush } from './IconPaintBrush.tsx';
+export { default as IconUserPlus } from './IconUserPlus.tsx';
+export { default as IconFileDown } from './IconFileDown.tsx';
+export { default as IconWand2 } from './IconWand2.tsx';
+export { default as IconCursorOnSquareDashed } from './IconCursorOnSquareDashed.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
