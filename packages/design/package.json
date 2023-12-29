@@ -80,6 +80,7 @@
   "packageManager": "pnpm@8.13.1",
   "prettier": "@pedaki/prettier-config",
   "dependencies": {
+    "@radix-ui/react-progress": "^1.0.3",
     "@tailwindcss/container-queries": "^0.1.1"
   }
 }
