@@ -37,6 +37,7 @@ export { default as IconUserPlus } from './IconUserPlus.tsx';
 export { default as IconFileDown } from './IconFileDown.tsx';
 export { default as IconWand2 } from './IconWand2.tsx';
 export { default as IconCursorOnSquareDashed } from './IconCursorOnSquareDashed.tsx';
+export { default as IconBookMarked } from './IconBookMarked.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
