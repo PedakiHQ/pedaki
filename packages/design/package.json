@@ -30,7 +30,7 @@
   "devDependencies": {
     "@pedaki/eslint-config": "0.5.2-beta.1",
     "@pedaki/prettier-config": "0.5.2-beta.1",
-    "@types/react": "^18.2.45",
+    "@types/react": "^18.2.46",
     "esbuild-css-modules-plugin": "^3.1.0",
     "esbuild-plugin-alias-path": "^2.0.2",
     "esbuild-plugin-file-path-extensions": "^2.0.0",
