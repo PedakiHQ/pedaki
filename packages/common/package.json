@@ -1,6 +1,6 @@
 {
   "name": "@pedaki/common",
-  "version": "0.5.2-beta.2",
+  "version": "0.5.2-beta.3",
   "author": "Nathan David <me@vahor.fr>",
   "repository": {
     "type": "git",
@@ -22,8 +22,8 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@pedaki/eslint-config": "workspace:0.5.2-beta.2",
-    "@pedaki/prettier-config": "workspace:0.5.2-beta.2",
+    "@pedaki/eslint-config": "0.5.2-beta.3",
+    "@pedaki/prettier-config": "0.5.2-beta.3",
     "@types/bcryptjs": "^2.4.6",
     "@types/memory-cache": "latest",
     "@types/react": "^18.2.47",
