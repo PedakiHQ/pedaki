@@ -25,7 +25,7 @@
     "mintlify": "latest"
   },
   "devDependencies": {
-    "@pedaki/prettier-config": "0.5.2-beta.2"
+    "@pedaki/prettier-config": "workspace:0.5.2-beta.2"
   },
   "prettier": "@pedaki/prettier-config"
 }
