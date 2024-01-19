@@ -40,7 +40,7 @@
     "@react-email/render": "0.0.12",
     "@react-email/tailwind": "0.0.14",
     "react-email": "2.0.0",
-    "resend": "^2.0.0"
+    "resend": "^3.0.0"
   },
   "engines": {
     "node": ">=18.0.0 <19.0.0",
