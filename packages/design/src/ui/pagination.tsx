@@ -3,9 +3,10 @@ import { Button, buttonVariants } from '~/ui/button.tsx';
 import IconChevronLeft from '~/ui/icons/IconChevronLeft.tsx';
 import IconChevronRight from '~/ui/icons/IconChevronRight.tsx';
 import IconChevronsLeft from '~/ui/icons/IconChevronsLeft.tsx';
-import IconMoreHorizontal from '~/ui/icons/IconMoreHorizontal.tsx';
 import IconChevronsRight from '~/ui/icons/IconChevronsRight.tsx';
+import IconMoreHorizontal from '~/ui/icons/IconMoreHorizontal.tsx';
 import { cn } from '~/utils';
+import Link from 'next/link';
 import * as React from 'react';
 
 const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
@@ -33,18 +34,18 @@ PaginationItem.displayName = 'PaginationItem';
 type PaginationLinkProps = {
   isActive?: boolean;
 } & Partial<Pick<ButtonProps, 'size'>> &
-  React.ComponentProps<'a'>;
+  React.ComponentProps<typeof Link>;
 
 const PaginationLink = ({ className, isActive, size = 'icon', ...props }: PaginationLinkProps) => (
-  <a
+  <Link
     aria-current={isActive ? 'page' : undefined}
     className={cn(
       buttonVariants({
         variant: 'ghost-sub',
         size,
       }),
-      'border border-main hover:bg-weak',
-      isActive && 'rounded-full',
+      'border-main hover:bg-weak border',
+      isActive && 'border-primary-base',
       className,
     )}
     {...props}
@@ -52,30 +53,50 @@ const PaginationLink = ({ className, isActive, size = 'icon', ...props }: Pagina
 );
 PaginationLink.displayName = 'PaginationLink';
 
-const PaginationPrevious = ({ ...props }: React.ComponentProps<typeof Button>) => (
-  <Button aria-label="Go to previous page" size="icon" variant="ghost-sub" {...props}>
-    <IconChevronLeft className="h-4 w-4" />
+const PaginationPrevious = ({
+  href,
+  ...props
+}: React.ComponentProps<typeof Button> & { href: string }) => (
+  <Button aria-label="Go to previous page" size="icon" variant="ghost-sub" {...props} asChild>
+    <Link href={href} prefetch={false}>
+      <IconChevronLeft className="h-4 w-4" />
+    </Link>
   </Button>
 );
 PaginationPrevious.displayName = 'PaginationPrevious';
 
-const PaginationNext = ({ ...props }: React.ComponentProps<typeof Button>) => (
-  <Button aria-label="Go to next page" size="icon" variant="ghost-sub" {...props}>
-    <IconChevronRight className="h-4 w-4" />
+const PaginationNext = ({
+  href,
+  ...props
+}: React.ComponentProps<typeof Button> & { href: string }) => (
+  <Button aria-label="Go to next page" size="icon" variant="ghost-sub" {...props} asChild>
+    <Link href={href} prefetch={false}>
+      <IconChevronRight className="h-4 w-4" />
+    </Link>
   </Button>
 );
 PaginationNext.displayName = 'PaginationNext';
 
-const PaginationFirst = ({ ...props }: React.ComponentProps<typeof Button>) => (
-  <Button aria-label="Go to first page" size="icon" variant="ghost-sub" {...props}>
-    <IconChevronsLeft className="h-4 w-4" />
+const PaginationFirst = ({
+  href,
+  ...props
+}: React.ComponentProps<typeof Button> & { href: string }) => (
+  <Button aria-label="Go to first page" size="icon" variant="ghost-sub" {...props} asChild>
+    <Link href={href} prefetch={false}>
+      <IconChevronsLeft className="h-4 w-4" />
+    </Link>
   </Button>
 );
 PaginationFirst.displayName = 'PaginationFirst';
 
-const PaginationLast = ({ ...props }: React.ComponentProps<typeof Button>) => (
-  <Button aria-label="Go to first page" size="icon" variant="ghost-sub" {...props}>
-    <IconChevronsRight className="h-4 w-4" />
+const PaginationLast = ({
+  href,
+  ...props
+}: React.ComponentProps<typeof Button> & { href: string }) => (
+  <Button aria-label="Go to last page" size="icon" variant="ghost-sub" {...props} asChild>
+    <Link href={href} prefetch={false}>
+      <IconChevronsRight className="h-4 w-4" />
+    </Link>
   </Button>
 );
 PaginationLast.displayName = 'PaginationLast';
