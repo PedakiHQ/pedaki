@@ -41,6 +41,7 @@ export { default as IconBookMarked } from './IconBookMarked.tsx';
 export { default as IconColumns2 } from './IconColumns2.tsx';
 export { default as IconUpload } from './IconUpload.tsx';
 export { default as IconDownload } from './IconDownload.tsx';
+export { default as IconPlus } from './IconPlus.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
