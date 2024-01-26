@@ -28,9 +28,9 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@pedaki/eslint-config": "0.5.2-beta.3",
-    "@pedaki/prettier-config": "0.5.2-beta.3",
-    "@types/react": "^18.2.47",
+    "@pedaki/eslint-config": "workspace:0.5.2-beta.3",
+    "@pedaki/prettier-config": "workspace:0.5.2-beta.3",
+    "@types/react": "^18.2.48",
     "esbuild-css-modules-plugin": "^3.1.0",
     "esbuild-plugin-alias-path": "^2.0.2",
     "esbuild-plugin-file-path-extensions": "^2.0.0",
@@ -80,5 +80,8 @@
     "npm": "use-pnpm"
   },
   "packageManager": "pnpm@8.14.1",
-  "prettier": "@pedaki/prettier-config"
+  "prettier": "@pedaki/prettier-config",
+  "dependencies": {
+    "react-resizable-panels": "^1.0.9"
+  }
 }

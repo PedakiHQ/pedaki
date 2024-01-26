@@ -42,6 +42,11 @@ export { default as IconColumns2 } from './IconColumns2.tsx';
 export { default as IconUpload } from './IconUpload.tsx';
 export { default as IconDownload } from './IconDownload.tsx';
 export { default as IconPlus } from './IconPlus.tsx';
+export { default as IconChevronLeft } from './IconChevronLeft.tsx';
+export { default as IconChevronsLeft } from './IconChevronsLeft.tsx';
+export { default as IconChevronsRight } from './IconChevronsRight.tsx';
+export { default as IconMoreHorizontal } from './IconMoreHorizontal.tsx';
+export { default as IconGripVertical } from './IconGripVertical.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
