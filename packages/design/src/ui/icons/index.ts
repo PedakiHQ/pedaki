@@ -47,6 +47,11 @@ export { default as IconChevronsLeft } from './IconChevronsLeft.tsx';
 export { default as IconChevronsRight } from './IconChevronsRight.tsx';
 export { default as IconMoreHorizontal } from './IconMoreHorizontal.tsx';
 export { default as IconGripVertical } from './IconGripVertical.tsx';
+export { default as IconSettings2 } from './IconSettings2.tsx';
+export { default as IconArrowUp } from './IconArrowUp.tsx';
+export { default as IconArrowDown } from './IconArrowDown.tsx';
+export { default as IconCaretSort } from './IconCaretSort.tsx';
+export { default as IconEyeNone } from './IconEyeNone.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';

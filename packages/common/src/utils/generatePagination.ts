@@ -1,35 +1,23 @@
-type PaginationElement = number | 'ellipsis';
+type PaginationElement = number | 'ellipsis_l' | 'ellipsis_r';
 
 export const generatePagination = (
     currentPage: number,
-    totalPages: number,
-    maxPages = 5,
+    totalPages: number
 ): PaginationElement[] => {
-    const delta = Math.floor(maxPages / 2);
-    const left = currentPage - delta;
-    const right = currentPage + delta + 1;
-    const range: number[] = [];
-    const rangeWithDots: PaginationElement[] = [];
-    let l: number | null = null;
+    if(currentPage === 1 && currentPage === totalPages) return [1];
+    const center: PaginationElement[] = [currentPage - 2, currentPage - 1, currentPage, currentPage + 1, currentPage + 2],
+        // @ts-ignore
+        filteredCenter = center.filter((p) => p > 1 && p < totalPages),
+        includeThreeLeft = currentPage === 5,
+        includeThreeRight = currentPage === totalPages - 4,
+        includeLeftDots = currentPage > 5,
+        includeRightDots = currentPage < totalPages - 4;
 
-    for (let i = 1; i <= totalPages; i++) {
-        if (i === 1 || i === totalPages || (i >= left && i < right)) {
-            range.push(i);
-        }
-    }
+    if (includeThreeLeft) filteredCenter.unshift(2)
+    if (includeThreeRight) filteredCenter.push(totalPages - 1)
 
-    for (const i of range) {
-        if (l) {
-            if (i - l === 2) {
-                rangeWithDots.push(l + 1);
-            } else if (i - l !== 1) {
-                rangeWithDots.push('ellipsis');
-                rangeWithDots.push(i -1);
-            }
-        }
-        rangeWithDots.push(i);
-        l = i;
-    }
+    if (includeLeftDots) filteredCenter.unshift('ellipsis_l');
+    if (includeRightDots) filteredCenter.push('ellipsis_r');
 
-    return rangeWithDots;
+    return [1, ...filteredCenter, totalPages]
 }

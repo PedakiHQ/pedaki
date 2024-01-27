@@ -7,9 +7,9 @@ import * as React from 'react';
 const buttonVariants = cva(
   [
     'group inline-flex items-center justify-center text-label-sm no-underline font-medium transition-colors',
-    'disabled:cursor-not-allowed',
-    'disabled:bg-weak',
-    'disabled:text-disabled',
+    'disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed',
+    'disabled:bg-weak data-[disabled]:bg-weak',
+    'disabled:text-disabled data-[disabled]:text-disabled',
   ],
   {
     variants: {

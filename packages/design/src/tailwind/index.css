@@ -97,7 +97,7 @@
   }
 
   * {
-    @apply border-border outline-primary-base;
+    @apply border-border outline-primary-base min-w-0;
   }
 
   .focus-ring {
