@@ -41,6 +41,8 @@ export default {
         lg: '1024px',
         xl: '1280px',
         '2xl': '1400px',
+
+        tall: { raw: '(min-height: 800px)' },
       },
     },
     colors: {

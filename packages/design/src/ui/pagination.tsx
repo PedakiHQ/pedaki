@@ -57,11 +57,11 @@ const PaginationPrevious = ({
   href,
   ...props
 }: React.ComponentProps<typeof Button> & { href: string }) => (
-    <Link href={href} prefetch={false}>
-  <Button aria-label="Go to previous page" size="icon" variant="ghost-sub" {...props}>
+  <Link href={href} prefetch={false}>
+    <Button aria-label="Go to previous page" size="icon" variant="ghost-sub" {...props}>
       <IconChevronLeft className="h-4 w-4" />
-  </Button>
-    </Link>
+    </Button>
+  </Link>
 );
 PaginationPrevious.displayName = 'PaginationPrevious';
 

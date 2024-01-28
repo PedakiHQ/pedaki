@@ -105,7 +105,7 @@
   }
 
   .focus-ring-force {
-    @apply ring-primary-light ring-offset-white ring-2 ring-offset-2 outline-none;
+    @apply ring-primary-light outline-none ring-2 ring-offset-2 ring-offset-white;
   }
 
   a {
