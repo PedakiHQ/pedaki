@@ -28,9 +28,9 @@
     "verbatimModuleSyntax": true,
     "experimentalDecorators": true,
     "paths": {
-      "~/*": ["src/*"]
-    }
+      "~/*": ["src/*"],
+    },
   },
   "include": ["src"],
-  "exclude": ["node_modules", ".react-email", ".idea", ".github", "src/preview-email.pug", "dist"]
+  "exclude": ["node_modules", ".react-email", ".idea", ".github", "src/preview-email.pug", "dist"],
 }
