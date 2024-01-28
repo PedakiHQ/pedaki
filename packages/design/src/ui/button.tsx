@@ -38,6 +38,11 @@ const buttonVariants = cva(
           'border border-transparent',
           'text-sub hover:text-main',
         ],
+        'ghost-error': [
+            'bg-transparent hover:bg-weak',
+            'border border-transparent',
+            'text-red-base hover:text-red-dark',
+            ],
 
         // Lighter
         'lighter-primary': [

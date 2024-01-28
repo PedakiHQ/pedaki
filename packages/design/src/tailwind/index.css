@@ -104,6 +104,10 @@
     @apply focus-visible:ring-primary-light focus:ring-primary-light ring-offset-white focus:ring-2 focus:ring-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
 
+  .focus-ring-force {
+    @apply ring-primary-light ring-offset-white ring-2 ring-offset-2 outline-none;
+  }
+
   a {
     width: fit-content;
     display: inline-block;

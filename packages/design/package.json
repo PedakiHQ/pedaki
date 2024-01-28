@@ -82,6 +82,7 @@
   "packageManager": "pnpm@8.14.1",
   "prettier": "@pedaki/prettier-config",
   "dependencies": {
+    "@radix-ui/react-popover": "^1.0.7",
     "react-resizable-panels": "^1.0.9"
   }
 }
