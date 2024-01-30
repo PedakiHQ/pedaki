@@ -34,7 +34,7 @@
     "esbuild-css-modules-plugin": "^3.1.0",
     "esbuild-plugin-alias-path": "^2.0.2",
     "esbuild-plugin-file-path-extensions": "^2.0.0",
-    "esbuild-sass-plugin": "^2.16.1",
+    "esbuild-sass-plugin": "^3.0.0",
     "next": "latest",
     "react": "^18.2.0",
     "react-hook-form": "^7.49.3"
