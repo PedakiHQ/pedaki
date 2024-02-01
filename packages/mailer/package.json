@@ -43,7 +43,7 @@
     "resend": "^3.0.0"
   },
   "engines": {
-    "node": ">=18.0.0 <19.0.0",
+    "node": ">=20",
     "pnpm": ">=8.0.0",
     "yarn": "use-pnpm",
     "npm": "use-pnpm"
