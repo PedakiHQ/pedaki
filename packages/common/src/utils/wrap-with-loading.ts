@@ -54,9 +54,9 @@ export const wrapWithLoading = async <T, B extends boolean>(
         ...sharedProps,
         ...notificationProps,
       });
-
-      return result;
     }
+
+    return result;
   } catch (error) {
     if (errorProps) {
       let notificationProps: NotificationBase;
