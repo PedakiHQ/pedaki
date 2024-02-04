@@ -149,3 +149,7 @@ body.lock-scroll {
   margin-top: 0;
   margin-right: 15px !important;
 }
+
+.rdp-vhidden {
+  display: none;
+}
