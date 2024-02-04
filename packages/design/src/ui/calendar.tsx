@@ -82,7 +82,7 @@ const Calendar = React.forwardRef<React.ElementRef<typeof DayPicker>, CalendarPr
                   <ScrollArea className="h-80">
                     {options.map((option, id: number) => (
                       <SelectItem
-                        key={`${option.props.value}-${id}`}
+                        key={`${option.props.value?.toString()}-${id}`}
                         value={option.props.value?.toString() ?? ''}
                       >
                         {option.props.children}

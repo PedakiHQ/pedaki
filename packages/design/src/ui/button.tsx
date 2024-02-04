@@ -7,10 +7,11 @@ import * as React from 'react';
 const buttonVariants = cva(
   [
     'group inline-flex items-center justify-center text-label-sm no-underline font-medium transition-colors',
-    'disabled:border-disabled data-[disabled]:border-disabled disabled:hover:border-disabled data-[disabled]:hover:border-disabled',
-    'disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed',
-    'disabled:bg-weak data-[disabled]:bg-weak',
-    'disabled:text-disabled data-[disabled]:text-disabled',
+    'disabled:border-disabled data-[disabled=true]:border-disabled disabled:hover:border-disabled data-[disabled=true]:hover:border-disabled',
+    'disabled:cursor-not-allowed data-[disabled=true]:cursor-not-allowed',
+    'disabled:pointer-events-none data-[disabled=true]:pointer-events-none',
+    'disabled:bg-weak data-[disabled=true]:bg-weak',
+    'disabled:text-disabled data-[disabled=true]:text-disabled',
   ],
   {
     variants: {
@@ -66,7 +67,7 @@ const buttonVariants = cva(
       },
       ring: {
         default: [
-          'focus-ring',
+          'focus-ring disabled:ring-0 data-[disabled=true]:ring-disabled',
           'data-[state=open]:ring-2 data-[state=open]:ring-shadow-focus-primary data-[state=open]:ring-offset-1',
         ],
         none: '',
