@@ -70,6 +70,7 @@
     "tailwindcss": "^3.3.3",
     "tailwindcss-animate": "^1.0.7",
     "dayjs": "^1.11.10",
+    "date-fns": "^3.3.1",
     "react-day-picker": "^8.10.0"
   },
   "peerDependenciesMeta": {
