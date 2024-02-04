@@ -10,7 +10,7 @@ export default defineConfig((options: Options) => ({
   format: ['esm'],
   dts: true,
   sourcemap: true,
-  minify: true,
+  minify: false,
   minifyWhitespace: true,
   keepNames: true,
   clean: true,

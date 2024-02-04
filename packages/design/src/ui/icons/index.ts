@@ -52,6 +52,7 @@ export { default as IconArrowUp } from './IconArrowUp.tsx';
 export { default as IconArrowDown } from './IconArrowDown.tsx';
 export { default as IconCaretSort } from './IconCaretSort.tsx';
 export { default as IconEyeNone } from './IconEyeNone.tsx';
+export { default as IconCalendar } from './IconCalendar.tsx';
 export { default as IconTrash } from './IconTrash.tsx';
 
 // Flags

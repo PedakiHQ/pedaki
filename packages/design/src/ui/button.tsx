@@ -27,6 +27,7 @@ const buttonVariants = cva(
           'border hover:border-primary-base',
           'text-primary-base',
         ],
+        stroke: ['bg-transparent', 'border', 'text-main'],
 
         // Ghost
         'ghost-primary': [
