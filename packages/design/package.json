@@ -28,16 +28,16 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@pedaki/eslint-config": "0.5.2-beta.7",
-    "@pedaki/prettier-config": "0.5.2-beta.7",
-    "@types/react": "^18.2.50",
+    "@pedaki/eslint-config": "workspace:0.5.2-beta.7",
+    "@pedaki/prettier-config": "workspace:0.5.2-beta.7",
+    "@types/react": "^18.2.57",
     "esbuild-css-modules-plugin": "^3.1.0",
     "esbuild-plugin-alias-path": "^2.0.2",
     "esbuild-plugin-file-path-extensions": "^2.0.0",
     "esbuild-sass-plugin": "^3.0.0",
     "next": "latest",
     "react": "^18.2.0",
-    "react-hook-form": "^7.50.0"
+    "react-hook-form": "^7.50.1"
   },
   "peerDependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
@@ -62,16 +62,16 @@
     "@tailwindcss/container-queries": "^0.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "date-fns": "^3.3.1",
+    "dayjs": "^1.11.10",
     "mini-svg-data-uri": "^1.4.4",
+    "react-day-picker": "^8.10.0",
     "react-hook-form": "^7.46.1",
     "react-resizable-panels": "^2.0.0",
     "sass": "^1.66.1",
     "tailwind-merge": "^2.0.0",
     "tailwindcss": "^3.3.3",
-    "tailwindcss-animate": "^1.0.7",
-    "dayjs": "^1.11.10",
-    "date-fns": "^3.3.1",
-    "react-day-picker": "^8.10.0"
+    "tailwindcss-animate": "^1.0.7"
   },
   "peerDependenciesMeta": {
     "react-hook-form": {
