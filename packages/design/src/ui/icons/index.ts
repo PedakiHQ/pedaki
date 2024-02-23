@@ -55,7 +55,7 @@ export { default as IconEyeNone } from './IconEyeNone.tsx';
 export { default as IconCalendar } from './IconCalendar.tsx';
 export { default as IconTrash } from './IconTrash.tsx';
 export { default as IconListOrdered } from './IconListOrdered.tsx';
-export { default as IconCircle } from './IconCircle.tsx';
+export { default as IconGripVertical2 } from './IconGripVertical2.tsx';
 
 // Flags
 export { default as IconFlagGB } from './IconFlagGB.tsx';
