@@ -30,11 +30,11 @@
   "devDependencies": {
     "@pedaki/eslint-config": "0.5.2-beta.8",
     "@pedaki/prettier-config": "0.5.2-beta.8",
-    "@types/react": "^18.2.57",
+    "@types/react": "^18.2.58",
     "esbuild-css-modules-plugin": "^3.1.0",
     "esbuild-plugin-alias-path": "^2.0.2",
     "esbuild-plugin-file-path-extensions": "^2.0.0",
-    "esbuild-sass-plugin": "^3.0.0",
+    "esbuild-sass-plugin": "^3.1.0",
     "next": "latest",
     "react": "^18.2.0",
     "react-hook-form": "^7.50.1"
@@ -85,5 +85,8 @@
     "npm": "use-pnpm"
   },
   "packageManager": "pnpm@8.15.1",
-  "prettier": "@pedaki/prettier-config"
+  "prettier": "@pedaki/prettier-config",
+  "dependencies": {
+    "cmdk": "^0.2.1"
+  }
 }

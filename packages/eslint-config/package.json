@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@pedaki/prettier-config": "0.5.2-beta.8",
-    "@types/eslint": "^8.56.2"
+    "@types/eslint": "^8.56.3"
   },
   "peerDependencies": {
     "@tanstack/eslint-plugin-query": "^5.0.0",
