@@ -22,11 +22,11 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@pedaki/eslint-config": "0.5.2-beta.10",
-    "@pedaki/prettier-config": "0.5.2-beta.10",
+    "@pedaki/eslint-config": "workspace:0.5.2-beta.10",
+    "@pedaki/prettier-config": "workspace:0.5.2-beta.10",
     "@types/bcryptjs": "^2.4.6",
     "@types/memory-cache": "latest",
-    "@types/react": "^18.2.58",
+    "@types/react": "^18.2.64",
     "react": "^18.2.0"
   },
   "peerDependencies": {
