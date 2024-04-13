@@ -15,7 +15,7 @@
     "node": "^18 || ^20",
     "pnpm": ">=8.0.0"
   },
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@8.15.7",
   "scripts": {
     "dev": "mintlify dev --port 8080",
     "lint": "mintlify broken-links || echo 1",
