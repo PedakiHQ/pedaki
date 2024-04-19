@@ -184,7 +184,7 @@ inquirer.prompt(questions).then(async (answers) => {
             }
         });
         await updatePackageJson(newVersion);
-        // await updateLockFiles();
+        await updateLockFiles();
         await commitChanges(newVersion);
         await openNewTagPage(newVersion, isPreRelease);
     } catch (e) {
