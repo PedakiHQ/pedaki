@@ -1,6 +1,6 @@
 {
   "name": "@pedaki/mailer",
-  "version": "0.5.2-beta.11",
+  "version": "0.5.3",
   "author": "Nathan David <me@vahor.fr>",
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@pedaki/eslint-config": "0.5.2-beta.11",
+    "@pedaki/eslint-config": "0.5.3",
     "@pedaki/prettier-config": "0.5.3",
     "@types/preview-email": "^3.0.4",
     "@types/react": "^18.2.79",

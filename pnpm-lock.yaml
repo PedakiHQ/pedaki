@@ -101,8 +101,8 @@ importers:
         version: 1.4.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
     devDependencies:
       '@pedaki/eslint-config':
-        specifier: 0.5.2-beta.11
-        version: 0.5.2-beta.11(@tanstack/eslint-plugin-query@5.20.1(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/eslint-plugin@7.0.2(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint-config-next@14.1.3(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-node@11.1.0(eslint@8.57.0))(eslint@8.57.0)
+        specifier: 0.5.3
+        version: 0.5.3(@tanstack/eslint-plugin-query@5.20.1(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/eslint-plugin@7.0.2(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint-config-next@14.1.3(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-node@11.1.0(eslint@8.57.0))(eslint@8.57.0)
       '@pedaki/prettier-config':
         specifier: 0.5.3
         version: 0.5.3(prettier@3.2.5)
@@ -217,8 +217,8 @@ importers:
         version: 1.0.7(tailwindcss@3.4.1)
     devDependencies:
       '@pedaki/eslint-config':
-        specifier: 0.5.2-beta.11
-        version: 0.5.2-beta.11(@tanstack/eslint-plugin-query@5.20.1(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/eslint-plugin@7.0.2(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint-config-next@14.1.3(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-node@11.1.0(eslint@8.57.0))(eslint@8.57.0)
+        specifier: 0.5.3
+        version: 0.5.3(@tanstack/eslint-plugin-query@5.20.1(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/eslint-plugin@7.0.2(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint-config-next@14.1.3(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-node@11.1.0(eslint@8.57.0))(eslint@8.57.0)
       '@pedaki/prettier-config':
         specifier: 0.5.3
         version: 0.5.3(prettier@3.2.5)
@@ -307,8 +307,8 @@ importers:
         version: 3.2.0
     devDependencies:
       '@pedaki/eslint-config':
-        specifier: 0.5.2-beta.11
-        version: 0.5.2-beta.11(@tanstack/eslint-plugin-query@5.20.1(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/eslint-plugin@7.0.2(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint-config-next@14.1.3(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-node@11.1.0(eslint@8.57.0))(eslint@8.57.0)
+        specifier: 0.5.3
+        version: 0.5.3(@tanstack/eslint-plugin-query@5.20.1(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/eslint-plugin@7.0.2(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint-config-next@14.1.3(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-node@11.1.0(eslint@8.57.0))(eslint@8.57.0)
       '@pedaki/prettier-config':
         specifier: 0.5.3
         version: 0.5.3(prettier@3.2.5)
@@ -1342,8 +1342,8 @@ packages:
   '@one-ini/wasm@0.1.1':
     resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
 
-  '@pedaki/eslint-config@0.5.2-beta.11':
-    resolution: {integrity: sha512-Idp/Kl6MZiUNisMafokQM0fJ/3hByXxQqkPuuuE3Fnez57oPzADFUNCC3B6QYVfwsV3Fs6iHR7p7sfQw6gtwCg==}
+  '@pedaki/eslint-config@0.5.3':
+    resolution: {integrity: sha512-y6DzP5Raq8VClYnKGuVUZtxwEUgqjc/PTNjFQegjdkgXeXV/Wf58R+lFvfrJbmrv1BYvVm10mQOrEuM89ttuPg==}
     engines: {node: ^18 || ^20}
     peerDependencies:
       '@tanstack/eslint-plugin-query': ^5.0.0
@@ -7856,7 +7856,7 @@ snapshots:
 
   '@one-ini/wasm@0.1.1': {}
 
-  '@pedaki/eslint-config@0.5.2-beta.11(@tanstack/eslint-plugin-query@5.20.1(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/eslint-plugin@7.0.2(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint-config-next@14.1.3(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-node@11.1.0(eslint@8.57.0))(eslint@8.57.0)':
+  '@pedaki/eslint-config@0.5.3(@tanstack/eslint-plugin-query@5.20.1(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/eslint-plugin@7.0.2(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint-config-next@14.1.3(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-node@11.1.0(eslint@8.57.0))(eslint@8.57.0)':
     dependencies:
       '@tanstack/eslint-plugin-query': 5.20.1(eslint@8.57.0)(typescript@5.4.5)
       '@typescript-eslint/eslint-plugin': 7.0.2(@typescript-eslint/parser@7.0.2(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
