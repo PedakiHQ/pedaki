@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@pedaki/eslint-config": "0.5.2-beta.11",
-    "@pedaki/prettier-config": "0.5.2-beta.11",
+    "@pedaki/prettier-config": "0.5.3",
     "@types/preview-email": "^3.0.4",
     "@types/react": "^18.2.79",
     "preview-email": "^3.0.19",

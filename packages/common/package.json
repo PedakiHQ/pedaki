@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@pedaki/eslint-config": "0.5.2-beta.11",
-    "@pedaki/prettier-config": "0.5.2-beta.11",
+    "@pedaki/prettier-config": "0.5.3",
     "@types/bcryptjs": "^2.4.6",
     "@types/memory-cache": "latest",
     "@types/react": "^18.2.79",

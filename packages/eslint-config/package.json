@@ -17,7 +17,7 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@pedaki/prettier-config": "0.5.2-beta.11",
+    "@pedaki/prettier-config": "0.5.3",
     "@types/eslint": "^8.56.10"
   },
   "peerDependencies": {
