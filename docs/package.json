@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.5.2-beta.11",
+  "version": "0.5.2-beta.12",
   "license": "CC-BY-NC-SA-4.0",
   "private": true,
   "repository": {
@@ -24,7 +24,7 @@
     "mintlify": "latest"
   },
   "devDependencies": {
-    "@pedaki/prettier-config": "0.5.2-beta.11"
+    "@pedaki/prettier-config": "0.5.2-beta.12"
   },
   "prettier": "@pedaki/prettier-config"
 }
