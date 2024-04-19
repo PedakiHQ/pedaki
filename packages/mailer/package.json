@@ -28,7 +28,7 @@
     "@pedaki/eslint-config": "0.5.2-beta.11",
     "@pedaki/prettier-config": "0.5.2-beta.11",
     "@types/preview-email": "^3.0.4",
-    "@types/react": "^18.2.64",
+    "@types/react": "^18.2.79",
     "preview-email": "^3.0.19",
     "react": "^18.2.0"
   },
@@ -48,6 +48,5 @@
     "yarn": "use-pnpm",
     "npm": "use-pnpm"
   },
-  "packageManager": "pnpm@9.0.1",
   "prettier": "@pedaki/prettier-config"
 }
