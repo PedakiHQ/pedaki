@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import inquirer from "inquirer";
-import {getPackages} from "@manypkg/get-packages";
-import {$} from 'execa';
+import { getPackages } from "@manypkg/get-packages";
+import { $ } from 'execa';
 import ora from "ora";
 import open from "open";
 import fs from "fs";
@@ -17,11 +17,11 @@ const questions = [
         name: 'versionType',
         message: 'What type of version do you want to release?',
         choices: [
-            {name: "Don't change", value: 'skip'},
-            {name: 'Major', value: 'major'},
-            {name: 'Minor', value: 'minor'},
-            {name: 'Patch', value: 'patch'},
-            {name: "Manual", value: "manual"},
+            { name: "Don't change", value: 'skip' },
+            { name: 'Major', value: 'major' },
+            { name: 'Minor', value: 'minor' },
+            { name: 'Patch', value: 'patch' },
+            { name: "Manual", value: "manual" },
         ],
     },
     {
@@ -127,7 +127,7 @@ const openNewTagPage = async (newVersion, preRelease) => {
 }
 
 const checkCurrentBranch = async () => {
-    const {stdout} = await $`git branch --show-current`;
+    const { stdout } = await $`git branch --show-current`;
     const currentBranch = stdout.trim();
     if (currentBranch !== 'main') {
         console.error(`You are on ${chalk.cyan(currentBranch)} branch. Please switch to ${chalk.cyan('main')} branch.`);
@@ -135,7 +135,7 @@ const checkCurrentBranch = async () => {
     }
 
     // Check that the branch is clean
-    const {stdout: status} = await $`git status --porcelain`;
+    const { stdout: status } = await $`git status --porcelain`;
     if (status.trim() !== '') {
         console.error(`You have uncommitted changes. Please commit or stash them before releasing.`);
         process.exit(1);
@@ -164,7 +164,7 @@ await checkCurrentBranch();
 
 inquirer.prompt(questions).then(async (answers) => {
     try {
-        const {versionType} = answers;
+        const { versionType } = answers;
         console.log(`You have selected to release a ${chalk.cyan(versionType)} version.`);
         let newVersion = answers.version || nextVersion(versionType);
         const isPreRelease = answers.preRelease || answers.version?.includes('-beta');
@@ -184,7 +184,7 @@ inquirer.prompt(questions).then(async (answers) => {
             }
         });
         await updatePackageJson(newVersion);
-        await updateLockFiles();
+        // await updateLockFiles();
         await commitChanges(newVersion);
         await openNewTagPage(newVersion, isPreRelease);
     } catch (e) {
