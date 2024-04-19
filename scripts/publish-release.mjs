@@ -3,7 +3,6 @@ import { getPackages } from "@manypkg/get-packages";
 import { $ } from "execa";
 
 const packages = await getPackages(process.cwd());
-const isBeta = packages.rootPackage.packageJson.version.includes('-beta');
 const version = packages.rootPackage.packageJson.version;
 
 /**
@@ -11,6 +10,7 @@ const version = packages.rootPackage.packageJson.version;
  */
 const publishPackage = async (pkg) => {
     const packageJson = pkg.packageJson;
+    const isBeta = packageJson.version.includes('-beta');
     if (packageJson.private) {
         console.log(`Skipping ${packageJson.name}...`);
         return;
@@ -37,7 +37,7 @@ else {
         // throw new Error('Not all packages have the same version!');
     }
 
-    console.log(`Publishing packages with version ${version}... (isBeta: ${isBeta})`);
+    console.log(`Publishing packages with version ${version}...`);
 
     await Promise.all(packages.packages.map(throat(2, (pkg) => publishPackage(pkg))));
 }
