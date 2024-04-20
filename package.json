@@ -29,6 +29,7 @@
     "publish-release": "node --no-warnings=ExperimentalWarning scripts/publish-release.mjs"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.7.0",
     "@manypkg/get-packages": "^2.2.1",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.12.7",
@@ -51,12 +52,6 @@
     "turbo": "^1.13.2",
     "typescript": "5.4.5",
     "vitest": "^1.5.0"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
   },
   "engines": {
     "node": "^18 || ^20",

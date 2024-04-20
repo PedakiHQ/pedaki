@@ -22,9 +22,5 @@
   },
   "dependencies": {
     "mintlify": "latest"
-  },
-  "devDependencies": {
-    "@pedaki/prettier-config": "0.5.3"
-  },
-  "prettier": "@pedaki/prettier-config"
+  }
 }

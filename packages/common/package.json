@@ -1,45 +1,42 @@
 {
-  "name": "@pedaki/common",
-  "version": "0.5.3",
-  "author": "Nathan David <me@vahor.fr>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/PedakiHQ/pedaki",
-    "directory": "packages/common"
-  },
-  "homepage": "https://www.pedaki.fr",
-  "license": "CC-BY-NC-SA-4.0",
-  "private": false,
-  "type": "module",
-  "publishConfig": {
-    "directory": "dist"
-  },
-  "scripts": {
-    "build": "tsup",
-    "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
-  },
-  "devDependencies": {
-    "@pedaki/eslint-config": "0.5.3",
-    "@pedaki/prettier-config": "0.5.3",
-    "@types/bcryptjs": "^2.4.6",
-    "@types/memory-cache": "latest",
-    "@types/react": "^18.2.79",
-    "react": "^18.2.0"
-  },
-  "peerDependencies": {
-    "bcryptjs": "^2.4.3",
-    "memory-cache": "^0.2.0",
-    "nanoid": "^5.0.0",
-    "sonner": "^1.0.0"
-  },
-  "engines": {
-    "node": "^18 || ^20",
-    "pnpm": ">=9.0.0",
-    "yarn": "use-pnpm",
-    "npm": "use-pnpm"
-  },
-  "prettier": "@pedaki/prettier-config"
+	"name": "@pedaki/common",
+	"version": "0.5.3",
+	"author": "Nathan David <me@vahor.fr>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/PedakiHQ/pedaki",
+		"directory": "packages/common"
+	},
+	"homepage": "https://www.pedaki.fr",
+	"license": "CC-BY-NC-SA-4.0",
+	"private": false,
+	"type": "module",
+	"publishConfig": {
+		"directory": "dist"
+	},
+	"scripts": {
+		"build": "tsup",
+		"format": "pnpx @biomejs/biome format ./ --write",
+		"lint": "pnpx @biomejs/biome lint ./ --apply",
+		"format:check": "pnpx @biomejs/biome format ./",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@types/bcryptjs": "^2.4.6",
+		"@types/memory-cache": "latest",
+		"@types/react": "^18.2.79",
+		"react": "^18.2.0"
+	},
+	"peerDependencies": {
+		"bcryptjs": "^2.4.3",
+		"memory-cache": "^0.2.0",
+		"nanoid": "^5.0.0",
+		"sonner": "^1.0.0"
+	},
+	"engines": {
+		"node": "^18 || ^20",
+		"pnpm": ">=9.0.0",
+		"yarn": "use-pnpm",
+		"npm": "use-pnpm"
+	}
 }

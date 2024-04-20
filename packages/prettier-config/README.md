@@ -1,1 +1,0 @@
-# @pedaki/prettier-config
