@@ -2,22 +2,22 @@
 
 // Based on https://github.com/coffee-cup/gradient-avatars/blob/main/src/gradients.ts
 
-import { hsl } from './colors.ts';
+import { hsl } from "./colors.ts";
 
 const randomHsl = (): string => {
-  const [hue, saturation, lightness] = hsl();
-  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+	const [hue, saturation, lightness] = hsl();
+	return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 };
 
 const generateColours = (): [string, string] => {
-  return [randomHsl(), randomHsl()];
+	return [randomHsl(), randomHsl()];
 };
 
 export const generateSVG = (size = 256): string => {
-  const [c1, c2] = generateColours();
-  const rotate = Math.floor(Math.random() * 360);
+	const [c1, c2] = generateColours();
+	const rotate = Math.floor(Math.random() * 360);
 
-  return `
+	return `
 <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="${size / 2}" cy="${size / 2}" r="${size / 2}" fill="url(#gradient)"/>
   <defs>
@@ -31,6 +31,6 @@ export const generateSVG = (size = 256): string => {
 };
 
 export const generateDataURL = (size = 256): string => {
-  const svg = generateSVG(size);
-  return `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`;
+	const svg = generateSVG(size);
+	return `data:image/svg+xml;base64,${Buffer.from(svg).toString("base64")}`;
 };

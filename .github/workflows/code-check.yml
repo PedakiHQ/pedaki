@@ -36,10 +36,10 @@ jobs:
       - name: Install deps
         run: pnpm install --frozen-lockfile --prefer-offline
 
-      - name: Run eslint
+      - name: Run lint
         run: pnpm lint
 
-      - name: Run prettier
+      - name: Run format check
         run: pnpm format:check
 
       - name: Run typescript
