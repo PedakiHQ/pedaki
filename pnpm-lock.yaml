@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       '@biomejs/biome':
-        specifier: ^1.6.0
+        specifier: ^1.7.0
         version: 1.7.0
       '@manypkg/get-packages':
         specifier: ^2.2.1

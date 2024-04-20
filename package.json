@@ -29,7 +29,7 @@
     "publish-release": "node --no-warnings=ExperimentalWarning scripts/publish-release.mjs"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.6.0",
+    "@biomejs/biome": "^1.7.0",
     "@manypkg/get-packages": "^2.2.1",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.12.7",
