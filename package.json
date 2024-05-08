@@ -38,7 +38,7 @@
     "cpy": "^11.0.1",
     "cross-env": "^7.0.3",
     "dotenv-cli": "latest",
-    "execa": "^8.0.1",
+    "execa": "^9.0.0",
     "fs-extra": "^11.2.0",
     "husky": "^9.0.11",
     "inquirer": "^9.2.19",
