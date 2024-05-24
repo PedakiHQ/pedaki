@@ -31,13 +31,13 @@
 		"react": "^18.2.0"
 	},
 	"peerDependencies": {
-		"@react-email/button": "0.0.14",
-		"@react-email/head": "0.0.7",
-		"@react-email/html": "0.0.7",
-		"@react-email/link": "0.0.7",
-		"@react-email/render": "0.0.12",
-		"@react-email/tailwind": "0.0.15",
-		"react-email": "2.1.1",
+		"@react-email/button": "0.0.15",
+		"@react-email/head": "0.0.9",
+		"@react-email/html": "0.0.8",
+		"@react-email/link": "0.0.8",
+		"@react-email/render": "0.0.15",
+		"@react-email/tailwind": "0.0.18",
+		"react-email": "2.1.4",
 		"resend": "^3.0.0"
 	},
 	"engines": {
